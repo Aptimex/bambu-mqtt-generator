@@ -1,0 +1,10 @@
+{
+  "filament_id": "GFT98",
+  "filament_name": "Generic PPS-CF @base",
+  "filament_type": "TPU",
+  "nozzle_temp_min": 320,
+  "nozzle_temp_max": 320,
+  "bed_temp": 110,
+  "color": "",
+  "is_bambu": false
+}

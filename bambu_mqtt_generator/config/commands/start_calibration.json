@@ -1,0 +1,74 @@
+{
+  "command": "start_calibration",
+  "category": "print",
+  "required_fields": [
+    "sequence_id",
+    "option"
+  ],
+  "optional_fields": [
+    "command",
+    "param"
+  ],
+  "field_definitions": {
+    "command": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": "gcode_file"
+    },
+    "param": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": "/usr/etc/print/auto_cali_for_user.gcode"
+    },
+    "sequence_id": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "option": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    }
+  },
+  "sections": {
+    "print": {
+      "command": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": "gcode_file"
+      },
+      "param": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": "/usr/etc/print/auto_cali_for_user.gcode"
+      },
+      "sequence_id": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "option": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      }
+    }
+  }
+}

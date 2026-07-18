@@ -1,0 +1,8 @@
+{
+  "command": "ack_proceed",
+  "category": "print",
+  "required_fields": [],
+  "optional_fields": [],
+  "field_definitions": {},
+  "sections": {}
+}

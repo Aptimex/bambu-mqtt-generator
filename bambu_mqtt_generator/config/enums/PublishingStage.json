@@ -1,0 +1,9 @@
+{
+  "name": "PublishingStage",
+  "values": {
+    "PublishingCreate": 0,
+    "PublishingUpload": 1,
+    "PublishingWaiting": 2,
+    "PublishingJumpUrl": 3
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "command": "ams_control",
+  "category": "print",
+  "required_fields": [
+    "sequence_id"
+  ],
+  "optional_fields": [
+    "command",
+    "param"
+  ],
+  "field_definitions": {
+    "command": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": "ams_control"
+    },
+    "sequence_id": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "param": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    }
+  },
+  "sections": {
+    "print": {
+      "command": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": "ams_control"
+      },
+      "sequence_id": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "param": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "filament_id": "GFP96",
+  "filament_name": "Generic PP-CF @base",
+  "filament_type": "PVA",
+  "nozzle_temp_min": 235,
+  "nozzle_temp_max": 235,
+  "bed_temp": 55,
+  "color": "",
+  "is_bambu": false
+}

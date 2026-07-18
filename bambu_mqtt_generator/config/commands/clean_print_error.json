@@ -1,0 +1,74 @@
+{
+  "command": "clean_print_error",
+  "category": "print",
+  "required_fields": [
+    "sequence_id"
+  ],
+  "optional_fields": [
+    "command",
+    "subtask_id",
+    "print_error"
+  ],
+  "field_definitions": {
+    "command": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": "clean_print_error"
+    },
+    "sequence_id": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "subtask_id": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "print_error": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    }
+  },
+  "sections": {
+    "print": {
+      "command": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": "clean_print_error"
+      },
+      "sequence_id": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "subtask_id": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "print_error": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "filament_id": "GFG98",
+  "filament_name": "Generic PETG-CF @base",
+  "filament_type": "PETG",
+  "nozzle_temp_min": 255,
+  "nozzle_temp_max": 255,
+  "bed_temp": 80,
+  "color": "",
+  "is_bambu": false
+}

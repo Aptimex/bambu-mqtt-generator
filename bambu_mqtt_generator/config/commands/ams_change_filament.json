@@ -1,0 +1,134 @@
+{
+  "command": "ams_change_filament",
+  "category": "print",
+  "required_fields": [
+    "sequence_id",
+    "ams_id"
+  ],
+  "optional_fields": [
+    "command",
+    "curr_temp",
+    "tar_temp",
+    "target",
+    "slot_id",
+    "extruder_id"
+  ],
+  "field_definitions": {
+    "command": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": "ams_change_filament"
+    },
+    "sequence_id": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "curr_temp": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "tar_temp": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "ams_id": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": "virtual_ids",
+      "default": null
+    },
+    "target": {
+      "section": "print",
+      "type": "integer",
+      "description": "",
+      "enum_ref": null,
+      "default": 255
+    },
+    "slot_id": {
+      "section": "print",
+      "type": "integer",
+      "description": "",
+      "enum_ref": null,
+      "default": 255
+    },
+    "extruder_id": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": "extruder_id",
+      "default": null
+    }
+  },
+  "sections": {
+    "print": {
+      "command": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": "ams_change_filament"
+      },
+      "sequence_id": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "curr_temp": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "tar_temp": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "ams_id": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": "virtual_ids",
+        "default": null
+      },
+      "target": {
+        "section": "print",
+        "type": "integer",
+        "description": "",
+        "enum_ref": null,
+        "default": 255
+      },
+      "slot_id": {
+        "section": "print",
+        "type": "integer",
+        "description": "",
+        "enum_ref": null,
+        "default": 255
+      },
+      "extruder_id": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": "extruder_id",
+        "default": null
+      }
+    }
+  }
+}

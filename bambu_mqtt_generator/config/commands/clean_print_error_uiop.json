@@ -1,0 +1,119 @@
+{
+  "command": "clean_print_error_uiop",
+  "category": "print",
+  "required_fields": [
+    "sequence_id"
+  ],
+  "optional_fields": [
+    "command",
+    "name",
+    "action",
+    "source",
+    "type",
+    "err"
+  ],
+  "field_definitions": {
+    "command": {
+      "section": "system",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": "uiop"
+    },
+    "sequence_id": {
+      "section": "system",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "name": {
+      "section": "system",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": "print_error"
+    },
+    "action": {
+      "section": "system",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": "close"
+    },
+    "source": {
+      "section": "system",
+      "type": "integer",
+      "description": "",
+      "enum_ref": null,
+      "default": 1
+    },
+    "type": {
+      "section": "system",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": "dialog"
+    },
+    "err": {
+      "section": "system",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    }
+  },
+  "sections": {
+    "system": {
+      "command": {
+        "section": "system",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": "uiop"
+      },
+      "sequence_id": {
+        "section": "system",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "name": {
+        "section": "system",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": "print_error"
+      },
+      "action": {
+        "section": "system",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": "close"
+      },
+      "source": {
+        "section": "system",
+        "type": "integer",
+        "description": "",
+        "enum_ref": null,
+        "default": 1
+      },
+      "type": {
+        "section": "system",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": "dialog"
+      },
+      "err": {
+        "section": "system",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      }
+    }
+  }
+}

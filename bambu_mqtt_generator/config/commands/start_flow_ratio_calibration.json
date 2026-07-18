@@ -1,0 +1,74 @@
+{
+  "command": "start_flow_ratio_calibration",
+  "category": "print",
+  "required_fields": [
+    "sequence_id",
+    "tray_id"
+  ],
+  "optional_fields": [
+    "command",
+    "nozzle_diameter"
+  ],
+  "field_definitions": {
+    "command": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": "flowrate_cali"
+    },
+    "sequence_id": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "tray_id": {
+      "section": "print",
+      "type": "array",
+      "description": "",
+      "enum_ref": "virtual_ids",
+      "default": null
+    },
+    "nozzle_diameter": {
+      "section": "print",
+      "type": "array",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    }
+  },
+  "sections": {
+    "print": {
+      "command": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": "flowrate_cali"
+      },
+      "sequence_id": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "tray_id": {
+        "section": "print",
+        "type": "array",
+        "description": "",
+        "enum_ref": "virtual_ids",
+        "default": null
+      },
+      "nozzle_diameter": {
+        "section": "print",
+        "type": "array",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      }
+    }
+  }
+}

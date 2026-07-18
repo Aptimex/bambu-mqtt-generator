@@ -1,0 +1,74 @@
+{
+  "command": "request_push_all",
+  "category": "print",
+  "required_fields": [
+    "sequence_id"
+  ],
+  "optional_fields": [
+    "command",
+    "version",
+    "push_target"
+  ],
+  "field_definitions": {
+    "sequence_id": {
+      "section": "pushing",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "command": {
+      "section": "pushing",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": "pushall"
+    },
+    "version": {
+      "section": "pushing",
+      "type": "integer",
+      "description": "",
+      "enum_ref": null,
+      "default": 1
+    },
+    "push_target": {
+      "section": "pushing",
+      "type": "integer",
+      "description": "",
+      "enum_ref": null,
+      "default": 1
+    }
+  },
+  "sections": {
+    "pushing": {
+      "sequence_id": {
+        "section": "pushing",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "command": {
+        "section": "pushing",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": "pushall"
+      },
+      "version": {
+        "section": "pushing",
+        "type": "integer",
+        "description": "",
+        "enum_ref": null,
+        "default": 1
+      },
+      "push_target": {
+        "section": "pushing",
+        "type": "integer",
+        "description": "",
+        "enum_ref": null,
+        "default": 1
+      }
+    }
+  }
+}

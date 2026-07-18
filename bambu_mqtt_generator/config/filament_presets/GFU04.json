@@ -1,0 +1,10 @@
+{
+  "filament_id": "GFU04",
+  "filament_name": "Bambu PVA",
+  "filament_type": "PVA",
+  "nozzle_temp_min": 190,
+  "nozzle_temp_max": 210,
+  "bed_temp": 60,
+  "color": "FFFF00FF",
+  "is_bambu": true
+}

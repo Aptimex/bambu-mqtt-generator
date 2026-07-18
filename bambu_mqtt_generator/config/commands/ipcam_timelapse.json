@@ -1,0 +1,59 @@
+{
+  "command": "ipcam_timelapse",
+  "category": "print",
+  "required_fields": [
+    "command",
+    "sequence_id"
+  ],
+  "optional_fields": [
+    "control"
+  ],
+  "field_definitions": {
+    "command": {
+      "section": "camera",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": "ipcam_timelapse"
+    },
+    "sequence_id": {
+      "section": "camera",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "control": {
+      "section": "camera",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    }
+  },
+  "sections": {
+    "camera": {
+      "command": {
+        "section": "camera",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": "ipcam_timelapse"
+      },
+      "sequence_id": {
+        "section": "camera",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "control": {
+        "section": "camera",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      }
+    }
+  }
+}

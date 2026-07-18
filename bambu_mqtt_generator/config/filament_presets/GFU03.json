@@ -1,0 +1,10 @@
+{
+  "filament_id": "GFU03",
+  "filament_name": "Bambu TPU 95A",
+  "filament_type": "TPU",
+  "nozzle_temp_min": 210,
+  "nozzle_temp_max": 230,
+  "bed_temp": 45,
+  "color": "FF00FFFF",
+  "is_bambu": true
+}

@@ -1,0 +1,14 @@
+{
+  "name": "SendingPrintJobStage",
+  "values": {
+    "PrintingStageCreate": 0,
+    "PrintingStageUpload": 1,
+    "PrintingStageWaiting": 2,
+    "PrintingStageSending": 3,
+    "PrintingStageRecord": 4,
+    "PrintingStageWaitPrinter": 5,
+    "PrintingStageFinished": 6,
+    "PrintingStageERROR": 7,
+    "PrintingStageLimit": 8
+  }
+}

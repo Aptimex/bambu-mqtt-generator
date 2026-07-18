@@ -1,0 +1,107 @@
+[
+  {
+    "model_id": "BL-P001",
+    "display_name": "Bambu Lab X1 Carbon",
+    "series": "series_x1",
+    "arch": "core_xy",
+    "file": "BL-P001.json"
+  },
+  {
+    "model_id": "BL-P002",
+    "display_name": "Bambu Lab X1",
+    "series": "series_x1",
+    "arch": "core_xy",
+    "file": "BL-P002.json"
+  },
+  {
+    "model_id": "C11",
+    "display_name": "Bambu Lab P1P",
+    "series": "series_p1p",
+    "arch": "core_xy",
+    "file": "C11.json"
+  },
+  {
+    "model_id": "C12",
+    "display_name": "Bambu Lab P1S",
+    "series": "series_p1p",
+    "arch": "core_xy",
+    "file": "C12.json"
+  },
+  {
+    "model_id": "C13",
+    "display_name": "Bambu Lab X1E",
+    "series": "series_x1",
+    "arch": "core_xy",
+    "file": "C13.json"
+  },
+  {
+    "model_id": "N1",
+    "display_name": "Bambu Lab A1 mini",
+    "series": "series_n",
+    "arch": "i3",
+    "file": "N1.json"
+  },
+  {
+    "model_id": "N2S",
+    "display_name": "Bambu Lab A1",
+    "series": "series_n",
+    "arch": "i3",
+    "file": "N2S.json"
+  },
+  {
+    "model_id": "N6",
+    "display_name": "Bambu Lab X2D",
+    "series": "series_x1",
+    "arch": "core_xy",
+    "file": "N6.json"
+  },
+  {
+    "model_id": "N7",
+    "display_name": "Bambu Lab P2S",
+    "series": "series_x1",
+    "arch": "core_xy",
+    "file": "N7.json"
+  },
+  {
+    "model_id": "N9",
+    "display_name": "Bambu Lab A2L",
+    "series": "series_n",
+    "arch": "i3",
+    "file": "N9.json"
+  },
+  {
+    "model_id": "O1C",
+    "display_name": "Bambu Lab H2C",
+    "series": "series_o",
+    "arch": "core_xy",
+    "file": "O1C.json"
+  },
+  {
+    "model_id": "O1C2",
+    "display_name": "Bambu Lab H2C",
+    "series": "series_o",
+    "arch": "core_xy",
+    "file": "O1C2.json"
+  },
+  {
+    "model_id": "O1D",
+    "display_name": "Bambu Lab H2D",
+    "series": "series_o",
+    "arch": "core_xy",
+    "file": "O1D.json"
+  },
+  {
+    "model_id": "O1E",
+    "display_name": "Bambu Lab H2D Pro",
+    "series": "series_o",
+    "arch": "core_xy",
+    "file": "O1E.json"
+  },
+  {
+    "model_id": "O1S",
+    "display_name": "Bambu Lab H2S",
+    "series": "series_o",
+    "arch": "core_xy",
+    "file": "O1S.json"
+  }
+]

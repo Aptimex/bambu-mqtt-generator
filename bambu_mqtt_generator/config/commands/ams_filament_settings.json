@@ -1,0 +1,209 @@
+{
+  "command": "ams_filament_settings",
+  "category": "print",
+  "required_fields": [
+    "sequence_id",
+    "ams_id",
+    "slot_id",
+    "tray_id",
+    "setting_id",
+    "tray_color",
+    "nozzle_temp_min",
+    "nozzle_temp_max",
+    "tray_type",
+    "cols"
+  ],
+  "optional_fields": [
+    "command",
+    "tray_info_idx",
+    "ctype"
+  ],
+  "field_definitions": {
+    "command": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": "ams_filament_setting"
+    },
+    "sequence_id": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "ams_id": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": "virtual_ids",
+      "default": null
+    },
+    "slot_id": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "tray_id": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": "virtual_ids",
+      "default": null
+    },
+    "tray_info_idx": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": "filament_presets",
+      "default": null
+    },
+    "setting_id": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "tray_color": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "nozzle_temp_min": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "nozzle_temp_max": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "tray_type": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": "filament_type",
+      "default": null
+    },
+    "cols": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "ctype": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    }
+  },
+  "sections": {
+    "print": {
+      "command": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": "ams_filament_setting"
+      },
+      "sequence_id": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "ams_id": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": "virtual_ids",
+        "default": null
+      },
+      "slot_id": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "tray_id": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": "virtual_ids",
+        "default": null
+      },
+      "tray_info_idx": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": "filament_presets",
+        "default": null
+      },
+      "setting_id": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "tray_color": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "nozzle_temp_min": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "nozzle_temp_max": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "tray_type": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": "filament_type",
+        "default": null
+      },
+      "cols": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "ctype": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      }
+    }
+  }
+}

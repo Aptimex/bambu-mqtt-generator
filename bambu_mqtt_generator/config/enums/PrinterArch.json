@@ -1,0 +1,7 @@
+{
+  "name": "PrinterArch",
+  "values": {
+    "ARCH_CORE_XY": 0,
+    "ARCH_I3": 1
+  }
+}

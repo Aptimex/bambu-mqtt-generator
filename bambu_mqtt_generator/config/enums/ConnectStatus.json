@@ -1,0 +1,8 @@
+{
+  "name": "ConnectStatus",
+  "values": {
+    "ConnectStatusOk": 0,
+    "ConnectStatusFailed": 1,
+    "ConnectStatusLost": 2
+  }
+}

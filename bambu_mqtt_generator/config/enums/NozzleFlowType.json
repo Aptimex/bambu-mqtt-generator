@@ -1,0 +1,10 @@
+{
+  "name": "NozzleFlowType",
+  "values": {
+    "NONE_FLOWTYPE": 0,
+    "S_FLOW": 1,
+    "H_FLOW": 2,
+    "U_FLOW": 3,
+    "E_FLOW": 4
+  }
+}

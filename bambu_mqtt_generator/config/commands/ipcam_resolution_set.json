@@ -1,0 +1,59 @@
+{
+  "command": "ipcam_resolution_set",
+  "category": "print",
+  "required_fields": [
+    "command",
+    "sequence_id"
+  ],
+  "optional_fields": [
+    "resolution"
+  ],
+  "field_definitions": {
+    "command": {
+      "section": "camera",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": "ipcam_resolution_set"
+    },
+    "sequence_id": {
+      "section": "camera",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "resolution": {
+      "section": "camera",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    }
+  },
+  "sections": {
+    "camera": {
+      "command": {
+        "section": "camera",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": "ipcam_resolution_set"
+      },
+      "sequence_id": {
+        "section": "camera",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "resolution": {
+        "section": "camera",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      }
+    }
+  }
+}

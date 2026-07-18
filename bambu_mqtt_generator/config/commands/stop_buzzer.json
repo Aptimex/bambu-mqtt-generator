@@ -1,0 +1,59 @@
+{
+  "command": "stop_buzzer",
+  "category": "print",
+  "required_fields": [
+    "sequence_id"
+  ],
+  "optional_fields": [
+    "command",
+    "mode"
+  ],
+  "field_definitions": {
+    "command": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": "buzzer_ctrl"
+    },
+    "mode": {
+      "section": "print",
+      "type": "integer",
+      "description": "",
+      "enum_ref": null,
+      "default": 0
+    },
+    "sequence_id": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    }
+  },
+  "sections": {
+    "print": {
+      "command": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": "buzzer_ctrl"
+      },
+      "mode": {
+        "section": "print",
+        "type": "integer",
+        "description": "",
+        "enum_ref": null,
+        "default": 0
+      },
+      "sequence_id": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      }
+    }
+  }
+}

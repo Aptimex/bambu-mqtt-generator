@@ -1,0 +1,19 @@
+[
+  "AmsStatusMain",
+  "BindJobStage",
+  "ConnectStatus",
+  "DevAmsType",
+  "DevFilamentStep",
+  "DevFirmwareUpgradeState",
+  "DevPrintingSpeedLevel",
+  "MessageFlag",
+  "NozzleDiameterType",
+  "NozzleFlowType",
+  "PrinterArch",
+  "PrinterSeries",
+  "PrintFromType",
+  "PublishingStage",
+  "SendingPrintJobStage",
+  "ToolHeadComponent",
+  "ToolHeadNameCase"
+]

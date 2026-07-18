@@ -1,0 +1,10 @@
+{
+  "name": "DevFirmwareUpgradeState",
+  "values": {
+    "DC": -1,
+    "UpgradingUnavaliable": 0,
+    "UpgradingAvaliable": 1,
+    "UpgradingInProgress": 2,
+    "UpgradingFinished": 3
+  }
+}

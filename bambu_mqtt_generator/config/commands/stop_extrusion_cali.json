@@ -1,0 +1,8 @@
+{
+  "command": "stop_extrusion_cali",
+  "category": "print",
+  "required_fields": [],
+  "optional_fields": [],
+  "field_definitions": {},
+  "sections": {}
+}

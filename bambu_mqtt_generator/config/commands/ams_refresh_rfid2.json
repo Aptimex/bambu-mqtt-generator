@@ -1,0 +1,73 @@
+{
+  "command": "ams_refresh_rfid2",
+  "category": "print",
+  "required_fields": [
+    "command",
+    "sequence_id",
+    "ams_id",
+    "slot_id"
+  ],
+  "optional_fields": [],
+  "field_definitions": {
+    "command": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": "ams_get_rfid"
+    },
+    "sequence_id": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "ams_id": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": "virtual_ids",
+      "default": null
+    },
+    "slot_id": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    }
+  },
+  "sections": {
+    "print": {
+      "command": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": "ams_get_rfid"
+      },
+      "sequence_id": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "ams_id": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": "virtual_ids",
+        "default": null
+      },
+      "slot_id": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      }
+    }
+  }
+}

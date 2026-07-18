@@ -1,0 +1,10 @@
+{
+  "filament_id": "GFR98",
+  "filament_name": "Generic PHA @base",
+  "filament_type": "PA",
+  "nozzle_temp_min": 220,
+  "nozzle_temp_max": 220,
+  "bed_temp": 55,
+  "color": "",
+  "is_bambu": false
+}

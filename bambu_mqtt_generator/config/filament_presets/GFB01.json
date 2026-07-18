@@ -1,0 +1,10 @@
+{
+  "filament_id": "GFB01",
+  "filament_name": "Bambu ASA @base",
+  "filament_type": "ASA",
+  "nozzle_temp_min": 260,
+  "nozzle_temp_max": 260,
+  "bed_temp": 90,
+  "color": "",
+  "is_bambu": true
+}

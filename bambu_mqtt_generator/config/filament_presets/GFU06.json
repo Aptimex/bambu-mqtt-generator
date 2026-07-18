@@ -1,0 +1,10 @@
+{
+  "filament_id": "GFU06",
+  "filament_name": "Bambu PETG-CF",
+  "filament_type": "PETG-CF",
+  "nozzle_temp_min": 240,
+  "nozzle_temp_max": 270,
+  "bed_temp": 80,
+  "color": "444444FF",
+  "is_bambu": true
+}

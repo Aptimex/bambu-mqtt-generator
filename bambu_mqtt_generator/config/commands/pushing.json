@@ -1,0 +1,44 @@
+{
+  "command": "pushing",
+  "category": "print",
+  "required_fields": [
+    "sequence_id"
+  ],
+  "optional_fields": [
+    "command"
+  ],
+  "field_definitions": {
+    "command": {
+      "section": "pushing",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "sequence_id": {
+      "section": "pushing",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    }
+  },
+  "sections": {
+    "pushing": {
+      "command": {
+        "section": "pushing",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "sequence_id": {
+        "section": "pushing",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      }
+    }
+  }
+}

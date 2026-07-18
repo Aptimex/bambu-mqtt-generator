@@ -1,0 +1,8 @@
+{
+  "name": "ToolHeadComponent",
+  "values": {
+    "Extruder": 0,
+    "Nozzle": 1,
+    "Hotend": 2
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "filament_id": "GFB60",
+  "filament_name": "PolyLite ABS @base",
+  "filament_type": "ABS",
+  "nozzle_temp_min": 270,
+  "nozzle_temp_max": 270,
+  "bed_temp": 90,
+  "color": "",
+  "is_bambu": false
+}

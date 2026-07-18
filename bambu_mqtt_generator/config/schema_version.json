@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "extracted_from": "ba049f6a2e08",
+  "extraction_date": "2026-07-18T05:07:06.396027Z",
+  "counts": {
+    "printers": 15,
+    "commands": 53,
+    "enums": 17,
+    "filament_presets": 11
+  }
+}

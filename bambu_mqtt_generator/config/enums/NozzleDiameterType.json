@@ -1,0 +1,10 @@
+{
+  "name": "NozzleDiameterType",
+  "values": {
+    "NONE_DIAMETER_TYPE": 0,
+    "NOZZLE_DIAMETER_0_2": 1,
+    "NOZZLE_DIAMETER_0_4": 2,
+    "NOZZLE_DIAMETER_0_6": 3,
+    "NOZZLE_DIAMETER_0_8": 4
+  }
+}

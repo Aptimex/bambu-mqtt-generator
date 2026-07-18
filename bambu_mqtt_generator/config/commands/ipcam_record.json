@@ -1,0 +1,59 @@
+{
+  "command": "ipcam_record",
+  "category": "print",
+  "required_fields": [
+    "command",
+    "sequence_id"
+  ],
+  "optional_fields": [
+    "control"
+  ],
+  "field_definitions": {
+    "command": {
+      "section": "camera",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": "ipcam_record_set"
+    },
+    "sequence_id": {
+      "section": "camera",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "control": {
+      "section": "camera",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    }
+  },
+  "sections": {
+    "camera": {
+      "command": {
+        "section": "camera",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": "ipcam_record_set"
+      },
+      "sequence_id": {
+        "section": "camera",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "control": {
+        "section": "camera",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      }
+    }
+  }
+}

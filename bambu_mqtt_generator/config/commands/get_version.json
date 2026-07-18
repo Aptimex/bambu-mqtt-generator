@@ -1,0 +1,43 @@
+{
+  "command": "get_version",
+  "category": "info",
+  "required_fields": [
+    "sequence_id",
+    "command"
+  ],
+  "optional_fields": [],
+  "field_definitions": {
+    "sequence_id": {
+      "section": "info",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "command": {
+      "section": "info",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": "get_version"
+    }
+  },
+  "sections": {
+    "info": {
+      "sequence_id": {
+        "section": "info",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "command": {
+        "section": "info",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": "get_version"
+      }
+    }
+  }
+}

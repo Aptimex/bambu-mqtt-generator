@@ -1,0 +1,11 @@
+{
+  "name": "DevAmsType",
+  "values": {
+    "EXT_SPOOL": 0,
+    "AMS": 1,
+    "AMS_LITE": 2,
+    "N3F": 3,
+    "N3S": 4,
+    "AMS_LITE_MIXED": 5
+  }
+}

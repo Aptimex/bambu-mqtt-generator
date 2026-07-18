@@ -1,0 +1,10 @@
+{
+  "filament_id": "GFC01",
+  "filament_name": "Bambu PC FR @base",
+  "filament_type": "PC",
+  "nozzle_temp_min": 280,
+  "nozzle_temp_max": 280,
+  "bed_temp": 110,
+  "color": "",
+  "is_bambu": true
+}

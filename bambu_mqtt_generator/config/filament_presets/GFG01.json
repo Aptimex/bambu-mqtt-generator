@@ -1,0 +1,10 @@
+{
+  "filament_id": "GFG01",
+  "filament_name": "Bambu PETG Translucent @base",
+  "filament_type": "PETG",
+  "nozzle_temp_min": 255,
+  "nozzle_temp_max": 255,
+  "bed_temp": 80,
+  "color": "",
+  "is_bambu": true
+}

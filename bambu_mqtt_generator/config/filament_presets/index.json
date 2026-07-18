@@ -1,0 +1,482 @@
+[
+  {
+    "filament_id": "CRB99",
+    "filament_type": "ABS",
+    "file": "CRB99.json"
+  },
+  {
+    "filament_id": "CRG99",
+    "filament_type": "PETG",
+    "file": "CRG99.json"
+  },
+  {
+    "filament_id": "CRL99",
+    "filament_type": "PLA",
+    "file": "CRL99.json"
+  },
+  {
+    "filament_id": "GFA00",
+    "filament_type": "PLA",
+    "file": "GFA00.json"
+  },
+  {
+    "filament_id": "GFA01",
+    "filament_type": "PLA",
+    "file": "GFA01.json"
+  },
+  {
+    "filament_id": "GFA02",
+    "filament_type": "PLA",
+    "file": "GFA02.json"
+  },
+  {
+    "filament_id": "GFA05",
+    "filament_type": "PLA",
+    "file": "GFA05.json"
+  },
+  {
+    "filament_id": "GFA06",
+    "filament_type": "PLA",
+    "file": "GFA06.json"
+  },
+  {
+    "filament_id": "GFA07",
+    "filament_type": "PLA",
+    "file": "GFA07.json"
+  },
+  {
+    "filament_id": "GFA08",
+    "filament_type": "PLA",
+    "file": "GFA08.json"
+  },
+  {
+    "filament_id": "GFA09",
+    "filament_type": "PLA",
+    "file": "GFA09.json"
+  },
+  {
+    "filament_id": "GFA10",
+    "filament_type": "PLA",
+    "file": "GFA10.json"
+  },
+  {
+    "filament_id": "GFA11",
+    "filament_type": "PLA",
+    "file": "GFA11.json"
+  },
+  {
+    "filament_id": "GFA12",
+    "filament_type": "PLA",
+    "file": "GFA12.json"
+  },
+  {
+    "filament_id": "GFA13",
+    "filament_type": "PLA",
+    "file": "GFA13.json"
+  },
+  {
+    "filament_id": "GFA15",
+    "filament_type": "PLA",
+    "file": "GFA15.json"
+  },
+  {
+    "filament_id": "GFA16",
+    "filament_type": "PLA",
+    "file": "GFA16.json"
+  },
+  {
+    "filament_id": "GFA17",
+    "filament_type": "PLA",
+    "file": "GFA17.json"
+  },
+  {
+    "filament_id": "GFA18",
+    "filament_type": "PLA",
+    "file": "GFA18.json"
+  },
+  {
+    "filament_id": "GFA19",
+    "filament_type": "PLA",
+    "file": "GFA19.json"
+  },
+  {
+    "filament_id": "GFA50",
+    "filament_type": "PLA",
+    "file": "GFA50.json"
+  },
+  {
+    "filament_id": "GFB00",
+    "filament_type": "ABS",
+    "file": "GFB00.json"
+  },
+  {
+    "filament_id": "GFB01",
+    "filament_type": "ASA",
+    "file": "GFB01.json"
+  },
+  {
+    "filament_id": "GFB02",
+    "filament_type": "ASA",
+    "file": "GFB02.json"
+  },
+  {
+    "filament_id": "GFB50",
+    "filament_type": "ABS",
+    "file": "GFB50.json"
+  },
+  {
+    "filament_id": "GFB51",
+    "filament_type": "ASA",
+    "file": "GFB51.json"
+  },
+  {
+    "filament_id": "GFB60",
+    "filament_type": "ABS",
+    "file": "GFB60.json"
+  },
+  {
+    "filament_id": "GFB61",
+    "filament_type": "ASA",
+    "file": "GFB61.json"
+  },
+  {
+    "filament_id": "GFB98",
+    "filament_type": "ASA",
+    "file": "GFB98.json"
+  },
+  {
+    "filament_id": "GFB99",
+    "filament_type": "ABS",
+    "file": "GFB99.json"
+  },
+  {
+    "filament_id": "GFC00",
+    "filament_type": "PC",
+    "file": "GFC00.json"
+  },
+  {
+    "filament_id": "GFC01",
+    "filament_type": "PC",
+    "file": "GFC01.json"
+  },
+  {
+    "filament_id": "GFC99",
+    "filament_type": "PC",
+    "file": "GFC99.json"
+  },
+  {
+    "filament_id": "GFG00",
+    "filament_type": "PETG",
+    "file": "GFG00.json"
+  },
+  {
+    "filament_id": "GFG01",
+    "filament_type": "PETG",
+    "file": "GFG01.json"
+  },
+  {
+    "filament_id": "GFG02",
+    "filament_type": "PETG",
+    "file": "GFG02.json"
+  },
+  {
+    "filament_id": "GFG03",
+    "filament_type": "PETG",
+    "file": "GFG03.json"
+  },
+  {
+    "filament_id": "GFG50",
+    "filament_type": "PETG",
+    "file": "GFG50.json"
+  },
+  {
+    "filament_id": "GFG60",
+    "filament_type": "PETG",
+    "file": "GFG60.json"
+  },
+  {
+    "filament_id": "GFG96",
+    "filament_type": "PETG",
+    "file": "GFG96.json"
+  },
+  {
+    "filament_id": "GFG97",
+    "filament_type": "PC",
+    "file": "GFG97.json"
+  },
+  {
+    "filament_id": "GFG98",
+    "filament_type": "PETG",
+    "file": "GFG98.json"
+  },
+  {
+    "filament_id": "GFG99",
+    "filament_type": "PETG",
+    "file": "GFG99.json"
+  },
+  {
+    "filament_id": "GFL00",
+    "filament_type": "PLA",
+    "file": "GFL00.json"
+  },
+  {
+    "filament_id": "GFL01",
+    "filament_type": "PLA",
+    "file": "GFL01.json"
+  },
+  {
+    "filament_id": "GFL03",
+    "filament_type": "PLA",
+    "file": "GFL03.json"
+  },
+  {
+    "filament_id": "GFL04",
+    "filament_type": "PLA",
+    "file": "GFL04.json"
+  },
+  {
+    "filament_id": "GFL05",
+    "filament_type": "PLA",
+    "file": "GFL05.json"
+  },
+  {
+    "filament_id": "GFL95",
+    "filament_type": "PLA",
+    "file": "GFL95.json"
+  },
+  {
+    "filament_id": "GFL96",
+    "filament_type": "PLA",
+    "file": "GFL96.json"
+  },
+  {
+    "filament_id": "GFL98",
+    "filament_type": "PLA",
+    "file": "GFL98.json"
+  },
+  {
+    "filament_id": "GFL99",
+    "filament_type": "PLA",
+    "file": "GFL99.json"
+  },
+  {
+    "filament_id": "GFN03",
+    "filament_type": "PA",
+    "file": "GFN03.json"
+  },
+  {
+    "filament_id": "GFN04",
+    "filament_type": "PA",
+    "file": "GFN04.json"
+  },
+  {
+    "filament_id": "GFN05",
+    "filament_type": "PA",
+    "file": "GFN05.json"
+  },
+  {
+    "filament_id": "GFN06",
+    "filament_type": "PA",
+    "file": "GFN06.json"
+  },
+  {
+    "filament_id": "GFN08",
+    "filament_type": "PA",
+    "file": "GFN08.json"
+  },
+  {
+    "filament_id": "GFN96",
+    "filament_type": "PA",
+    "file": "GFN96.json"
+  },
+  {
+    "filament_id": "GFN97",
+    "filament_type": "PA",
+    "file": "GFN97.json"
+  },
+  {
+    "filament_id": "GFN98",
+    "filament_type": "PA",
+    "file": "GFN98.json"
+  },
+  {
+    "filament_id": "GFN99",
+    "filament_type": "PA",
+    "file": "GFN99.json"
+  },
+  {
+    "filament_id": "GFP95",
+    "filament_type": "PVA",
+    "file": "GFP95.json"
+  },
+  {
+    "filament_id": "GFP96",
+    "filament_type": "PVA",
+    "file": "GFP96.json"
+  },
+  {
+    "filament_id": "GFP97",
+    "filament_type": "PVA",
+    "file": "GFP97.json"
+  },
+  {
+    "filament_id": "GFP98",
+    "filament_type": "PVA",
+    "file": "GFP98.json"
+  },
+  {
+    "filament_id": "GFP99",
+    "filament_type": "PVA",
+    "file": "GFP99.json"
+  },
+  {
+    "filament_id": "GFR98",
+    "filament_type": "PA",
+    "file": "GFR98.json"
+  },
+  {
+    "filament_id": "GFR99",
+    "filament_type": "PA",
+    "file": "GFR99.json"
+  },
+  {
+    "filament_id": "GFS00",
+    "filament_type": "PLA",
+    "file": "GFS00.json"
+  },
+  {
+    "filament_id": "GFS01",
+    "filament_type": "PA",
+    "file": "GFS01.json"
+  },
+  {
+    "filament_id": "GFS02",
+    "filament_type": "PLA",
+    "file": "GFS02.json"
+  },
+  {
+    "filament_id": "GFS03",
+    "filament_type": "PA",
+    "file": "GFS03.json"
+  },
+  {
+    "filament_id": "GFS04",
+    "filament_type": "PVA",
+    "file": "GFS04.json"
+  },
+  {
+    "filament_id": "GFS05",
+    "filament_type": "PLA",
+    "file": "GFS05.json"
+  },
+  {
+    "filament_id": "GFS06",
+    "filament_type": "ABS",
+    "file": "GFS06.json"
+  },
+  {
+    "filament_id": "GFS97",
+    "filament_type": "PVA",
+    "file": "GFS97.json"
+  },
+  {
+    "filament_id": "GFS98",
+    "filament_type": "PVA",
+    "file": "GFS98.json"
+  },
+  {
+    "filament_id": "GFS99",
+    "filament_type": "PVA",
+    "file": "GFS99.json"
+  },
+  {
+    "filament_id": "GFT01",
+    "filament_type": "PETG",
+    "file": "GFT01.json"
+  },
+  {
+    "filament_id": "GFT02",
+    "filament_type": "TPU",
+    "file": "GFT02.json"
+  },
+  {
+    "filament_id": "GFT97",
+    "filament_type": "TPU",
+    "file": "GFT97.json"
+  },
+  {
+    "filament_id": "GFT98",
+    "filament_type": "TPU",
+    "file": "GFT98.json"
+  },
+  {
+    "filament_id": "GFU00",
+    "filament_type": "TPU",
+    "file": "GFU00.json"
+  },
+  {
+    "filament_id": "GFU01",
+    "filament_type": "PLA",
+    "file": "GFU01.json"
+  },
+  {
+    "filament_id": "GFU02",
+    "filament_type": "PETG",
+    "file": "GFU02.json"
+  },
+  {
+    "filament_id": "GFU03",
+    "filament_type": "TPU",
+    "file": "GFU03.json"
+  },
+  {
+    "filament_id": "GFU04",
+    "filament_type": "PVA",
+    "file": "GFU04.json"
+  },
+  {
+    "filament_id": "GFU05",
+    "filament_type": "PLA-CF",
+    "file": "GFU05.json"
+  },
+  {
+    "filament_id": "GFU06",
+    "filament_type": "PETG-CF",
+    "file": "GFU06.json"
+  },
+  {
+    "filament_id": "GFU07",
+    "filament_type": "PA-CF",
+    "file": "GFU07.json"
+  },
+  {
+    "filament_id": "GFU08",
+    "filament_type": "PET-CF",
+    "file": "GFU08.json"
+  },
+  {
+    "filament_id": "GFU09",
+    "filament_type": "PAHT-CF",
+    "file": "GFU09.json"
+  },
+  {
+    "filament_id": "GFU10",
+    "filament_type": "ASA",
+    "file": "GFU10.json"
+  },
+  {
+    "filament_id": "GFU11",
+    "filament_type": "PC",
+    "file": "GFU11.json"
+  },
+  {
+    "filament_id": "GFU98",
+    "filament_type": "TPU",
+    "file": "GFU98.json"
+  },
+  {
+    "filament_id": "GFU99",
+    "filament_type": "TPU",
+    "file": "GFU99.json"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "command": "set_nozzle",
+  "category": "print",
+  "required_fields": [],
+  "optional_fields": [],
+  "field_definitions": {},
+  "sections": {}
+}

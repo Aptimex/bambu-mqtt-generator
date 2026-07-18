@@ -1,0 +1,267 @@
+[
+  {
+    "command": "ack_proceed",
+    "category": "print",
+    "file": "ack_proceed.json"
+  },
+  {
+    "command": "ams_air_print_detect",
+    "category": "print",
+    "file": "ams_air_print_detect.json"
+  },
+  {
+    "command": "ams_calibrate",
+    "category": "print",
+    "file": "ams_calibrate.json"
+  },
+  {
+    "command": "ams_change_filament",
+    "category": "print",
+    "file": "ams_change_filament.json"
+  },
+  {
+    "command": "ams_control",
+    "category": "print",
+    "file": "ams_control.json"
+  },
+  {
+    "command": "ams_drying_stop",
+    "category": "print",
+    "file": "ams_drying_stop.json"
+  },
+  {
+    "command": "ams_filament_settings",
+    "category": "print",
+    "file": "ams_filament_settings.json"
+  },
+  {
+    "command": "ams_refresh_rfid",
+    "category": "print",
+    "file": "ams_refresh_rfid.json"
+  },
+  {
+    "command": "ams_refresh_rfid2",
+    "category": "print",
+    "file": "ams_refresh_rfid2.json"
+  },
+  {
+    "command": "ams_select_tray",
+    "category": "print",
+    "file": "ams_select_tray.json"
+  },
+  {
+    "command": "ams_switch_filament",
+    "category": "print",
+    "file": "ams_switch_filament.json"
+  },
+  {
+    "command": "ams_user_settings",
+    "category": "print",
+    "file": "ams_user_settings.json"
+  },
+  {
+    "command": "clean_print_error",
+    "category": "print",
+    "file": "clean_print_error.json"
+  },
+  {
+    "command": "clean_print_error_uiop",
+    "category": "print",
+    "file": "clean_print_error_uiop.json"
+  },
+  {
+    "command": "delete_pa_calibration",
+    "category": "print",
+    "file": "delete_pa_calibration.json"
+  },
+  {
+    "command": "dont_remind_next_time",
+    "category": "print",
+    "file": "dont_remind_next_time.json"
+  },
+  {
+    "command": "extruder_control",
+    "category": "print",
+    "file": "extruder_control.json"
+  },
+  {
+    "command": "extrusion_cali_set",
+    "category": "print",
+    "file": "extrusion_cali_set.json"
+  },
+  {
+    "command": "get_access_code",
+    "category": "info",
+    "file": "get_access_code.json"
+  },
+  {
+    "command": "get_flow_ratio_calibration_result",
+    "category": "print",
+    "file": "get_flow_ratio_calibration_result.json"
+  },
+  {
+    "command": "get_pa_calibration_result",
+    "category": "print",
+    "file": "get_pa_calibration_result.json"
+  },
+  {
+    "command": "get_pa_calibration_tab",
+    "category": "print",
+    "file": "get_pa_calibration_tab.json"
+  },
+  {
+    "command": "get_version",
+    "category": "info",
+    "file": "get_version.json"
+  },
+  {
+    "command": "hms_idle_ignore",
+    "category": "print",
+    "file": "hms_idle_ignore.json"
+  },
+  {
+    "command": "hms_ignore",
+    "category": "print",
+    "file": "hms_ignore.json"
+  },
+  {
+    "command": "hms_resume",
+    "category": "print",
+    "file": "hms_resume.json"
+  },
+  {
+    "command": "hms_stop",
+    "category": "print",
+    "file": "hms_stop.json"
+  },
+  {
+    "command": "ipcam_check_timelapse_storage",
+    "category": "print",
+    "file": "ipcam_check_timelapse_storage.json"
+  },
+  {
+    "command": "ipcam_delete_oldest_timelapse",
+    "category": "print",
+    "file": "ipcam_delete_oldest_timelapse.json"
+  },
+  {
+    "command": "ipcam_record",
+    "category": "print",
+    "file": "ipcam_record.json"
+  },
+  {
+    "command": "ipcam_resolution_set",
+    "category": "print",
+    "file": "ipcam_resolution_set.json"
+  },
+  {
+    "command": "ipcam_timelapse",
+    "category": "print",
+    "file": "ipcam_timelapse.json"
+  },
+  {
+    "command": "purification_disable",
+    "category": "print",
+    "file": "purification_disable.json"
+  },
+  {
+    "command": "pushing",
+    "category": "print",
+    "file": "pushing.json"
+  },
+  {
+    "command": "refresh_nozzle",
+    "category": "print",
+    "file": "refresh_nozzle.json"
+  },
+  {
+    "command": "request_push_all",
+    "category": "print",
+    "file": "request_push_all.json"
+  },
+  {
+    "command": "set_bed",
+    "category": "print",
+    "file": "set_bed.json"
+  },
+  {
+    "command": "set_nozzle",
+    "category": "print",
+    "file": "set_nozzle.json"
+  },
+  {
+    "command": "set_nozzle_new",
+    "category": "print",
+    "file": "set_nozzle_new.json"
+  },
+  {
+    "command": "set_pa_calibration",
+    "category": "print",
+    "file": "set_pa_calibration.json"
+  },
+  {
+    "command": "set_printing_option",
+    "category": "print",
+    "file": "set_printing_option.json"
+  },
+  {
+    "command": "set_printing_speed",
+    "category": "print",
+    "file": "set_printing_speed.json"
+  },
+  {
+    "command": "start_calibration",
+    "category": "print",
+    "file": "start_calibration.json"
+  },
+  {
+    "command": "start_extrusion_cali",
+    "category": "print",
+    "file": "start_extrusion_cali.json"
+  },
+  {
+    "command": "start_flow_ratio_calibration",
+    "category": "print",
+    "file": "start_flow_ratio_calibration.json"
+  },
+  {
+    "command": "start_pa_calibration",
+    "category": "print",
+    "file": "start_pa_calibration.json"
+  },
+  {
+    "command": "stop_buzzer",
+    "category": "print",
+    "file": "stop_buzzer.json"
+  },
+  {
+    "command": "stop_extrusion_cali",
+    "category": "print",
+    "file": "stop_extrusion_cali.json"
+  },
+  {
+    "command": "task_abort",
+    "category": "print",
+    "file": "task_abort.json"
+  },
+  {
+    "command": "task_cancel",
+    "category": "print",
+    "file": "task_cancel.json"
+  },
+  {
+    "command": "task_partskip",
+    "category": "print",
+    "file": "task_partskip.json"
+  },
+  {
+    "command": "task_pause",
+    "category": "print",
+    "file": "task_pause.json"
+  },
+  {
+    "command": "task_resume",
+    "category": "print",
+    "file": "task_resume.json"
+  }
+]

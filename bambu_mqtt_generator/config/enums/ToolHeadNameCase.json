@@ -1,0 +1,8 @@
+{
+  "name": "ToolHeadNameCase",
+  "values": {
+    "TitleCase": 0,
+    "SentenceCase": 1,
+    "LowerCase": 2
+  }
+}

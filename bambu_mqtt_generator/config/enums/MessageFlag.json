@@ -1,0 +1,8 @@
+{
+  "name": "MessageFlag",
+  "values": {
+    "MSG_FLAG_NONE": 0,
+    "MSG_SIGN": 1,
+    "MSG_ENCRYPT": 2
+  }
+}

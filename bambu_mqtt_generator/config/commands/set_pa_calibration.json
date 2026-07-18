@@ -1,0 +1,59 @@
+{
+  "command": "set_pa_calibration",
+  "category": "print",
+  "required_fields": [
+    "sequence_id"
+  ],
+  "optional_fields": [
+    "command",
+    "nozzle_diameter"
+  ],
+  "field_definitions": {
+    "command": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": "extrusion_cali_set"
+    },
+    "sequence_id": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "nozzle_diameter": {
+      "section": "print",
+      "type": "array",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    }
+  },
+  "sections": {
+    "print": {
+      "command": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": "extrusion_cali_set"
+      },
+      "sequence_id": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "nozzle_diameter": {
+        "section": "print",
+        "type": "array",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      }
+    }
+  }
+}

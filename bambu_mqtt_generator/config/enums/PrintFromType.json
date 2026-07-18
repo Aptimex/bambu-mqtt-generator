@@ -1,0 +1,7 @@
+{
+  "name": "PrintFromType",
+  "values": {
+    "FROM_NORMAL": 0,
+    "FROM_SDCARD_VIEW": 1
+  }
+}

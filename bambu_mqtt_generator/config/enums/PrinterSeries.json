@@ -1,0 +1,8 @@
+{
+  "name": "PrinterSeries",
+  "values": {
+    "SERIES_X1": 0,
+    "SERIES_P1P": 1,
+    "SERIES_UNKNOWN": 2
+  }
+}

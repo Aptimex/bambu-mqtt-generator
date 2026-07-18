@@ -1,0 +1,10 @@
+{
+  "filament_id": "GFA50",
+  "filament_name": "Bambu PLA-CF @base",
+  "filament_type": "PLA",
+  "nozzle_temp_min": 220,
+  "nozzle_temp_max": 220,
+  "bed_temp": 55,
+  "color": "",
+  "is_bambu": true
+}

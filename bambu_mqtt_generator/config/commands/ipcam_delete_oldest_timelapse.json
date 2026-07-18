@@ -1,0 +1,74 @@
+{
+  "command": "ipcam_delete_oldest_timelapse",
+  "category": "print",
+  "required_fields": [
+    "sequence_id",
+    "command"
+  ],
+  "optional_fields": [
+    "storage",
+    "total_layer"
+  ],
+  "field_definitions": {
+    "sequence_id": {
+      "section": "camera",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "command": {
+      "section": "camera",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": "ipcam_delete_oldest_timelapse"
+    },
+    "storage": {
+      "section": "camera",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    },
+    "total_layer": {
+      "section": "camera",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null
+    }
+  },
+  "sections": {
+    "camera": {
+      "sequence_id": {
+        "section": "camera",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "command": {
+        "section": "camera",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": "ipcam_delete_oldest_timelapse"
+      },
+      "storage": {
+        "section": "camera",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      },
+      "total_layer": {
+        "section": "camera",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null
+      }
+    }
+  }
+}

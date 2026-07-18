@@ -1,0 +1,11 @@
+{
+  "name": "BindJobStage",
+  "values": {
+    "LoginStageConnect": 0,
+    "LoginStageLogin": 1,
+    "LoginStageWaitForLogin": 2,
+    "LoginStageGetIdentify": 3,
+    "LoginStageWaitAuth": 4,
+    "LoginStageFinished": 5
+  }
+}

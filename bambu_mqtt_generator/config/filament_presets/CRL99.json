@@ -1,0 +1,10 @@
+{
+  "filament_id": "CRL99",
+  "filament_name": "Generic PLA @Creality CR-6",
+  "filament_type": "PLA",
+  "nozzle_temp_min": 220,
+  "nozzle_temp_max": 220,
+  "bed_temp": 55,
+  "color": "",
+  "is_bambu": false
+}
