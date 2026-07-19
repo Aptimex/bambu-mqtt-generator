@@ -135,6 +135,40 @@ class ConfigLoader:
         return sorted(printer.get("firmware_versions", {}).keys(), 
                       key=lambda v: tuple(map(int, v.split("."))))
 
+    def get_closest_firmware_version(self, model_id: str, target_version: str) -> Optional[str]:
+        """
+        Find the closest matching firmware version for a printer model.
+        
+        Returns the highest available version that is <= target_version.
+        If target_version is older than all available versions, returns the oldest.
+        If target_version exactly matches an available version, returns it.
+        
+        Args:
+            model_id: Printer model ID (e.g., "N1", "N7")
+            target_version: Target firmware version string (e.g., "01.05.00.00")
+            
+        Returns:
+            Closest matching firmware version or None if no versions available
+        """
+        versions = self.get_firmware_versions(model_id)
+        if not versions:
+            return None
+            
+        def version_tuple(v: str) -> tuple:
+            return tuple(map(int, v.split(".")))
+        
+        target_tuple = version_tuple(target_version)
+        
+        # Find versions <= target
+        candidates = [v for v in versions if version_tuple(v) <= target_tuple]
+        
+        if candidates:
+            # Return highest candidate (closest but not exceeding target)
+            return max(candidates, key=version_tuple)
+        else:
+            # Target is older than all available - return oldest
+            return min(versions, key=version_tuple)
+
     def _normalize_printer_name(self, name: str) -> str:
         """Normalize printer name for matching: lowercase, collapse whitespace."""
         return re.sub(r'\s+', ' ', name.strip().lower())
@@ -186,12 +220,21 @@ class ConfigLoader:
             model_id: Either a model ID (e.g., "BL-P001") or printer name 
                       (e.g., "X1 Carbon", "P1P", "A1")
             firmware_version: Firmware version string (e.g., "01.05.06.06")
+                              If exact version not found, closest earlier version is used.
         """
         resolved_model_id = self._resolve_model_id(model_id)
         if not resolved_model_id:
             raise ValueError(f"Unknown printer model: {model_id}")
+        
+        # Find closest matching firmware version
+        closest_version = self.get_closest_firmware_version(resolved_model_id, firmware_version)
+        if not closest_version:
+            raise ValueError(f"No firmware versions available for model: {resolved_model_id}")
+        if closest_version != firmware_version:
+            print(f"[bambu-mqtt-generator] Firmware version '{firmware_version}' not found for {resolved_model_id}, using closest: '{closest_version}'")
+        
         from .payload_builder import PayloadBuilder
-        return PayloadBuilder(self, resolved_model_id, firmware_version)
+        return PayloadBuilder(self, resolved_model_id, closest_version)
 
 
 # Convenience function
