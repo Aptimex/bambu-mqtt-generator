@@ -9,6 +9,7 @@ from pathlib import Path
 import random
 
 from .config_loader import ConfigLoader, load_config
+from .sign_mqtt import MQTTSigner, sign_payload
 
 
 # Virtual tray IDs for external spools
@@ -32,6 +33,7 @@ class PayloadBuilder:
     model_id: str = ""
     firmware_version: str = ""
     _sequence_counter: int = 0
+    signer: Optional[MQTTSigner] = field(default=None)
     
     def __post_init__(self):
         if isinstance(self.config, str):
@@ -75,6 +77,9 @@ class PayloadBuilder:
         for field_name in command_spec.get("required_fields", []):
             field_def = command_spec["field_definitions"].get(field_name, {})
             if field_def.get("section") == section and field_name not in provided:
+                # Skip if field has default: null (treated as optional)
+                if field_def.get("default") is None:
+                    continue
                 missing.append(field_name)
         return missing
     
@@ -116,6 +121,10 @@ class PayloadBuilder:
                     default = field_def.get("default")
                     if default is not None:
                         payload[section_name][field_name] = default
+        
+        # Remove None values from payload (fields with default: null should be omitted)
+        for section_name in payload:
+            payload[section_name] = {k: v for k, v in payload[section_name].items() if v is not None}
         
         # Third pass: Validate required fields (after defaults added)
         for section_name, section_fields in sections.items():
@@ -313,6 +322,8 @@ class PayloadBuilder:
             nozzle_temp_max=nozzle_temp_max,
             tray_type=tray_type,
             sequence_id=sequence_id,
+            cols=None,
+            ctype=None,
         )
     
     def build_get_version(self, sequence_id: Optional[str] = None) -> Dict[str, Any]:
@@ -325,7 +336,7 @@ class PayloadBuilder:
     
     def build_pushall(self, sequence_id: Optional[str] = None) -> Dict[str, Any]:
         """Build pushall (request full status) payload."""
-        return self.build_payload("pushall", sequence_id=sequence_id)
+        return self.build_payload("request_push_all", sequence_id=sequence_id)
     
     def build_ams_change_filament(
         self,

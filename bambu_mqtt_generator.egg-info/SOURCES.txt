@@ -3,6 +3,8 @@ setup.py
 bambu_mqtt_generator/__init__.py
 bambu_mqtt_generator/config_loader.py
 bambu_mqtt_generator/payload_builder.py
+bambu_mqtt_generator/response_parser.py
+bambu_mqtt_generator/sign_mqtt.py
 bambu_mqtt_generator.egg-info/PKG-INFO
 bambu_mqtt_generator.egg-info/SOURCES.txt
 bambu_mqtt_generator.egg-info/dependency_links.txt

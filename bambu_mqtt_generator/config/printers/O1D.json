@@ -153,7 +153,16 @@
         "support_ams_filament_change_abort": true,
         "support_print_check_firmware_for_tpu_left": true,
         "support_user_first_setup_tpu_check": true,
-        "support_user_first_setup_tpu_check_url": "https://e.bambulab.com/t?c=fwWqpBg37Liel92N"
+        "support_user_first_setup_tpu_check_url": "https://e.bambulab.com/t?c=fwWqpBg37Liel92N",
+        "ams_response_format": "standard",
+        "ams_format_details": {
+          "external_spool_key": "vt_tray",
+          "ams_array_key": "ams",
+          "ams_id_key": "id",
+          "tray_array_key": "tray",
+          "tray_id_key": "id",
+          "has_vir_slot": false
+        }
       },
       "model_id": "O1D",
       "subseries": [

@@ -90,7 +90,16 @@
         "support_extrusion_cali": true,
         "support_user_preset": false,
         "bed_temperature_limit": 100,
-        "support_ams_ext_mix_print": true
+        "support_ams_ext_mix_print": true,
+        "ams_response_format": "p1p",
+        "ams_format_details": {
+          "external_spool_key": "vt_tray",
+          "ams_array_key": "ams",
+          "ams_id_key": "id",
+          "tray_array_key": "tray",
+          "tray_id_key": "id",
+          "has_vir_slot": false
+        }
       },
       "model_id": "C11",
       "support_wrapping_detection": false,
@@ -173,7 +182,16 @@
         "support_extrusion_cali": true,
         "support_user_preset": false,
         "bed_temperature_limit": 100,
-        "support_ams_ext_mix_print": true
+        "support_ams_ext_mix_print": true,
+        "ams_response_format": "p1p",
+        "ams_format_details": {
+          "external_spool_key": "vt_tray",
+          "ams_array_key": "ams",
+          "ams_id_key": "id",
+          "tray_array_key": "tray",
+          "tray_id_key": "id",
+          "has_vir_slot": false
+        }
       },
       "model_id": "C11",
       "support_wrapping_detection": false,
@@ -255,7 +273,16 @@
         "support_extrusion_cali": true,
         "support_user_preset": false,
         "bed_temperature_limit": 100,
-        "support_ams_ext_mix_print": true
+        "support_ams_ext_mix_print": true,
+        "ams_response_format": "p1p",
+        "ams_format_details": {
+          "external_spool_key": "vt_tray",
+          "ams_array_key": "ams",
+          "ams_id_key": "id",
+          "tray_array_key": "tray",
+          "tray_id_key": "id",
+          "has_vir_slot": false
+        }
       },
       "model_id": "C11",
       "support_wrapping_detection": false,
@@ -337,7 +364,16 @@
         "support_extrusion_cali": true,
         "support_user_preset": false,
         "bed_temperature_limit": 100,
-        "support_ams_ext_mix_print": true
+        "support_ams_ext_mix_print": true,
+        "ams_response_format": "p1p",
+        "ams_format_details": {
+          "external_spool_key": "vt_tray",
+          "ams_array_key": "ams",
+          "ams_id_key": "id",
+          "tray_array_key": "tray",
+          "tray_id_key": "id",
+          "has_vir_slot": false
+        }
       },
       "model_id": "C11",
       "support_wrapping_detection": false,
@@ -423,7 +459,16 @@
         "support_extrusion_cali": true,
         "support_user_preset": true,
         "bed_temperature_limit": 100,
-        "support_ams_ext_mix_print": true
+        "support_ams_ext_mix_print": true,
+        "ams_response_format": "p1p",
+        "ams_format_details": {
+          "external_spool_key": "vt_tray",
+          "ams_array_key": "ams",
+          "ams_id_key": "id",
+          "tray_array_key": "tray",
+          "tray_id_key": "id",
+          "has_vir_slot": false
+        }
       },
       "model_id": "C11",
       "support_wrapping_detection": false,
@@ -505,7 +550,16 @@
         "support_extrusion_cali": true,
         "support_user_preset": false,
         "bed_temperature_limit": 100,
-        "support_ams_ext_mix_print": true
+        "support_ams_ext_mix_print": true,
+        "ams_response_format": "p1p",
+        "ams_format_details": {
+          "external_spool_key": "vt_tray",
+          "ams_array_key": "ams",
+          "ams_id_key": "id",
+          "tray_array_key": "tray",
+          "tray_id_key": "id",
+          "has_vir_slot": false
+        }
       },
       "model_id": "C11",
       "support_wrapping_detection": false,
@@ -587,7 +641,16 @@
         "support_extrusion_cali": true,
         "support_user_preset": false,
         "bed_temperature_limit": 100,
-        "support_ams_ext_mix_print": true
+        "support_ams_ext_mix_print": true,
+        "ams_response_format": "p1p",
+        "ams_format_details": {
+          "external_spool_key": "vt_tray",
+          "ams_array_key": "ams",
+          "ams_id_key": "id",
+          "tray_array_key": "tray",
+          "tray_id_key": "id",
+          "has_vir_slot": false
+        }
       },
       "model_id": "C11",
       "support_wrapping_detection": false,
