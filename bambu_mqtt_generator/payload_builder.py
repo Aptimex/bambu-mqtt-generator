@@ -62,8 +62,8 @@ class PayloadBuilder:
             raise ValueError(f"tray_color must be 6 or 8 hex characters, got: {color}")
     
     def _next_sequence_id(self) -> str:
-        """Generate next sequence ID as a random 8-digit number string."""
-        return str(random.randint(10_000_000, 99_999_999))
+        """Generate next sequence ID as a random 5-digit number string starting with '2'."""
+        return str(random.randint(20_000, 29_999))
     
     def _resolve_enum_ref(self, field_name: str, value: Any) -> Any:
         """Resolve enum references if needed."""
@@ -335,7 +335,7 @@ class PayloadBuilder:
         return self.build_payload("get_access_code", sequence_id=sequence_id)
     
     def build_pushall(self, sequence_id: Optional[str] = None) -> Dict[str, Any]:
-        """Build pushall (request full status) payload."""
+        """Build pushall (request full status) payload. Note that response will contain a different sequence_id."""
         return self.build_payload("request_push_all", sequence_id=sequence_id)
     
     def build_ams_change_filament(

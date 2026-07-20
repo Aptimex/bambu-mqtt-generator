@@ -36,6 +36,7 @@ Usage:
 """
 
 import json
+import random
 import re
 from base64 import b64encode
 from typing import Optional
@@ -254,13 +255,15 @@ class MQTTSigner:
         """Sign an arbitrary JSON string using this signer's credentials."""
         return sign(payload_json, self.key_pem, self.cert_id)
     
-    def build_app_cert_install(self, sequence_id: str) -> str:
+    def build_app_cert_install(self, sequence_id: Optional[str] = None) -> str: 
         """Build app_cert_install bootstrap message using this signer's chain and CRL.
         
         Requires cert_chain_pem and crl_pem to have been provided during initialization.
         """
         if not self.cert_chain_pem or not self.crl_pem:
             raise ValueError("cert_chain_pem and crl_pem required for app_cert_install (not provided during init)")
+        if sequence_id is None:
+            sequence_id = str(random.randint(20_000, 29_999))
         return build_app_cert_install(sequence_id, self.cert_chain_pem, self.crl_pem)
     
     def get_cert_id(self) -> str:
