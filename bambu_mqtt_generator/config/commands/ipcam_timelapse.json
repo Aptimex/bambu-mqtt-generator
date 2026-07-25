@@ -2,11 +2,11 @@
   "command": "ipcam_timelapse",
   "category": "print",
   "required_fields": [
-    "command",
-    "sequence_id"
+    "sequence_id",
+    "control"
   ],
   "optional_fields": [
-    "control"
+    "command"
   ],
   "field_definitions": {
     "command": {
@@ -14,21 +14,24 @@
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "ipcam_timelapse"
+      "default": "ipcam_timelapse",
+      "conditional": false
     },
     "sequence_id": {
       "section": "camera",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "control": {
       "section": "camera",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     }
   },
   "sections": {
@@ -38,21 +41,24 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "ipcam_timelapse"
+        "default": "ipcam_timelapse",
+        "conditional": false
       },
       "sequence_id": {
         "section": "camera",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "control": {
         "section": "camera",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       }
     }
   }

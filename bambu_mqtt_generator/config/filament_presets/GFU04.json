@@ -1,10 +1,11 @@
 {
   "filament_id": "GFU04",
-  "filament_name": "Bambu PVA",
-  "filament_type": "PVA",
-  "nozzle_temp_min": 190,
-  "nozzle_temp_max": 210,
-  "bed_temp": 60,
-  "color": "FFFF00FF",
-  "is_bambu": true
+  "filament_name": "Bambu TPU 85A @base",
+  "filament_type": "TPU",
+  "nozzle_temp_min": 200,
+  "nozzle_temp_max": 240,
+  "bed_temp": 35,
+  "color": "",
+  "is_bambu": true,
+  "nozzle_temp_recommended": 225
 }

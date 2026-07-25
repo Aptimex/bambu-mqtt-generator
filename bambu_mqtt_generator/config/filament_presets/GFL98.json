@@ -1,10 +1,11 @@
 {
   "filament_id": "GFL98",
-  "filament_name": "Generic PLA-CF @Anker",
-  "filament_type": "PLA",
-  "nozzle_temp_min": 220,
-  "nozzle_temp_max": 220,
+  "filament_name": "Generic PLA-CF @base",
+  "filament_type": "PLA-CF",
+  "nozzle_temp_min": 190,
+  "nozzle_temp_max": 240,
   "bed_temp": 55,
   "color": "",
-  "is_bambu": false
+  "is_bambu": true,
+  "nozzle_temp_recommended": 220
 }

@@ -2,12 +2,12 @@
   "command": "clean_print_error",
   "category": "print",
   "required_fields": [
-    "sequence_id"
-  ],
-  "optional_fields": [
-    "command",
+    "sequence_id",
     "subtask_id",
     "print_error"
+  ],
+  "optional_fields": [
+    "command"
   ],
   "field_definitions": {
     "command": {
@@ -15,28 +15,32 @@
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "clean_print_error"
+      "default": "clean_print_error",
+      "conditional": false
     },
     "sequence_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "subtask_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "print_error": {
       "section": "print",
-      "type": "string",
+      "type": "integer",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     }
   },
   "sections": {
@@ -46,28 +50,32 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "clean_print_error"
+        "default": "clean_print_error",
+        "conditional": false
       },
       "sequence_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "subtask_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "print_error": {
         "section": "print",
-        "type": "string",
+        "type": "integer",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       }
     }
   }

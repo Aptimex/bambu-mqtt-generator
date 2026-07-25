@@ -2,12 +2,12 @@
   "command": "task_cancel",
   "category": "print",
   "required_fields": [
+    "job_id",
     "sequence_id"
   ],
   "optional_fields": [
     "command",
-    "param",
-    "job_id"
+    "param"
   ],
   "field_definitions": {
     "command": {
@@ -15,28 +15,32 @@
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "stop"
+      "default": "stop",
+      "conditional": false
     },
     "param": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": ""
+      "default": "",
+      "conditional": false
     },
     "job_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "sequence_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     }
   },
   "sections": {
@@ -46,28 +50,32 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "stop"
+        "default": "stop",
+        "conditional": false
       },
       "param": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": ""
+        "default": "",
+        "conditional": false
       },
       "job_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "sequence_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       }
     }
   }

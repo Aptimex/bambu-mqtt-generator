@@ -2,9 +2,10 @@
   "filament_id": "GFG02",
   "filament_name": "Bambu PETG HF @base",
   "filament_type": "PETG",
-  "nozzle_temp_min": 255,
-  "nozzle_temp_max": 255,
-  "bed_temp": 80,
+  "nozzle_temp_min": 230,
+  "nozzle_temp_max": 270,
+  "bed_temp": 70,
   "color": "",
-  "is_bambu": true
+  "is_bambu": true,
+  "nozzle_temp_recommended": 245
 }

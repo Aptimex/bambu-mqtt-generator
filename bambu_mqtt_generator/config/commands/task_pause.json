@@ -14,21 +14,24 @@
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "pause"
+      "default": "pause",
+      "conditional": false
     },
     "param": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": ""
+      "default": "",
+      "conditional": false
     },
     "sequence_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     }
   },
   "sections": {
@@ -38,21 +41,24 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "pause"
+        "default": "pause",
+        "conditional": false
       },
       "param": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": ""
+        "default": "",
+        "conditional": false
       },
       "sequence_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       }
     }
   }

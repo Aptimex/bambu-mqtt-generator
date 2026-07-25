@@ -11,7 +11,9 @@ setup(
         "bambu_mqtt_generator": ["config/**/*.json"],
     },
     python_requires=">=3.8",
-    install_requires=[],
+    install_requires=[
+        "cryptography>=3.4",
+    ],
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",

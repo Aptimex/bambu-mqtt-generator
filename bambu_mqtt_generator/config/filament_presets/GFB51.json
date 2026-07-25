@@ -1,10 +1,11 @@
 {
   "filament_id": "GFB51",
   "filament_name": "Bambu ASA-CF @base",
-  "filament_type": "ASA",
-  "nozzle_temp_min": 260,
-  "nozzle_temp_max": 260,
-  "bed_temp": 90,
+  "filament_type": "ASA-CF",
+  "nozzle_temp_min": 250,
+  "nozzle_temp_max": 280,
+  "bed_temp": 100,
   "color": "",
-  "is_bambu": true
+  "is_bambu": true,
+  "nozzle_temp_recommended": 275
 }

@@ -2,11 +2,11 @@
   "command": "get_pa_calibration_result",
   "category": "print",
   "required_fields": [
-    "command",
-    "sequence_id"
+    "sequence_id",
+    "nozzle_diameter"
   ],
   "optional_fields": [
-    "nozzle_diameter"
+    "command"
   ],
   "field_definitions": {
     "command": {
@@ -14,21 +14,24 @@
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "extrusion_cali_get_result"
+      "default": "extrusion_cali_get_result",
+      "conditional": false
     },
     "sequence_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "nozzle_diameter": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     }
   },
   "sections": {
@@ -38,21 +41,24 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "extrusion_cali_get_result"
+        "default": "extrusion_cali_get_result",
+        "conditional": false
       },
       "sequence_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "nozzle_diameter": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       }
     }
   }

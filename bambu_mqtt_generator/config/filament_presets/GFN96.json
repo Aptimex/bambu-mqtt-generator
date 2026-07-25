@@ -1,10 +1,11 @@
 {
   "filament_id": "GFN96",
   "filament_name": "Generic PPA-GF @base",
-  "filament_type": "PA",
-  "nozzle_temp_min": 290,
-  "nozzle_temp_max": 290,
+  "filament_type": "PPA-GF",
+  "nozzle_temp_min": 280,
+  "nozzle_temp_max": 320,
   "bed_temp": 100,
   "color": "",
-  "is_bambu": false
+  "is_bambu": true,
+  "nozzle_temp_recommended": 290
 }

@@ -2,11 +2,11 @@
   "command": "set_printing_speed",
   "category": "print",
   "required_fields": [
-    "sequence_id"
+    "sequence_id",
+    "param"
   ],
   "optional_fields": [
-    "command",
-    "param"
+    "command"
   ],
   "field_definitions": {
     "command": {
@@ -14,21 +14,24 @@
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "print_speed"
+      "default": "print_speed",
+      "conditional": false
     },
     "sequence_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "param": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     }
   },
   "sections": {
@@ -38,21 +41,24 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "print_speed"
+        "default": "print_speed",
+        "conditional": false
       },
       "sequence_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "param": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       }
     }
   }

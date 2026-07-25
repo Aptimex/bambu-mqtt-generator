@@ -1,10 +1,11 @@
 {
   "filament_id": "GFU99",
-  "filament_name": "Generic TPU @Anker",
+  "filament_name": "Generic TPU @base",
   "filament_type": "TPU",
-  "nozzle_temp_min": 240,
-  "nozzle_temp_max": 240,
+  "nozzle_temp_min": 200,
+  "nozzle_temp_max": 250,
   "bed_temp": 35,
   "color": "",
-  "is_bambu": false
+  "is_bambu": true,
+  "nozzle_temp_recommended": 240
 }

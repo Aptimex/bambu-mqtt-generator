@@ -72,14 +72,17 @@ class PayloadBuilder:
         return value
     
     def _validate_required(self, command_spec: Dict, section: str, provided: Dict) -> List[str]:
-        """Validate required fields are present."""
+        """
+        Return the required fields of `section` that the caller did not supply.
+
+        A field is in `required_fields` precisely because Bambu Studio always
+        sends it and has no literal default for it, so an absent one is an
+        error rather than something to skip.
+        """
         missing = []
         for field_name in command_spec.get("required_fields", []):
             field_def = command_spec["field_definitions"].get(field_name, {})
             if field_def.get("section") == section and field_name not in provided:
-                # Skip if field has default: null (treated as optional)
-                if field_def.get("default") is None:
-                    continue
                 missing.append(field_name)
         return missing
     
@@ -134,7 +137,7 @@ class PayloadBuilder:
         
         return payload
     
-    def build_ams_filament_setting(
+    def _build_ams_filament_setting(
         self,
         ams_id: int,
         tray_id: int,
@@ -150,25 +153,12 @@ class PayloadBuilder:
         ctype: Optional[int] = None,
     ) -> Dict[str, Any]:
         """
-        Build ams_filament_settings payload (change filament color/type on AMS or external spool).
-        
-        For external spool (main): ams_id=255, tray_id=254, slot_id=0
-        For external spool (deputy): ams_id=254, tray_id=254, slot_id=0
-        For AMS: ams_id=1-4, tray_id=slot_id (0-3)
-        
-        Args:
-            ams_id: AMS ID (255=main external, 254=deputy external, 1-4=physical AMS)
-            tray_id: Tray ID (254 for virtual trays, 0-3 for AMS slots)
-            slot_id: Slot ID (0 for external, 0-3 for AMS)
-            tray_info_idx: Filament ID (e.g., 'GFU01' for Bambu PLA Basic)
-            setting_id: Preset setting ID from filament profile (default: "", no user preset)
-            tray_color: RGBA hex color (e.g., '00FF00FF' for green)
-            nozzle_temp_min: Minimum nozzle temperature (default: 0)
-            nozzle_temp_max: Maximum nozzle temperature (default: 0)
-            tray_type: Filament type (e.g., 'PLA', 'PETG') (default: "")
-            sequence_id: Optional custom sequence ID
-            cols: Optional color array for multi-color
-            ctype: Optional color type
+        Assemble an ams_filament_settings payload from fully-resolved ids.
+
+        Internal: this takes the ids exactly as they go on the wire and does no
+        preset lookup or id derivation. Callers should use
+        build_filament_setting, which works those out. For a payload this
+        method can't express, use build_payload("ams_filament_settings", ...).
         """
         # Normalize tray_color: accept 6 or 8 hex chars, default alpha to FF
         tray_color = self._normalize_tray_color(tray_color)
@@ -187,48 +177,7 @@ class PayloadBuilder:
             cols=cols,
             ctype=ctype,
         )
-    
-    def build_external_spool_setting(
-        self,
-        tray_info_idx: str,
-        tray_color: str,
-        nozzle_temp_min: int = 0,
-        nozzle_temp_max: int = 0,
-        tray_type: str = "",
-        setting_id: str = "",
-        is_main: bool = True,
-        sequence_id: Optional[str] = None,
-    ) -> Dict[str, Any]:
-        """
-        Convenience method to set external spool (virtual tray) settings.
-        
-        Args:
-            tray_info_idx: Filament ID (e.g., 'GFU01' for Bambu PLA Basic)
-            tray_color: RGBA hex color (e.g., '00FF00FF' for green)
-            nozzle_temp_min: Minimum nozzle temperature (default: 0)
-            nozzle_temp_max: Maximum nozzle temperature (default: 0)
-            tray_type: Filament type (e.g., 'PLA', 'PETG') (default: "")
-            setting_id: Preset setting ID from filament profile (default: "", no user preset)
-            is_main: True for main external spool (255), False for deputy (254)
-            sequence_id: Optional custom sequence ID
-        """
-        virtual = self.config.get_virtual_ids()
-        ams_id = virtual["VIRTUAL_TRAY_MAIN_ID"] if is_main else virtual["VIRTUAL_TRAY_DEPUTY_ID"]
-        tray_id = virtual["VIRTUAL_TRAY_DEPUTY_ID"]  # Always 254 for virtual trays
-        
-        return self.build_ams_filament_setting(
-            ams_id=ams_id,
-            tray_id=tray_id,
-            slot_id=0,
-            tray_info_idx=tray_info_idx,
-            setting_id=setting_id,
-            tray_color=tray_color,
-            nozzle_temp_min=nozzle_temp_min,
-            nozzle_temp_max=nozzle_temp_max,
-            tray_type=tray_type,
-            sequence_id=sequence_id,
-        )
-    
+
     def build_filament_setting(
         self,
         tray_info_idx: str,
@@ -241,24 +190,27 @@ class PayloadBuilder:
         setting_id: str = "",
         slot_id: Optional[int] = None,
         sequence_id: Optional[str] = None,
+        cols: Optional[List[str]] = None,
+        ctype: Optional[int] = None,
     ) -> Dict[str, Any]:
         """
-        Unified interface for filament settings on any tray (external spool or physical AMS).
-        
+        Set filament settings on any tray — physical AMS or external spool.
+
+        This is the interface for filament changes; it derives the ids Bambu
+        Studio would send and fills in temperatures and type from the filament
+        preset when they aren't given.
+
         **External spool (virtual tray):**
         - ams_id=ExternalSpool.MAIN (255) or ExternalSpool.DEPUTY (254)
         - tray_id is ignored; auto-set to 254 and slot_id to 0
-        
+
         **Physical AMS:**
-        - ams_id=1-4, provide tray_id or slot_id (0-3, the other is derived)
-        
-        For optional parameters (nozzle_temp_min, nozzle_temp_max, tray_type), if not provided,
-        defaults are looked up from the filament presets using tray_info_idx.
-        
+        - ams_id=0-3, provide tray_id or slot_id (0-3, the other is derived)
+
         Args:
-            tray_info_idx: Filament ID (e.g., 'GFU01')
+            tray_info_idx: Filament ID (e.g., 'GFA00')
             tray_color: RGBA hex color (6 or 8 chars, # prefix OK)
-            ams_id: AMS ID (ExternalSpool.MAIN=255, ExternalSpool.DEPUTY=254, 1-4=physical AMS) - REQUIRED
+            ams_id: AMS ID (ExternalSpool.MAIN=255, ExternalSpool.DEPUTY=254, 0-3=physical AMS) - REQUIRED
             tray_id: Tray ID (0-3 for physical AMS; ignored for virtual/external) - REQUIRED
             nozzle_temp_min: Minimum nozzle temperature (default: from filament preset)
             nozzle_temp_max: Maximum nozzle temperature (default: from filament preset)
@@ -266,9 +218,20 @@ class PayloadBuilder:
             setting_id: Preset setting ID (default: "", no user preset)
             slot_id: Slot ID (0-3 for physical AMS; ignored for virtual)
             sequence_id: Optional custom sequence ID
+            cols: Colors on the spool as 'RRGGBBAA' strings, in order. For a
+                plain spool this is just [tray_color]; omit it entirely.
+            ctype: How the colors in `cols` are laid out (a *color* type, not a
+                filament type): 0=gradient (blended), 1=multi-color (discrete
+                bands), 2=single. Only meaningful when cols has 2+ entries.
+                Only printers advertising manual multi-color editing (bit 23 of
+                the push_status `fun2` field) accept cols/ctype; Bambu Studio
+                omits both otherwise.
+
+        Raises:
+            ValueError: for an unknown filament id, an out-of-range or
+                inconsistent AMS/slot id, or a physical AMS with neither
+                tray_id nor slot_id.
         """
-        virtual = self.config.get_virtual_ids()
-        
         # Look up filament defaults for optional parameters
         filament_preset = self.config.get_filament_preset(tray_info_idx)
         if not filament_preset:
@@ -281,14 +244,9 @@ class PayloadBuilder:
         if tray_type is None:
             tray_type = filament_preset.get("filament_type", "")
         
-# Determine if external spool (virtual tray)
-        is_virtual = False
-        
         if ams_id in (VIRTUAL_AMS_MAIN_ID, VIRTUAL_AMS_DEPUTY_ID):
-            is_virtual = True
-        
-        if is_virtual:
-            # External spool: use virtual tray IDs, ignore provided tray_id
+            # External spool: fixed virtual tray ids, any provided tray_id/
+            # slot_id is ignored.
             tray_id = VIRTUAL_TRAY_DEPUTY_ID  # Always 254
             slot_id = 0
         else:
@@ -302,8 +260,8 @@ class PayloadBuilder:
             # Now validate both are provided
             if tray_id is None or slot_id is None:
                 raise ValueError("For physical AMS, must provide tray_id or slot_id (the other is derived)")
-            if not (1 <= ams_id <= 4):
-                raise ValueError(f"Physical AMS ams_id must be 1-4, got {ams_id}")
+            if not (0 <= ams_id <= 3):
+                raise ValueError(f"Physical AMS ams_id must be 0-3, got {ams_id}")
             if not (0 <= tray_id <= 3):
                 raise ValueError(f"Physical AMS tray_id must be 0-3, got {tray_id}")
             if not (0 <= slot_id <= 3):
@@ -311,7 +269,7 @@ class PayloadBuilder:
             if tray_id != slot_id:
                 raise ValueError(f"Physical AMS tray_id ({tray_id}) must equal slot_id ({slot_id})")
         
-        return self.build_ams_filament_setting(
+        return self._build_ams_filament_setting(
             ams_id=ams_id,
             tray_id=tray_id,
             slot_id=slot_id,
@@ -322,8 +280,8 @@ class PayloadBuilder:
             nozzle_temp_max=nozzle_temp_max,
             tray_type=tray_type,
             sequence_id=sequence_id,
-            cols=None,
-            ctype=None,
+            cols=cols,
+            ctype=ctype,
         )
     
     def build_get_version(self, sequence_id: Optional[str] = None) -> Dict[str, Any]:
@@ -380,23 +338,33 @@ class PayloadBuilder:
             raise ValueError(f"Invalid action: {action}. Valid: {valid_actions}")
         return self.build_payload("ams_control", sequence_id=sequence_id, param=action)
     
-    def build_set_nozzle(
+    def build_set_nozzle_temp(
         self,
-        nozzle_type: str,
-        nozzle_diameter: float,
+        extruder_index: int,
+        target_temp: int,
         sequence_id: Optional[str] = None,
     ) -> Dict[str, Any]:
-        """Build set_nozzle payload."""
+        """
+        Build a set_nozzle_temp payload.
+
+        Bambu Studio's older `command_set_nozzle` sends an M104 G-code rather
+        than a JSON command; use build_gcode for that.
+        """
         return self.build_payload(
-            "set_nozzle",
+            "set_nozzle_new",
             sequence_id=sequence_id,
-            nozzle_type=nozzle_type,
-            nozzle_diameter=nozzle_diameter,
+            extruder_index=extruder_index,
+            target_temp=target_temp,
         )
-    
+
     def build_gcode(self, gcode: str, sequence_id: Optional[str] = None) -> Dict[str, Any]:
-        """Build raw G-code payload."""
-        return self.build_payload("gcode", sequence_id=sequence_id, gcode=gcode)
+        """
+        Build a gcode_line payload (raw G-code).
+
+        This is how Bambu Studio delivers several AMS operations — refresh
+        RFID, calibrate and select tray all send M620 G-code.
+        """
+        return self.build_payload("gcode_line", sequence_id=sequence_id, param=gcode)
     
     def get_mqtt_topic(self, device_id: str) -> str:
         """Get the MQTT topic for sending commands to a printer."""

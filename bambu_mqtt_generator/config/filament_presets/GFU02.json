@@ -1,10 +1,11 @@
 {
   "filament_id": "GFU02",
-  "filament_name": "Bambu PETG Basic",
-  "filament_type": "PETG",
-  "nozzle_temp_min": 230,
-  "nozzle_temp_max": 250,
-  "bed_temp": 75,
-  "color": "0000FFFF",
-  "is_bambu": true
+  "filament_name": "Bambu TPU for AMS @base",
+  "filament_type": "TPU-AMS",
+  "nozzle_temp_min": 220,
+  "nozzle_temp_max": 240,
+  "bed_temp": 35,
+  "color": "",
+  "is_bambu": true,
+  "nozzle_temp_recommended": 230
 }

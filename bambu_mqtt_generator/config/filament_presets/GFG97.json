@@ -1,10 +1,11 @@
 {
   "filament_id": "GFG97",
   "filament_name": "Generic PCTG @base",
-  "filament_type": "PC",
-  "nozzle_temp_min": 255,
-  "nozzle_temp_max": 255,
-  "bed_temp": 80,
+  "filament_type": "PCTG",
+  "nozzle_temp_min": 240,
+  "nozzle_temp_max": 270,
+  "bed_temp": 70,
   "color": "",
-  "is_bambu": false
+  "is_bambu": true,
+  "nozzle_temp_recommended": 255
 }

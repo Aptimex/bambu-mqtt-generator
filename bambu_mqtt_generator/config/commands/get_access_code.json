@@ -2,24 +2,27 @@
   "command": "get_access_code",
   "category": "info",
   "required_fields": [
-    "sequence_id",
+    "sequence_id"
+  ],
+  "optional_fields": [
     "command"
   ],
-  "optional_fields": [],
   "field_definitions": {
     "sequence_id": {
       "section": "system",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "command": {
       "section": "system",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "get_access_code"
+      "default": "get_access_code",
+      "conditional": false
     }
   },
   "sections": {
@@ -29,14 +32,16 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "command": {
         "section": "system",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "get_access_code"
+        "default": "get_access_code",
+        "conditional": false
       }
     }
   }

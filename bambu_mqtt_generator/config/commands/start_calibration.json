@@ -1,13 +1,12 @@
 {
   "command": "start_calibration",
   "category": "print",
-  "required_fields": [
-    "sequence_id",
-    "option"
-  ],
+  "required_fields": [],
   "optional_fields": [
     "command",
-    "param"
+    "param",
+    "sequence_id",
+    "option"
   ],
   "field_definitions": {
     "command": {
@@ -15,28 +14,32 @@
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "gcode_file"
+      "default": "gcode_file",
+      "conditional": true
     },
     "param": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "/usr/etc/print/auto_cali_for_user.gcode"
+      "default": "/usr/etc/print/auto_cali_for_user.gcode",
+      "conditional": true
     },
     "sequence_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": true
     },
     "option": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": true
     }
   },
   "sections": {
@@ -46,28 +49,32 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "gcode_file"
+        "default": "gcode_file",
+        "conditional": true
       },
       "param": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "/usr/etc/print/auto_cali_for_user.gcode"
+        "default": "/usr/etc/print/auto_cali_for_user.gcode",
+        "conditional": true
       },
       "sequence_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": true
       },
       "option": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": true
       }
     }
   }

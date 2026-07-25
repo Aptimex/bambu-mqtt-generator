@@ -1,0 +1,23 @@
+{
+  "names": {
+    "a1": "N2S",
+    "a1 mini": "N1",
+    "a2l": "N9",
+    "h2d": "O1D",
+    "h2d pro": "O1E",
+    "h2s": "O1S",
+    "p1p": "C11",
+    "p1s": "C12",
+    "p2s": "N7",
+    "x1": "BL-P002",
+    "x1 carbon": "BL-P001",
+    "x1e": "C13",
+    "x2d": "N6"
+  },
+  "ambiguous": {
+    "h2c": [
+      "O1C",
+      "O1C2"
+    ]
+  }
+}

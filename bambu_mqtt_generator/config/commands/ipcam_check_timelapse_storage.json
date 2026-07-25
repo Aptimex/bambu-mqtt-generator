@@ -3,12 +3,12 @@
   "category": "print",
   "required_fields": [
     "sequence_id",
-    "command"
-  ],
-  "optional_fields": [
-    "sub_command",
     "storage",
     "total_layer"
+  ],
+  "optional_fields": [
+    "command",
+    "sub_command"
   ],
   "field_definitions": {
     "sequence_id": {
@@ -16,35 +16,40 @@
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "command": {
       "section": "camera",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "ipcam_get_media_info"
+      "default": "ipcam_get_media_info",
+      "conditional": false
     },
     "sub_command": {
       "section": "camera",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "is_timelapse_storage_enough"
+      "default": "is_timelapse_storage_enough",
+      "conditional": false
     },
     "storage": {
       "section": "camera",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "total_layer": {
       "section": "camera",
-      "type": "string",
+      "type": "integer",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     }
   },
   "sections": {
@@ -54,35 +59,40 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "command": {
         "section": "camera",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "ipcam_get_media_info"
+        "default": "ipcam_get_media_info",
+        "conditional": false
       },
       "sub_command": {
         "section": "camera",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "is_timelapse_storage_enough"
+        "default": "is_timelapse_storage_enough",
+        "conditional": false
       },
       "storage": {
         "section": "camera",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "total_layer": {
         "section": "camera",
-        "type": "string",
+        "type": "integer",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       }
     }
   }

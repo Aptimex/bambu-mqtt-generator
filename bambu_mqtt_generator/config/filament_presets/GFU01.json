@@ -1,10 +1,11 @@
 {
   "filament_id": "GFU01",
-  "filament_name": "Bambu PLA Basic",
-  "filament_type": "PLA",
-  "nozzle_temp_min": 190,
-  "nozzle_temp_max": 230,
-  "bed_temp": 65,
-  "color": "00FF00FF",
-  "is_bambu": true
+  "filament_name": "Bambu TPU 95A @base",
+  "filament_type": "TPU",
+  "nozzle_temp_min": 200,
+  "nozzle_temp_max": 250,
+  "bed_temp": 35,
+  "color": "",
+  "is_bambu": true,
+  "nozzle_temp_recommended": 230
 }

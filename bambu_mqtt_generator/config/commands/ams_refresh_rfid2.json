@@ -2,40 +2,45 @@
   "command": "ams_refresh_rfid2",
   "category": "print",
   "required_fields": [
-    "command",
     "sequence_id",
     "ams_id",
     "slot_id"
   ],
-  "optional_fields": [],
+  "optional_fields": [
+    "command"
+  ],
   "field_definitions": {
     "command": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "ams_get_rfid"
+      "default": "ams_get_rfid",
+      "conditional": false
     },
     "sequence_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "ams_id": {
       "section": "print",
-      "type": "string",
+      "type": "integer",
       "description": "",
       "enum_ref": "virtual_ids",
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "slot_id": {
       "section": "print",
-      "type": "string",
+      "type": "integer",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     }
   },
   "sections": {
@@ -45,28 +50,32 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "ams_get_rfid"
+        "default": "ams_get_rfid",
+        "conditional": false
       },
       "sequence_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "ams_id": {
         "section": "print",
-        "type": "string",
+        "type": "integer",
         "description": "",
         "enum_ref": "virtual_ids",
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "slot_id": {
         "section": "print",
-        "type": "string",
+        "type": "integer",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       }
     }
   }

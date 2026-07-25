@@ -2,9 +2,10 @@
   "filament_id": "GFG60",
   "filament_name": "PolyLite PETG @base",
   "filament_type": "PETG",
-  "nozzle_temp_min": 255,
-  "nozzle_temp_max": 255,
-  "bed_temp": 80,
+  "nozzle_temp_min": 220,
+  "nozzle_temp_max": 260,
+  "bed_temp": 70,
   "color": "",
-  "is_bambu": false
+  "is_bambu": true,
+  "nozzle_temp_recommended": 255
 }

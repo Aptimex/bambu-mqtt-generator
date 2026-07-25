@@ -2,17 +2,17 @@
   "command": "delete_pa_calibration",
   "category": "print",
   "required_fields": [
-    "sequence_id"
-  ],
-  "optional_fields": [
-    "command",
+    "sequence_id",
     "extruder_id",
     "nozzle_id",
     "filament_id",
     "cali_idx",
-    "nozzle_pos",
-    "nozzle_sn",
     "nozzle_diameter"
+  ],
+  "optional_fields": [
+    "command",
+    "nozzle_pos",
+    "nozzle_sn"
   ],
   "field_definitions": {
     "command": {
@@ -20,63 +20,72 @@
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "extrusion_cali_del"
+      "default": "extrusion_cali_del",
+      "conditional": false
     },
     "sequence_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "extruder_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": "extruder_id",
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "nozzle_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "filament_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "cali_idx": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "nozzle_pos": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": true
     },
     "nozzle_sn": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": true
     },
     "nozzle_diameter": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     }
   },
   "sections": {
@@ -86,63 +95,72 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "extrusion_cali_del"
+        "default": "extrusion_cali_del",
+        "conditional": false
       },
       "sequence_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "extruder_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": "extruder_id",
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "nozzle_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "filament_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "cali_idx": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "nozzle_pos": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": true
       },
       "nozzle_sn": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": true
       },
       "nozzle_diameter": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       }
     }
   }

@@ -6,16 +6,16 @@
     "ams_id",
     "slot_id",
     "tray_id",
+    "tray_info_idx",
     "setting_id",
     "tray_color",
     "nozzle_temp_min",
     "nozzle_temp_max",
-    "tray_type",
-    "cols"
+    "tray_type"
   ],
   "optional_fields": [
     "command",
-    "tray_info_idx",
+    "cols",
     "ctype"
   ],
   "field_definitions": {
@@ -24,91 +24,104 @@
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "ams_filament_setting"
+      "default": "ams_filament_setting",
+      "conditional": false
     },
     "sequence_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "ams_id": {
       "section": "print",
-      "type": "string",
+      "type": "integer",
       "description": "",
       "enum_ref": "virtual_ids",
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "slot_id": {
       "section": "print",
-      "type": "string",
+      "type": "integer",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "tray_id": {
       "section": "print",
-      "type": "string",
+      "type": "integer",
       "description": "",
       "enum_ref": "virtual_ids",
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "tray_info_idx": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": "filament_presets",
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "setting_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "tray_color": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "nozzle_temp_min": {
       "section": "print",
-      "type": "string",
+      "type": "integer",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "nozzle_temp_max": {
       "section": "print",
-      "type": "string",
+      "type": "integer",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "tray_type": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": "filament_type",
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "cols": {
       "section": "print",
-      "type": "string",
+      "type": "array",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": true
     },
     "ctype": {
       "section": "print",
-      "type": "string",
+      "type": "integer",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": true
     }
   },
   "sections": {
@@ -118,91 +131,104 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "ams_filament_setting"
+        "default": "ams_filament_setting",
+        "conditional": false
       },
       "sequence_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "ams_id": {
         "section": "print",
-        "type": "string",
+        "type": "integer",
         "description": "",
         "enum_ref": "virtual_ids",
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "slot_id": {
         "section": "print",
-        "type": "string",
+        "type": "integer",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "tray_id": {
         "section": "print",
-        "type": "string",
+        "type": "integer",
         "description": "",
         "enum_ref": "virtual_ids",
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "tray_info_idx": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": "filament_presets",
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "setting_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "tray_color": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "nozzle_temp_min": {
         "section": "print",
-        "type": "string",
+        "type": "integer",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "nozzle_temp_max": {
         "section": "print",
-        "type": "string",
+        "type": "integer",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "tray_type": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": "filament_type",
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "cols": {
         "section": "print",
-        "type": "string",
+        "type": "array",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": true
       },
       "ctype": {
         "section": "print",
-        "type": "string",
+        "type": "integer",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": true
       }
     }
   }

@@ -108,16 +108,7 @@
         "bed_temperature_limit": 110,
         "nozzle_max_temperature": 320,
         "support_ams_ext_mix_print": true,
-        "support_ams_filament_change_abort": true,
-        "ams_response_format": "p1p",
-        "ams_format_details": {
-          "external_spool_key": "vt_tray",
-          "ams_array_key": "ams",
-          "ams_id_key": "id",
-          "tray_array_key": "tray",
-          "tray_id_key": "id",
-          "has_vir_slot": false
-        }
+        "support_ams_filament_change_abort": true
       },
       "fan": {
         "-1": {
@@ -219,16 +210,7 @@
         "bed_temperature_limit": 110,
         "nozzle_max_temperature": 320,
         "support_ams_ext_mix_print": true,
-        "support_ams_filament_change_abort": true,
-        "ams_response_format": "p1p",
-        "ams_format_details": {
-          "external_spool_key": "vt_tray",
-          "ams_array_key": "ams",
-          "ams_id_key": "id",
-          "tray_array_key": "tray",
-          "tray_id_key": "id",
-          "has_vir_slot": false
-        }
+        "support_ams_filament_change_abort": true
       },
       "fan": {
         "-1": {

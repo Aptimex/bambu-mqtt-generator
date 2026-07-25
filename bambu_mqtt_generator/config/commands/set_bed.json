@@ -2,11 +2,11 @@
   "command": "set_bed",
   "category": "print",
   "required_fields": [
-    "command",
+    "temp",
     "sequence_id"
   ],
   "optional_fields": [
-    "temp"
+    "command"
   ],
   "field_definitions": {
     "command": {
@@ -14,21 +14,24 @@
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "set_bed_temp"
+      "default": "set_bed_temp",
+      "conditional": false
     },
     "temp": {
       "section": "print",
-      "type": "string",
+      "type": "integer",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "sequence_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     }
   },
   "sections": {
@@ -38,21 +41,24 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "set_bed_temp"
+        "default": "set_bed_temp",
+        "conditional": false
       },
       "temp": {
         "section": "print",
-        "type": "string",
+        "type": "integer",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "sequence_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       }
     }
   }

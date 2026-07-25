@@ -3,11 +3,11 @@
   "category": "print",
   "required_fields": [
     "sequence_id",
-    "tray_id"
+    "tray_id",
+    "nozzle_diameter"
   ],
   "optional_fields": [
-    "command",
-    "nozzle_diameter"
+    "command"
   ],
   "field_definitions": {
     "command": {
@@ -15,28 +15,32 @@
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "flowrate_cali"
+      "default": "flowrate_cali",
+      "conditional": false
     },
     "sequence_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "tray_id": {
       "section": "print",
-      "type": "array",
+      "type": "string",
       "description": "",
       "enum_ref": "virtual_ids",
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "nozzle_diameter": {
       "section": "print",
-      "type": "array",
+      "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     }
   },
   "sections": {
@@ -46,28 +50,32 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "flowrate_cali"
+        "default": "flowrate_cali",
+        "conditional": false
       },
       "sequence_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "tray_id": {
         "section": "print",
-        "type": "array",
+        "type": "string",
         "description": "",
         "enum_ref": "virtual_ids",
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "nozzle_diameter": {
         "section": "print",
-        "type": "array",
+        "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       }
     }
   }

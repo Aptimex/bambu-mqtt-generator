@@ -1,18 +1,8 @@
 [
   {
-    "command": "ack_proceed",
-    "category": "print",
-    "file": "ack_proceed.json"
-  },
-  {
     "command": "ams_air_print_detect",
     "category": "print",
     "file": "ams_air_print_detect.json"
-  },
-  {
-    "command": "ams_calibrate",
-    "category": "print",
-    "file": "ams_calibrate.json"
   },
   {
     "command": "ams_change_filament",
@@ -35,19 +25,9 @@
     "file": "ams_filament_settings.json"
   },
   {
-    "command": "ams_refresh_rfid",
-    "category": "print",
-    "file": "ams_refresh_rfid.json"
-  },
-  {
     "command": "ams_refresh_rfid2",
     "category": "print",
     "file": "ams_refresh_rfid2.json"
-  },
-  {
-    "command": "ams_select_tray",
-    "category": "print",
-    "file": "ams_select_tray.json"
   },
   {
     "command": "ams_switch_filament",
@@ -88,6 +68,11 @@
     "command": "extrusion_cali_set",
     "category": "print",
     "file": "extrusion_cali_set.json"
+  },
+  {
+    "command": "gcode_line",
+    "category": "print",
+    "file": "gcode_line.json"
   },
   {
     "command": "get_access_code",
@@ -185,11 +170,6 @@
     "file": "set_bed.json"
   },
   {
-    "command": "set_nozzle",
-    "category": "print",
-    "file": "set_nozzle.json"
-  },
-  {
     "command": "set_nozzle_new",
     "category": "print",
     "file": "set_nozzle_new.json"
@@ -233,11 +213,6 @@
     "command": "stop_buzzer",
     "category": "print",
     "file": "stop_buzzer.json"
-  },
-  {
-    "command": "stop_extrusion_cali",
-    "category": "print",
-    "file": "stop_extrusion_cali.json"
   },
   {
     "command": "task_abort",

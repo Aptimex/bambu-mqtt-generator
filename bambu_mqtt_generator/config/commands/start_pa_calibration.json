@@ -2,12 +2,12 @@
   "command": "start_pa_calibration",
   "category": "print",
   "required_fields": [
-    "sequence_id"
-  ],
-  "optional_fields": [
-    "command",
+    "sequence_id",
     "nozzle_diameter",
     "mode"
+  ],
+  "optional_fields": [
+    "command"
   ],
   "field_definitions": {
     "command": {
@@ -15,28 +15,32 @@
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "extrusion_cali"
+      "default": "extrusion_cali",
+      "conditional": false
     },
     "sequence_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "nozzle_diameter": {
-      "section": "print",
-      "type": "array",
-      "description": "",
-      "enum_ref": null,
-      "default": null
-    },
-    "mode": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
+    },
+    "mode": {
+      "section": "print",
+      "type": "integer",
+      "description": "",
+      "enum_ref": null,
+      "default": null,
+      "conditional": false
     }
   },
   "sections": {
@@ -46,28 +50,32 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "extrusion_cali"
+        "default": "extrusion_cali",
+        "conditional": false
       },
       "sequence_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "nozzle_diameter": {
-        "section": "print",
-        "type": "array",
-        "description": "",
-        "enum_ref": null,
-        "default": null
-      },
-      "mode": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
+      },
+      "mode": {
+        "section": "print",
+        "type": "integer",
+        "description": "",
+        "enum_ref": null,
+        "default": null,
+        "conditional": false
       }
     }
   }

@@ -2,11 +2,11 @@
   "command": "ams_air_print_detect",
   "category": "print",
   "required_fields": [
-    "sequence_id"
+    "sequence_id",
+    "air_print_detect"
   ],
   "optional_fields": [
-    "command",
-    "air_print_detect"
+    "command"
   ],
   "field_definitions": {
     "command": {
@@ -14,21 +14,24 @@
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "print_option"
+      "default": "print_option",
+      "conditional": false
     },
     "sequence_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "air_print_detect": {
       "section": "print",
-      "type": "string",
+      "type": "boolean",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     }
   },
   "sections": {
@@ -38,21 +41,24 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "print_option"
+        "default": "print_option",
+        "conditional": false
       },
       "sequence_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "air_print_detect": {
         "section": "print",
-        "type": "string",
+        "type": "boolean",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       }
     }
   }

@@ -1,10 +1,11 @@
 {
   "filament_id": "GFN05",
   "filament_name": "Bambu PA6-CF @base",
-  "filament_type": "PA",
-  "nozzle_temp_min": 290,
-  "nozzle_temp_max": 290,
+  "filament_type": "PA6-CF",
+  "nozzle_temp_min": 260,
+  "nozzle_temp_max": 300,
   "bed_temp": 100,
   "color": "",
-  "is_bambu": true
+  "is_bambu": true,
+  "nozzle_temp_recommended": 275
 }

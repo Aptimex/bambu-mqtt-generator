@@ -1,15 +1,31 @@
 {
-  "command": "set_nozzle_new",
+  "command": "gcode_line",
   "category": "print",
   "required_fields": [
-    "sequence_id",
-    "extruder_index",
-    "target_temp"
+    "param",
+    "sequence_id"
   ],
   "optional_fields": [
-    "command"
+    "command",
+    "user_id"
   ],
   "field_definitions": {
+    "command": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": "gcode_line",
+      "conditional": false
+    },
+    "param": {
+      "section": "print",
+      "type": "string",
+      "description": "",
+      "enum_ref": null,
+      "default": null,
+      "conditional": false
+    },
     "sequence_id": {
       "section": "print",
       "type": "string",
@@ -18,33 +34,33 @@
       "default": null,
       "conditional": false
     },
-    "command": {
+    "user_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "set_nozzle_temp",
-      "conditional": false
-    },
-    "extruder_index": {
-      "section": "print",
-      "type": "integer",
-      "description": "",
-      "enum_ref": null,
       "default": null,
-      "conditional": false
-    },
-    "target_temp": {
-      "section": "print",
-      "type": "integer",
-      "description": "",
-      "enum_ref": null,
-      "default": null,
-      "conditional": false
+      "conditional": true
     }
   },
   "sections": {
     "print": {
+      "command": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": "gcode_line",
+        "conditional": false
+      },
+      "param": {
+        "section": "print",
+        "type": "string",
+        "description": "",
+        "enum_ref": null,
+        "default": null,
+        "conditional": false
+      },
       "sequence_id": {
         "section": "print",
         "type": "string",
@@ -53,29 +69,13 @@
         "default": null,
         "conditional": false
       },
-      "command": {
+      "user_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "set_nozzle_temp",
-        "conditional": false
-      },
-      "extruder_index": {
-        "section": "print",
-        "type": "integer",
-        "description": "",
-        "enum_ref": null,
         "default": null,
-        "conditional": false
-      },
-      "target_temp": {
-        "section": "print",
-        "type": "integer",
-        "description": "",
-        "enum_ref": null,
-        "default": null,
-        "conditional": false
+        "conditional": true
       }
     }
   }

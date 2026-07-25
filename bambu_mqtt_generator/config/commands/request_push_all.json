@@ -15,28 +15,32 @@
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "command": {
       "section": "pushing",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "pushall"
+      "default": "pushall",
+      "conditional": false
     },
     "version": {
       "section": "pushing",
       "type": "integer",
       "description": "",
       "enum_ref": null,
-      "default": 1
+      "default": 1,
+      "conditional": false
     },
     "push_target": {
       "section": "pushing",
       "type": "integer",
       "description": "",
       "enum_ref": null,
-      "default": 1
+      "default": 1,
+      "conditional": false
     }
   },
   "sections": {
@@ -46,28 +50,32 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "command": {
         "section": "pushing",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "pushall"
+        "default": "pushall",
+        "conditional": false
       },
       "version": {
         "section": "pushing",
         "type": "integer",
         "description": "",
         "enum_ref": null,
-        "default": 1
+        "default": 1,
+        "conditional": false
       },
       "push_target": {
         "section": "pushing",
         "type": "integer",
         "description": "",
         "enum_ref": null,
-        "default": 1
+        "default": 1,
+        "conditional": false
       }
     }
   }

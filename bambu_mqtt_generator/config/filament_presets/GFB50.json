@@ -1,10 +1,11 @@
 {
   "filament_id": "GFB50",
   "filament_name": "Bambu ABS-GF @base",
-  "filament_type": "ABS",
-  "nozzle_temp_min": 270,
-  "nozzle_temp_max": 270,
+  "filament_type": "ABS-GF",
+  "nozzle_temp_min": 240,
+  "nozzle_temp_max": 280,
   "bed_temp": 90,
   "color": "",
-  "is_bambu": true
+  "is_bambu": true,
+  "nozzle_temp_recommended": 270
 }

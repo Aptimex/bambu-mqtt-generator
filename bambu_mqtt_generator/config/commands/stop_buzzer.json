@@ -14,21 +14,24 @@
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "buzzer_ctrl"
+      "default": "buzzer_ctrl",
+      "conditional": false
     },
     "mode": {
       "section": "print",
       "type": "integer",
       "description": "",
       "enum_ref": null,
-      "default": 0
+      "default": 0,
+      "conditional": false
     },
     "sequence_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     }
   },
   "sections": {
@@ -38,21 +41,24 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "buzzer_ctrl"
+        "default": "buzzer_ctrl",
+        "conditional": false
       },
       "mode": {
         "section": "print",
         "type": "integer",
         "description": "",
         "enum_ref": null,
-        "default": 0
+        "default": 0,
+        "conditional": false
       },
       "sequence_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       }
     }
   }

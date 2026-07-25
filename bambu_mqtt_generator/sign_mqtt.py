@@ -5,13 +5,17 @@ Based on the Bambu Connect certificate and private key publicly disclosed Januar
 Protocol reference: https://github.com/Doridian/OpenBambuAPI/blob/main/cloud-x509-auth.md
 
 Usage:
-    from bambu_mqtt_generator import PayloadBuilder, load_config
-    from bambu_mqtt_generator.sign_mqtt import sign_payload, build_app_cert_install, MQTTSigner
-    
+    from bambu_mqtt_generator import (
+        ExternalSpool, MQTTSigner, build_app_cert_install, get_payload_builder,
+        sign_payload,
+    )
+
+
     # Build payload using PayloadBuilder
-    config = load_config()
-    builder = config.get_payload_builder("X1 Carbon", "01.05.06.06")
-    payload = builder.build_ams_filament_setting(ams_id=255, tray_id=254, ...)
+    builder = get_payload_builder("X1 Carbon", "01.05.06.06")
+    payload = builder.build_filament_setting(
+        tray_info_idx="GFA00", tray_color="00FF00", ams_id=ExternalSpool.MAIN,
+    )
     
     # Sign the payload for printers requiring message signing
     # User must provide their own cert/key (e.g., from Bambu Connect)
@@ -78,14 +82,14 @@ def sign_payload(
     and return the EXACT wire bytes (as a str) that BambuStudio publishes.
 
     Canonical bytes-to-sign (per OpenBambuAPI cloud-x509-auth.md):
-        bytes_to_sign = b'{"print":' + json.dumps(payload[top_key],
+        bytes_to_sign = b'{"<top_key>":' + json.dumps(payload[top_key],
                             sort_keys=True, separators=(",", ":")) + b'}'
 
     Only the top-level command object (e.g., "print") is signed — no
     user_id or other envelope fields are included in the signed content.
 
     The published wire message is compact JSON, header-first, with the
-    "print" object byte-identical to the canonical signed bytes:
+    command object byte-identical to the canonical signed bytes:
         {"header":<compact sorted header>,"print":<canonical inner>}
     BambuStudio does NOT include a top-level user_id field.
     """
@@ -95,8 +99,9 @@ def sign_payload(
         payload[top_key], sort_keys=True, separators=(",", ":")
     )
     canonical_inner_bytes = canonical_inner.encode("utf-8")
-    # Always sign with "print" as the key (Bambu protocol expects "print" on wire)
-    payload_bytes = b'{"print":' + canonical_inner_bytes + b"}"
+    payload_bytes = (
+        b'{"' + top_key.encode() + b'":' + canonical_inner_bytes + b"}"
+    )
 
     key = load_pem_private_key(private_key_pem.encode(), password=None)
     signature = key.sign(payload_bytes, padding.PKCS1v15(), hashes.SHA256())
@@ -111,11 +116,47 @@ def sign_payload(
     }
     header_json = json.dumps(header, sort_keys=True, separators=(",", ":"))
 
-    # Wire format always uses "print" as the top-level key
+    # Header first; the command object must be byte-identical to the signed bytes.
     return (
         '{"header":' + header_json
-        + ',"print":' + canonical_inner + "}"
+        + ',"' + top_key + '":' + canonical_inner + "}"
     )
+
+
+# ─── Signature / certificate error codes ─────────────────────────────────────
+# Returned by the printer as {"err_code": <code>, "reason": "...",
+# "result": "failed", ...} inside the "print" or "security" scope when a signed
+# command is rejected for signing-related reasons.
+
+ERROR_CODES = {
+    84033543: 'command was not wrapped in the signature block (no "header" field '
+              "at all) for a command type that requires one. No reason field "
+              "accompanies this one.",
+    84033545: "no app-cert registered for this cert_id (cold state) — printer "
+              "needs an app_cert_install bootstrap for this cert (e.g. after a "
+              "power-cycle).",
+    84033546: "malformed payload — bad JSON, a missing/invalid field, etc. "
+              "Checked before any signing-related validation, so it can mask "
+              "other errors.",
+    84033547: "cert-chain/CRL registration is incomplete or invalid (e.g. a "
+              "truncated chain, or the bootstrap omitted the CRL) — the "
+              "signature itself may be fine.",
+    84033548: "the signature bytes don't verify against an otherwise-valid "
+              "registration.",
+}
+
+
+def describe_error(err_code: Optional[int]) -> Optional[str]:
+    """
+    Return a human-readable description for a printer err_code, or None if the
+    code is unknown / not an error.
+
+    Args:
+        err_code: The err_code value from a printer response.
+    """
+    if not err_code:
+        return None
+    return ERROR_CODES.get(err_code)
 
 
 def build_app_cert_install(

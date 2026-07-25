@@ -3,12 +3,12 @@
   "category": "print",
   "required_fields": [
     "sequence_id",
+    "curr_temp",
+    "tar_temp",
     "ams_id"
   ],
   "optional_fields": [
     "command",
-    "curr_temp",
-    "tar_temp",
     "target",
     "slot_id",
     "extruder_id"
@@ -19,56 +19,64 @@
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "ams_change_filament"
+      "default": "ams_change_filament",
+      "conditional": false
     },
     "sequence_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "curr_temp": {
       "section": "print",
-      "type": "string",
+      "type": "integer",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "tar_temp": {
       "section": "print",
-      "type": "string",
+      "type": "integer",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "ams_id": {
       "section": "print",
-      "type": "string",
+      "type": "integer",
       "description": "",
       "enum_ref": "virtual_ids",
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "target": {
       "section": "print",
       "type": "integer",
       "description": "",
       "enum_ref": null,
-      "default": 255
+      "default": 255,
+      "conditional": true
     },
     "slot_id": {
       "section": "print",
       "type": "integer",
       "description": "",
       "enum_ref": null,
-      "default": 255
+      "default": 255,
+      "conditional": true
     },
     "extruder_id": {
       "section": "print",
-      "type": "string",
+      "type": "integer",
       "description": "",
       "enum_ref": "extruder_id",
-      "default": null
+      "default": null,
+      "conditional": true
     }
   },
   "sections": {
@@ -78,56 +86,64 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "ams_change_filament"
+        "default": "ams_change_filament",
+        "conditional": false
       },
       "sequence_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "curr_temp": {
         "section": "print",
-        "type": "string",
+        "type": "integer",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "tar_temp": {
         "section": "print",
-        "type": "string",
+        "type": "integer",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "ams_id": {
         "section": "print",
-        "type": "string",
+        "type": "integer",
         "description": "",
         "enum_ref": "virtual_ids",
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "target": {
         "section": "print",
         "type": "integer",
         "description": "",
         "enum_ref": null,
-        "default": 255
+        "default": 255,
+        "conditional": true
       },
       "slot_id": {
         "section": "print",
         "type": "integer",
         "description": "",
         "enum_ref": null,
-        "default": 255
+        "default": 255,
+        "conditional": true
       },
       "extruder_id": {
         "section": "print",
-        "type": "string",
+        "type": "integer",
         "description": "",
         "enum_ref": "extruder_id",
-        "default": null
+        "default": null,
+        "conditional": true
       }
     }
   }

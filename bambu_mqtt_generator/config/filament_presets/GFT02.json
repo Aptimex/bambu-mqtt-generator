@@ -1,10 +1,11 @@
 {
   "filament_id": "GFT02",
   "filament_name": "Bambu PPS-CF @base",
-  "filament_type": "TPU",
-  "nozzle_temp_min": 320,
-  "nozzle_temp_max": 320,
+  "filament_type": "PPS-CF",
+  "nozzle_temp_min": 310,
+  "nozzle_temp_max": 340,
   "bed_temp": 110,
   "color": "",
-  "is_bambu": true
+  "is_bambu": true,
+  "nozzle_temp_recommended": 320
 }

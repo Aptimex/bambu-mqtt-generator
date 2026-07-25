@@ -102,16 +102,7 @@
         "support_user_preset": false,
         "support_ams_ext_mix_print": true,
         "support_ams_filament_change_abort": true,
-        "support_build_plate_marker_detect_type": 1,
-        "ams_response_format": "x1c",
-        "ams_format_details": {
-          "external_spool_key": "vir_slot",
-          "ams_array_key": "ams",
-          "ams_id_key": "id",
-          "tray_array_key": "tray",
-          "tray_id_key": "id",
-          "has_vir_slot": true
-        }
+        "support_build_plate_marker_detect_type": 1
       },
       "fan": {
         "-1": {
@@ -205,16 +196,7 @@
         "support_extrusion_cali": false,
         "support_user_preset": false,
         "support_ams_ext_mix_print": true,
-        "support_ams_filament_change_abort": true,
-        "ams_response_format": "x1c",
-        "ams_format_details": {
-          "external_spool_key": "vir_slot",
-          "ams_array_key": "ams",
-          "ams_id_key": "id",
-          "tray_array_key": "tray",
-          "tray_id_key": "id",
-          "has_vir_slot": true
-        }
+        "support_ams_filament_change_abort": true
       },
       "fan": {
         "-1": {
@@ -308,16 +290,7 @@
         "support_extrusion_cali": false,
         "support_user_preset": false,
         "support_ams_ext_mix_print": true,
-        "support_ams_filament_change_abort": true,
-        "ams_response_format": "x1c",
-        "ams_format_details": {
-          "external_spool_key": "vir_slot",
-          "ams_array_key": "ams",
-          "ams_id_key": "id",
-          "tray_array_key": "tray",
-          "tray_id_key": "id",
-          "has_vir_slot": true
-        }
+        "support_ams_filament_change_abort": true
       },
       "fan": {
         "-1": {
@@ -412,16 +385,7 @@
         "support_extrusion_cali": false,
         "support_user_preset": false,
         "support_ams_ext_mix_print": true,
-        "support_ams_filament_change_abort": true,
-        "ams_response_format": "x1c",
-        "ams_format_details": {
-          "external_spool_key": "vir_slot",
-          "ams_array_key": "ams",
-          "ams_id_key": "id",
-          "tray_array_key": "tray",
-          "tray_id_key": "id",
-          "has_vir_slot": true
-        }
+        "support_ams_filament_change_abort": true
       },
       "fan": {
         "-1": {
@@ -515,16 +479,7 @@
         "support_extrusion_cali": false,
         "support_user_preset": true,
         "support_ams_ext_mix_print": true,
-        "support_ams_filament_change_abort": true,
-        "ams_response_format": "x1c",
-        "ams_format_details": {
-          "external_spool_key": "vir_slot",
-          "ams_array_key": "ams",
-          "ams_id_key": "id",
-          "tray_array_key": "tray",
-          "tray_id_key": "id",
-          "has_vir_slot": true
-        }
+        "support_ams_filament_change_abort": true
       },
       "fan": {
         "-1": {
@@ -618,16 +573,7 @@
         "support_extrusion_cali": false,
         "support_user_preset": false,
         "support_ams_ext_mix_print": true,
-        "support_ams_filament_change_abort": true,
-        "ams_response_format": "x1c",
-        "ams_format_details": {
-          "external_spool_key": "vir_slot",
-          "ams_array_key": "ams",
-          "ams_id_key": "id",
-          "tray_array_key": "tray",
-          "tray_id_key": "id",
-          "has_vir_slot": true
-        }
+        "support_ams_filament_change_abort": true
       },
       "fan": {
         "-1": {

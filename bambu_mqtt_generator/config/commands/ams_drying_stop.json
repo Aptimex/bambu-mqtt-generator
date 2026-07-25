@@ -13,14 +13,16 @@
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "auto_stop_ams_dry"
+      "default": "auto_stop_ams_dry",
+      "conditional": false
     },
     "sequence_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     }
   },
   "sections": {
@@ -30,14 +32,16 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "auto_stop_ams_dry"
+        "default": "auto_stop_ams_dry",
+        "conditional": false
       },
       "sequence_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       }
     }
   }

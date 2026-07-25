@@ -2,13 +2,13 @@
   "command": "hms_stop",
   "category": "print",
   "required_fields": [
+    "err",
+    "job_id",
     "sequence_id"
   ],
   "optional_fields": [
     "command",
-    "err",
-    "param",
-    "job_id"
+    "param"
   ],
   "field_definitions": {
     "command": {
@@ -16,35 +16,40 @@
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "stop"
+      "default": "stop",
+      "conditional": false
     },
     "err": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "param": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "reserve"
+      "default": "reserve",
+      "conditional": false
     },
     "job_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "sequence_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     }
   },
   "sections": {
@@ -54,35 +59,40 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "stop"
+        "default": "stop",
+        "conditional": false
       },
       "err": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "param": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "reserve"
+        "default": "reserve",
+        "conditional": false
       },
       "job_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "sequence_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       }
     }
   }

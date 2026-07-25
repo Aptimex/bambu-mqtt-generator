@@ -1,10 +1,11 @@
 {
   "filament_id": "GFT97",
   "filament_name": "Generic PPS @base",
-  "filament_type": "TPU",
-  "nozzle_temp_min": 320,
-  "nozzle_temp_max": 320,
+  "filament_type": "PPS",
+  "nozzle_temp_min": 300,
+  "nozzle_temp_max": 340,
   "bed_temp": 110,
   "color": "",
-  "is_bambu": false
+  "is_bambu": true,
+  "nozzle_temp_recommended": 320
 }

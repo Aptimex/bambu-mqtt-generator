@@ -3,11 +3,11 @@
   "category": "print",
   "required_fields": [
     "sequence_id",
-    "command"
-  ],
-  "optional_fields": [
     "storage",
     "total_layer"
+  ],
+  "optional_fields": [
+    "command"
   ],
   "field_definitions": {
     "sequence_id": {
@@ -15,28 +15,32 @@
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "command": {
       "section": "camera",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "ipcam_delete_oldest_timelapse"
+      "default": "ipcam_delete_oldest_timelapse",
+      "conditional": false
     },
     "storage": {
       "section": "camera",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "total_layer": {
       "section": "camera",
-      "type": "string",
+      "type": "integer",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     }
   },
   "sections": {
@@ -46,28 +50,32 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "command": {
         "section": "camera",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "ipcam_delete_oldest_timelapse"
+        "default": "ipcam_delete_oldest_timelapse",
+        "conditional": false
       },
       "storage": {
         "section": "camera",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "total_layer": {
         "section": "camera",
-        "type": "string",
+        "type": "integer",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       }
     }
   }

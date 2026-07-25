@@ -3,15 +3,15 @@
   "category": "print",
   "required_fields": [
     "sequence_id",
-    "setting_id"
-  ],
-  "optional_fields": [
-    "command",
     "tray_id",
-    "name",
+    "setting_id",
     "nozzle_temp",
     "bed_temp",
     "max_volumetric_speed"
+  ],
+  "optional_fields": [
+    "command",
+    "name"
   ],
   "field_definitions": {
     "command": {
@@ -19,56 +19,64 @@
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "extrusion_cali"
+      "default": "extrusion_cali",
+      "conditional": false
     },
     "sequence_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "tray_id": {
       "section": "print",
-      "type": "string",
+      "type": "integer",
       "description": "",
       "enum_ref": "virtual_ids",
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "setting_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "name": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": ""
+      "default": "",
+      "conditional": false
     },
     "nozzle_temp": {
       "section": "print",
-      "type": "string",
+      "type": "integer",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "bed_temp": {
       "section": "print",
-      "type": "string",
+      "type": "integer",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "max_volumetric_speed": {
       "section": "print",
-      "type": "string",
+      "type": "number",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     }
   },
   "sections": {
@@ -78,56 +86,64 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "extrusion_cali"
+        "default": "extrusion_cali",
+        "conditional": false
       },
       "sequence_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "tray_id": {
         "section": "print",
-        "type": "string",
+        "type": "integer",
         "description": "",
         "enum_ref": "virtual_ids",
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "setting_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "name": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": ""
+        "default": "",
+        "conditional": false
       },
       "nozzle_temp": {
         "section": "print",
-        "type": "string",
+        "type": "integer",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "bed_temp": {
         "section": "print",
-        "type": "string",
+        "type": "integer",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "max_volumetric_speed": {
         "section": "print",
-        "type": "string",
+        "type": "number",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       }
     }
   }

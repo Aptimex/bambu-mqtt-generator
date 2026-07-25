@@ -89,16 +89,7 @@
         "support_ams_settings_reorder": true,
         "support_ams_settings_hide_image": true,
         "support_high_tempbed_calibration": true,
-        "support_print_time_estimate_warning": true,
-        "ams_response_format": "standard",
-        "ams_format_details": {
-          "external_spool_key": "vt_tray",
-          "ams_array_key": "ams",
-          "ams_id_key": "id",
-          "tray_array_key": "tray",
-          "tray_id_key": "id",
-          "has_vir_slot": false
-        }
+        "support_print_time_estimate_warning": true
       },
       "model_id": "N9",
       "compatible_machine": [],
@@ -184,16 +175,7 @@
         "support_ams_settings_reorder": true,
         "support_ams_settings_hide_image": true,
         "support_high_tempbed_calibration": true,
-        "support_print_time_estimate_warning": true,
-        "ams_response_format": "standard",
-        "ams_format_details": {
-          "external_spool_key": "vt_tray",
-          "ams_array_key": "ams",
-          "ams_id_key": "id",
-          "tray_array_key": "tray",
-          "tray_id_key": "id",
-          "has_vir_slot": false
-        }
+        "support_print_time_estimate_warning": true
       },
       "model_id": "N9",
       "compatible_machine": [],

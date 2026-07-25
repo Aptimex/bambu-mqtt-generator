@@ -1,10 +1,11 @@
 {
   "filament_id": "GFN99",
-  "filament_name": "Generic PA @Anker",
+  "filament_name": "Generic PA @base",
   "filament_type": "PA",
-  "nozzle_temp_min": 290,
-  "nozzle_temp_max": 290,
+  "nozzle_temp_min": 240,
+  "nozzle_temp_max": 280,
   "bed_temp": 100,
   "color": "",
-  "is_bambu": false
+  "is_bambu": true,
+  "nozzle_temp_recommended": 260
 }

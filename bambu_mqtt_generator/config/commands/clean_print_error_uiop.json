@@ -2,15 +2,15 @@
   "command": "clean_print_error_uiop",
   "category": "print",
   "required_fields": [
-    "sequence_id"
+    "sequence_id",
+    "err"
   ],
   "optional_fields": [
     "command",
     "name",
     "action",
     "source",
-    "type",
-    "err"
+    "type"
   ],
   "field_definitions": {
     "command": {
@@ -18,49 +18,56 @@
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "uiop"
+      "default": "uiop",
+      "conditional": false
     },
     "sequence_id": {
       "section": "system",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "name": {
       "section": "system",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "print_error"
+      "default": "print_error",
+      "conditional": false
     },
     "action": {
       "section": "system",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "close"
+      "default": "close",
+      "conditional": false
     },
     "source": {
       "section": "system",
       "type": "integer",
       "description": "",
       "enum_ref": null,
-      "default": 1
+      "default": 1,
+      "conditional": false
     },
     "type": {
       "section": "system",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "dialog"
+      "default": "dialog",
+      "conditional": false
     },
     "err": {
       "section": "system",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     }
   },
   "sections": {
@@ -70,49 +77,56 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "uiop"
+        "default": "uiop",
+        "conditional": false
       },
       "sequence_id": {
         "section": "system",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "name": {
         "section": "system",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "print_error"
+        "default": "print_error",
+        "conditional": false
       },
       "action": {
         "section": "system",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "close"
+        "default": "close",
+        "conditional": false
       },
       "source": {
         "section": "system",
         "type": "integer",
         "description": "",
         "enum_ref": null,
-        "default": 1
+        "default": 1,
+        "conditional": false
       },
       "type": {
         "section": "system",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "dialog"
+        "default": "dialog",
+        "conditional": false
       },
       "err": {
         "section": "system",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       }
     }
   }

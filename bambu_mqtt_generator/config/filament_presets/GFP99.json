@@ -1,10 +1,11 @@
 {
   "filament_id": "GFP99",
   "filament_name": "Generic PE @base",
-  "filament_type": "PVA",
-  "nozzle_temp_min": 220,
+  "filament_type": "PE",
+  "nozzle_temp_min": 175,
   "nozzle_temp_max": 220,
   "bed_temp": 55,
   "color": "",
-  "is_bambu": false
+  "is_bambu": true,
+  "nozzle_temp_recommended": 210
 }

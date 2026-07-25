@@ -2,11 +2,11 @@
   "command": "task_partskip",
   "category": "print",
   "required_fields": [
+    "obj_list",
     "sequence_id"
   ],
   "optional_fields": [
-    "command",
-    "obj_list"
+    "command"
   ],
   "field_definitions": {
     "command": {
@@ -14,21 +14,24 @@
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": "skip_objects"
+      "default": "skip_objects",
+      "conditional": false
     },
     "obj_list": {
       "section": "print",
-      "type": "string",
+      "type": "array",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "sequence_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     }
   },
   "sections": {
@@ -38,21 +41,24 @@
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": "skip_objects"
+        "default": "skip_objects",
+        "conditional": false
       },
       "obj_list": {
         "section": "print",
-        "type": "string",
+        "type": "array",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "sequence_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       }
     }
   }

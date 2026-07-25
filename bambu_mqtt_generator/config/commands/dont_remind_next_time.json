@@ -2,57 +2,63 @@
   "command": "dont_remind_next_time",
   "category": "print",
   "required_fields": [
+    "command",
     "sequence_id"
   ],
   "optional_fields": [
-    "command",
     "err_ignored"
   ],
   "field_definitions": {
     "command": {
       "section": "print",
-      "type": "array",
+      "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "sequence_id": {
       "section": "print",
       "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": false
     },
     "err_ignored": {
       "section": "print",
-      "type": "array",
+      "type": "string",
       "description": "",
       "enum_ref": null,
-      "default": null
+      "default": null,
+      "conditional": true
     }
   },
   "sections": {
     "print": {
       "command": {
         "section": "print",
-        "type": "array",
+        "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "sequence_id": {
         "section": "print",
         "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": false
       },
       "err_ignored": {
         "section": "print",
-        "type": "array",
+        "type": "string",
         "description": "",
         "enum_ref": null,
-        "default": null
+        "default": null,
+        "conditional": true
       }
     }
   }

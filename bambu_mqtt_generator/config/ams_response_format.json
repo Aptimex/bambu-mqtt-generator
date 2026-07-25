@@ -1,0 +1,78 @@
+{
+  "detection": "runtime",
+  "note": "Bambu Studio applies one parser to every printer model and firmware and detects the shape at runtime. Do not branch on model id.",
+  "source": [
+    "src/slic3r/GUI/DeviceManager.cpp",
+    "src/slic3r/GUI/DeviceCore/DevFilaSystem.cpp",
+    "src/slic3r/GUI/DeviceCore/DevDefs.h"
+  ],
+  "ams": {
+    "container_key": "ams",
+    "array_key": "ams",
+    "id_key": "id",
+    "tray_array_key": "tray",
+    "tray_id_key": "id"
+  },
+  "external_spool": {
+    "keys": [
+      {
+        "key": "vir_slot",
+        "container": "array",
+        "id_source": "entry",
+        "comment": "Each entry carries its own id; 255 = main slot, 254 = deputy slot."
+      },
+      {
+        "key": "vt_tray",
+        "container": "object",
+        "id_source": "forced",
+        "forced_id": 255,
+        "comment": "The id reported by the printer is discarded and the slot is treated as the main slot (255). The A1 reports \"id\": \"254\" here but is still the main slot."
+      }
+    ],
+    "main_id": 255,
+    "deputy_id": 254,
+    "packed_id": {
+      "applies_when_id_greater_than": 255,
+      "ams_id_bits": [
+        8,
+        15
+      ],
+      "slot_id_bits": [
+        0,
+        7
+      ],
+      "decode": "(id >> 8) + (id & 0xff)"
+    }
+  },
+  "command_ids": {
+    "virtual_slot": {
+      "ams_id": [
+        255,
+        254
+      ],
+      "tray_id": 254,
+      "slot_id": 0
+    },
+    "physical_ams": {
+      "ams_id": "the 0-based AMS id as reported in push_status",
+      "tray_id": "equal to slot_id",
+      "slot_id": "the 0-based tray id as reported in push_status"
+    }
+  },
+  "verification": {
+    "verified": [
+      "external_spool_precedence",
+      "vir_slot_is_array",
+      "vt_tray_id_forced_to_main",
+      "vir_slot_ids_are_per_entry",
+      "packed_slot_id_decoding",
+      "ams_array_shape",
+      "ams_id_key",
+      "tray_array_key",
+      "tray_id_key",
+      "virtual_tray_command_id",
+      "physical_tray_command_id"
+    ],
+    "unverified": []
+  }
+}

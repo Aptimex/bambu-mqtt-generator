@@ -2,9 +2,10 @@
   "filament_id": "GFA17",
   "filament_name": "Bambu PLA Translucent @base",
   "filament_type": "PLA",
-  "nozzle_temp_min": 220,
-  "nozzle_temp_max": 220,
+  "nozzle_temp_min": 190,
+  "nozzle_temp_max": 240,
   "bed_temp": 55,
   "color": "",
-  "is_bambu": true
+  "is_bambu": true,
+  "nozzle_temp_recommended": 220
 }
