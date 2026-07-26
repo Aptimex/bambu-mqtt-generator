@@ -1,0 +1,11 @@
+{
+  "filament_id": "GFL52",
+  "filament_name": "Fiberon PA12-CF @base",
+  "filament_type": "PA-CF",
+  "nozzle_temp_min": 260,
+  "nozzle_temp_max": 300,
+  "bed_temp": 40,
+  "color": "",
+  "is_bambu": true,
+  "nozzle_temp_recommended": 300
+}

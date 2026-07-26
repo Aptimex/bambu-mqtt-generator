@@ -1,0 +1,11 @@
+{
+  "filament_id": "GFSNL08",
+  "filament_name": "SUNLU PETG @base",
+  "filament_type": "PETG",
+  "nozzle_temp_min": 230,
+  "nozzle_temp_max": 280,
+  "bed_temp": 60,
+  "color": "",
+  "is_bambu": true,
+  "nozzle_temp_recommended": 245
+}

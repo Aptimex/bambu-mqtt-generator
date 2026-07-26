@@ -1,0 +1,11 @@
+{
+  "filament_id": "GFL53",
+  "filament_name": "Fiberon PA612-CF @base",
+  "filament_type": "PA",
+  "nozzle_temp_min": 260,
+  "nozzle_temp_max": 300,
+  "bed_temp": 100,
+  "color": "",
+  "is_bambu": true,
+  "nozzle_temp_recommended": 290
+}

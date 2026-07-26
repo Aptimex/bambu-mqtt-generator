@@ -28,6 +28,23 @@ class AmbiguousPrinterNameError(ValueError):
         )
 
 
+class AmbiguousCommandNameError(ValueError):
+    """A wire command name maps to more than one command spec.
+
+    Several Bambu Studio operations can send the same `command` string with
+    different fields — three of them send `print_option`. The spec name is what
+    distinguishes them.
+    """
+
+    def __init__(self, name: str, spec_names: List[str]):
+        self.name = name
+        self.spec_names = list(spec_names)
+        super().__init__(
+            f"Command '{name}' is sent by more than one command spec: "
+            f"{', '.join(self.spec_names)}. Use one of those spec names instead."
+        )
+
+
 class ConfigLoader:
     """Loads and caches configuration files for payload generation.
 
@@ -154,6 +171,18 @@ class ConfigLoader:
     
     # --- Accessor methods ---
     
+    def resolve_model_id(self, identifier: str) -> Optional[str]:
+        """Resolve a model id or printer name to its canonical model id.
+
+        Both forms are case-insensitive and tolerate extra whitespace. Returns
+        None if the printer is unknown, which makes this the way to test whether
+        an identifier names a supported printer without catching an exception.
+
+        Raises:
+            AmbiguousPrinterNameError: the name belongs to several models.
+        """
+        return self._resolve_model_id(identifier)
+
     def get_printer(self, model_id: str) -> Optional[Dict]:
         """Get printer config by model ID (e.g., 'BL-P001', 'C11').
 
@@ -169,8 +198,53 @@ class ConfigLoader:
         return self._printer_index
     
     def get_command(self, command_name: str) -> Optional[Dict]:
-        """Get command spec by name."""
-        return self._commands.get(command_name)
+        """Get command spec by name.
+
+        Specs are keyed by the name Bambu Studio gives the operation, which is
+        not always the string that goes on the wire: the spec named
+        `ams_filament_settings` sends `command: "ams_filament_setting"`. Both
+        names resolve here, so callers can use whichever they know.
+
+        Raises:
+            AmbiguousCommandNameError: the wire name is sent by several specs,
+                so only a spec name can say which one is meant.
+        """
+        spec = self._commands.get(command_name)
+        if spec is not None:
+            return spec
+
+        if not hasattr(self, "_wire_command_lookup"):
+            self._wire_command_lookup, self._ambiguous_wire_commands = \
+                self._build_wire_command_map()
+
+        if command_name in self._ambiguous_wire_commands:
+            raise AmbiguousCommandNameError(
+                command_name, self._ambiguous_wire_commands[command_name]
+            )
+
+        return self._wire_command_lookup.get(command_name)
+
+    def _build_wire_command_map(self) -> Tuple[Dict[str, Dict], Dict[str, List[str]]]:
+        """Map wire command strings back to their specs.
+
+        The wire value is the default of a spec's own `command` field; the
+        spec's top-level `command` is the Bambu Studio operation name it is
+        keyed by. A wire name used by several specs is recorded as ambiguous
+        rather than resolved to whichever was seen first.
+        """
+        claims: Dict[str, List[str]] = {}
+        for name, spec in self._commands.items():
+            wire = spec.get("field_definitions", {}).get("command", {}).get("default")
+            # A real spec name always wins over an alias.
+            if not wire or wire == name or wire in self._commands:
+                continue
+            claims.setdefault(wire, []).append(name)
+
+        unique = {w: self._commands[names[0]]
+                  for w, names in claims.items() if len(names) == 1}
+        ambiguous = {w: sorted(names)
+                     for w, names in claims.items() if len(names) > 1}
+        return unique, ambiguous
     
     def get_enum(self, enum_name: str) -> Optional[Dict]:
         """Get enum values by name."""

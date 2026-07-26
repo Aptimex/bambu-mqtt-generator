@@ -6,6 +6,7 @@ a clean interface for generating valid MQTT payloads for printer commands.
 """
 
 from .config_loader import (
+    AmbiguousCommandNameError,
     AmbiguousPrinterNameError,
     ConfigLoader,
     load_config,
@@ -41,6 +42,7 @@ from .sign_mqtt import (
 __version__ = "1.0.0"
 
 __all__ = [
+    "AmbiguousCommandNameError",
     "AmbiguousPrinterNameError",
     "ConfigLoader",
     "load_config",

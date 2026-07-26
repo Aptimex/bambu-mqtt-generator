@@ -336,6 +336,55 @@
     "file": "GFL05.json"
   },
   {
+    "filament_id": "GFL06",
+    "filament_name": "Fiberon PETG-ESD @base",
+    "filament_type": "PETG",
+    "is_bambu": true,
+    "file": "GFL06.json"
+  },
+  {
+    "filament_id": "GFL50",
+    "filament_name": "Fiberon PA6-CF @base",
+    "filament_type": "PA6-CF",
+    "is_bambu": true,
+    "file": "GFL50.json"
+  },
+  {
+    "filament_id": "GFL51",
+    "filament_name": "Fiberon PA6-GF @base",
+    "filament_type": "PA-GF",
+    "is_bambu": true,
+    "file": "GFL51.json"
+  },
+  {
+    "filament_id": "GFL52",
+    "filament_name": "Fiberon PA12-CF @base",
+    "filament_type": "PA-CF",
+    "is_bambu": true,
+    "file": "GFL52.json"
+  },
+  {
+    "filament_id": "GFL53",
+    "filament_name": "Fiberon PA612-CF @base",
+    "filament_type": "PA",
+    "is_bambu": true,
+    "file": "GFL53.json"
+  },
+  {
+    "filament_id": "GFL54",
+    "filament_name": "Fiberon PET-CF @base",
+    "filament_type": "PET-CF",
+    "is_bambu": true,
+    "file": "GFL54.json"
+  },
+  {
+    "filament_id": "GFL55",
+    "filament_name": "Fiberon PETG-rCF @base",
+    "filament_type": "PETG-CF",
+    "is_bambu": true,
+    "file": "GFL55.json"
+  },
+  {
     "filament_id": "GFL95",
     "filament_name": "Generic PLA High Speed @base",
     "filament_type": "PLA",
@@ -544,6 +593,55 @@
     "filament_type": "PVA",
     "is_bambu": true,
     "file": "GFS99.json"
+  },
+  {
+    "filament_id": "GFSNL02",
+    "filament_name": "SUNLU PLA Matte @base",
+    "filament_type": "PLA",
+    "is_bambu": true,
+    "file": "GFSNL02.json"
+  },
+  {
+    "filament_id": "GFSNL03",
+    "filament_name": "SUNLU PLA+ @base",
+    "filament_type": "PLA",
+    "is_bambu": true,
+    "file": "GFSNL03.json"
+  },
+  {
+    "filament_id": "GFSNL04",
+    "filament_name": "SUNLU PLA+ 2.0 @base",
+    "filament_type": "PLA",
+    "is_bambu": true,
+    "file": "GFSNL04.json"
+  },
+  {
+    "filament_id": "GFSNL05",
+    "filament_name": "SUNLU Silk PLA+ @base",
+    "filament_type": "PLA",
+    "is_bambu": true,
+    "file": "GFSNL05.json"
+  },
+  {
+    "filament_id": "GFSNL06",
+    "filament_name": "SUNLU PLA Marble @base",
+    "filament_type": "PLA",
+    "is_bambu": true,
+    "file": "GFSNL06.json"
+  },
+  {
+    "filament_id": "GFSNL07",
+    "filament_name": "SUNLU Wood PLA @base",
+    "filament_type": "PLA",
+    "is_bambu": true,
+    "file": "GFSNL07.json"
+  },
+  {
+    "filament_id": "GFSNL08",
+    "filament_name": "SUNLU PETG @base",
+    "filament_type": "PETG",
+    "is_bambu": true,
+    "file": "GFSNL08.json"
   },
   {
     "filament_id": "GFT01",

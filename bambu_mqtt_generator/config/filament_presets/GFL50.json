@@ -1,0 +1,11 @@
+{
+  "filament_id": "GFL50",
+  "filament_name": "Fiberon PA6-CF @base",
+  "filament_type": "PA6-CF",
+  "nozzle_temp_min": 280,
+  "nozzle_temp_max": 300,
+  "bed_temp": 40,
+  "color": "",
+  "is_bambu": true,
+  "nozzle_temp_recommended": 300
+}
