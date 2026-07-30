@@ -242,7 +242,11 @@ class PayloadBuilder:
         if nozzle_temp_max is None:
             nozzle_temp_max = filament_preset.get("nozzle_temp_max", 0)
         if tray_type is None:
-            tray_type = filament_preset.get("filament_type", "")
+            # tray_type, not filament_type: support filaments are announced
+            # under a different name than their material (GFS00 is a PLA
+            # profile but goes out as "PLA-S"). Older configs have no
+            # tray_type, hence the fallback.
+            tray_type = filament_preset.get("tray_type") or filament_preset.get("filament_type", "")
         
         if ams_id in (VIRTUAL_AMS_MAIN_ID, VIRTUAL_AMS_DEPUTY_ID):
             # External spool: fixed virtual tray ids, any provided tray_id/
@@ -374,8 +378,24 @@ class PayloadBuilder:
         """Get default settings for a known filament preset."""
         return self.config.get_filament_preset(filament_id)
 
+    def get_tray_type(self, filament_id: str) -> Optional[str]:
+        """The tray_type a filament id is announced under, or None if unknown.
 
-# Convenience function
+        build_filament_setting() applies this automatically; call it directly
+        when a caller has a filament id and needs the type it implies — a
+        material name given alongside the id is not a substitute, since support
+        filaments are announced under a different name than their material.
+        """
+        return self.config.get_tray_type(filament_id)
+
+
+# Convenience functions
+def get_tray_type(filament_id: str) -> Optional[str]:
+    """The tray_type a filament id is announced under, using the default config."""
+    return load_config().get_tray_type(filament_id)
+
+
+
 def build_payload(command_name: str, **kwargs) -> Dict[str, Any]:
     """Quick payload builder using default config."""
     builder = PayloadBuilder()

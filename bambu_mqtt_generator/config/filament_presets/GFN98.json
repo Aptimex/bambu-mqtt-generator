@@ -2,6 +2,8 @@
   "filament_id": "GFN98",
   "filament_name": "Generic PA-CF @base",
   "filament_type": "PA-CF",
+  "tray_type": "PA-CF",
+  "is_support": false,
   "nozzle_temp_min": 260,
   "nozzle_temp_max": 300,
   "bed_temp": 100,

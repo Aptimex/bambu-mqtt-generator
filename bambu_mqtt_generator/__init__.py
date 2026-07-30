@@ -15,6 +15,7 @@ from .config_loader import (
 from .payload_builder import (
     PayloadBuilder,
     build_payload,
+    get_tray_type,
     ExternalSpool,
     VIRTUAL_TRAY_MAIN_ID,
     VIRTUAL_TRAY_DEPUTY_ID,
@@ -49,6 +50,7 @@ __all__ = [
     "PayloadBuilder",
     "build_payload",
     "get_payload_builder",
+    "get_tray_type",
     "ExternalSpool",
     "VIRTUAL_TRAY_MAIN_ID",
     "VIRTUAL_TRAY_DEPUTY_ID",

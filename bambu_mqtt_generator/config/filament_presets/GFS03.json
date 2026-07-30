@@ -2,6 +2,8 @@
   "filament_id": "GFS03",
   "filament_name": "Bambu Support For PA/PET @base",
   "filament_type": "PA",
+  "tray_type": "PA-S",
+  "is_support": true,
   "nozzle_temp_min": 260,
   "nozzle_temp_max": 300,
   "bed_temp": 100,

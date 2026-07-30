@@ -2,6 +2,8 @@
   "filament_id": "GFL50",
   "filament_name": "Fiberon PA6-CF @base",
   "filament_type": "PA6-CF",
+  "tray_type": "PA6-CF",
+  "is_support": false,
   "nozzle_temp_min": 280,
   "nozzle_temp_max": 300,
   "bed_temp": 40,

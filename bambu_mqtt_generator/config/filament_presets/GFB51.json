@@ -2,6 +2,8 @@
   "filament_id": "GFB51",
   "filament_name": "Bambu ASA-CF @base",
   "filament_type": "ASA-CF",
+  "tray_type": "ASA-CF",
+  "is_support": false,
   "nozzle_temp_min": 250,
   "nozzle_temp_max": 280,
   "bed_temp": 100,

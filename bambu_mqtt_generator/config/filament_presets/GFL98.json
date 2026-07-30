@@ -2,6 +2,8 @@
   "filament_id": "GFL98",
   "filament_name": "Generic PLA-CF @base",
   "filament_type": "PLA-CF",
+  "tray_type": "PLA-CF",
+  "is_support": false,
   "nozzle_temp_min": 190,
   "nozzle_temp_max": 240,
   "bed_temp": 55,

@@ -2,6 +2,8 @@
   "filament_id": "GFT97",
   "filament_name": "Generic PPS @base",
   "filament_type": "PPS",
+  "tray_type": "PPS",
+  "is_support": false,
   "nozzle_temp_min": 300,
   "nozzle_temp_max": 340,
   "bed_temp": 110,

@@ -2,6 +2,8 @@
   "filament_id": "GFR98",
   "filament_name": "Generic PHA @base",
   "filament_type": "PHA",
+  "tray_type": "PHA",
+  "is_support": false,
   "nozzle_temp_min": 190,
   "nozzle_temp_max": 240,
   "bed_temp": 55,

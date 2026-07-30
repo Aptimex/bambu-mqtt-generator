@@ -2,6 +2,8 @@
   "filament_id": "GFS02",
   "filament_name": "Bambu Support For PLA @base",
   "filament_type": "PLA",
+  "tray_type": "PLA-S",
+  "is_support": true,
   "nozzle_temp_min": 190,
   "nozzle_temp_max": 240,
   "bed_temp": 55,

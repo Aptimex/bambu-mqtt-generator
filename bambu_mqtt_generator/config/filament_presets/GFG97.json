@@ -2,6 +2,8 @@
   "filament_id": "GFG97",
   "filament_name": "Generic PCTG @base",
   "filament_type": "PCTG",
+  "tray_type": "PCTG",
+  "is_support": false,
   "nozzle_temp_min": 240,
   "nozzle_temp_max": 270,
   "bed_temp": 70,

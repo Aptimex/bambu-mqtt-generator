@@ -2,6 +2,8 @@
   "filament_id": "GFN06",
   "filament_name": "Bambu PPA-CF @base",
   "filament_type": "PPA-CF",
+  "tray_type": "PPA-CF",
+  "is_support": false,
   "nozzle_temp_min": 280,
   "nozzle_temp_max": 320,
   "bed_temp": 100,

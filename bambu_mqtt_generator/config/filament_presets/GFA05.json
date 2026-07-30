@@ -2,6 +2,8 @@
   "filament_id": "GFA05",
   "filament_name": "Bambu PLA Silk @base",
   "filament_type": "PLA",
+  "tray_type": "PLA",
+  "is_support": false,
   "nozzle_temp_min": 190,
   "nozzle_temp_max": 240,
   "bed_temp": 55,

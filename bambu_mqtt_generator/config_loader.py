@@ -261,7 +261,33 @@ class ConfigLoader:
     def get_filament_index(self) -> List[Dict]:
         """Get list of all filament presets."""
         return self._filament_index
-    
+
+    def get_tray_type(self, filament_id: str) -> Optional[str]:
+        """The tray_type to announce for a filament id, or None if unknown.
+
+        This is the printer's display type, which is not always the filament's
+        material type: support filaments are announced differently (GFS00 is a
+        PLA profile but goes out as 'PLA-S'), so a caller holding only a
+        filament id must resolve it here rather than splitting the name or
+        reusing filament_type.
+        """
+        preset = self._filament_presets.get(filament_id)
+        if not preset:
+            return None
+        return preset.get("tray_type") or preset.get("filament_type") or None
+
+    def get_tray_types(self) -> Dict[str, str]:
+        """Map every known filament id to its tray_type.
+
+        Built from the index, so it covers every extracted preset.
+        """
+        return {
+            entry["filament_id"]: entry.get("tray_type") or entry.get("filament_type") or ""
+            for entry in self._filament_index
+            if entry.get("filament_id")
+        }
+
+
     def get_feature_flags(self) -> Dict[str, Any]:
         """Get feature flags matrix."""
         return self._feature_flags

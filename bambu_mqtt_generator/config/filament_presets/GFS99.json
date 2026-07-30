@@ -2,6 +2,8 @@
   "filament_id": "GFS99",
   "filament_name": "Generic PVA @base",
   "filament_type": "PVA",
+  "tray_type": "PVA",
+  "is_support": true,
   "nozzle_temp_min": 190,
   "nozzle_temp_max": 240,
   "bed_temp": 55,

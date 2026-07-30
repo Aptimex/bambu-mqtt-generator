@@ -2,6 +2,8 @@
   "filament_id": "GFP99",
   "filament_name": "Generic PE @base",
   "filament_type": "PE",
+  "tray_type": "PE",
+  "is_support": false,
   "nozzle_temp_min": 175,
   "nozzle_temp_max": 220,
   "bed_temp": 55,

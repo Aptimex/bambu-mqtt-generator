@@ -2,6 +2,8 @@
   "filament_id": "GFSNL07",
   "filament_name": "SUNLU Wood PLA @base",
   "filament_type": "PLA",
+  "tray_type": "PLA",
+  "is_support": false,
   "nozzle_temp_min": 195,
   "nozzle_temp_max": 260,
   "bed_temp": 55,

@@ -2,6 +2,8 @@
   "filament_id": "GFS04",
   "filament_name": "Bambu PVA @base",
   "filament_type": "PVA",
+  "tray_type": "PVA",
+  "is_support": true,
   "nozzle_temp_min": 210,
   "nozzle_temp_max": 250,
   "bed_temp": 55,

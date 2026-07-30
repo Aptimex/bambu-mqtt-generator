@@ -2,6 +2,8 @@
   "filament_id": "GFS98",
   "filament_name": "Generic HIPS @base",
   "filament_type": "HIPS",
+  "tray_type": "HIPS",
+  "is_support": true,
   "nozzle_temp_min": 220,
   "nozzle_temp_max": 270,
   "bed_temp": 90,

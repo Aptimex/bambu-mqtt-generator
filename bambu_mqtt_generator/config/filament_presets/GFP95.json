@@ -2,6 +2,8 @@
   "filament_id": "GFP95",
   "filament_name": "Generic PP-GF @base",
   "filament_type": "PP-GF",
+  "tray_type": "PP-GF",
+  "is_support": false,
   "nozzle_temp_min": 220,
   "nozzle_temp_max": 250,
   "bed_temp": 55,

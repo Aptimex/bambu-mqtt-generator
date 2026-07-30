@@ -2,6 +2,8 @@
   "filament_id": "CRL99",
   "filament_name": "Generic PLA @Creality CR-6",
   "filament_type": "PLA",
+  "tray_type": "PLA",
+  "is_support": false,
   "nozzle_temp_min": 190,
   "nozzle_temp_max": 230,
   "bed_temp": 60,

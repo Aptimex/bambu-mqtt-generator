@@ -2,6 +2,8 @@
   "filament_id": "GFP98",
   "filament_name": "Generic PE-CF @base",
   "filament_type": "PE-CF",
+  "tray_type": "PE-CF",
+  "is_support": false,
   "nozzle_temp_min": 175,
   "nozzle_temp_max": 220,
   "bed_temp": 55,

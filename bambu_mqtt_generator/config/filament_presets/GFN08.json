@@ -2,6 +2,8 @@
   "filament_id": "GFN08",
   "filament_name": "Bambu PA6-GF @base",
   "filament_type": "PA-GF",
+  "tray_type": "PA-GF",
+  "is_support": false,
   "nozzle_temp_min": 260,
   "nozzle_temp_max": 300,
   "bed_temp": 100,

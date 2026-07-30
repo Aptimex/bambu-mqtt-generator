@@ -2,6 +2,8 @@
   "filament_id": "GFL54",
   "filament_name": "Fiberon PET-CF @base",
   "filament_type": "PET-CF",
+  "tray_type": "PET-CF",
+  "is_support": false,
   "nozzle_temp_min": 270,
   "nozzle_temp_max": 300,
   "bed_temp": 70,

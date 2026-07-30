@@ -2,6 +2,8 @@
   "filament_id": "GFU98",
   "filament_name": "Generic TPU for AMS @base",
   "filament_type": "TPU-AMS",
+  "tray_type": "TPU-AMS",
+  "is_support": false,
   "nozzle_temp_min": 200,
   "nozzle_temp_max": 250,
   "bed_temp": 35,

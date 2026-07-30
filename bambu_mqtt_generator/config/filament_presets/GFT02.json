@@ -2,6 +2,8 @@
   "filament_id": "GFT02",
   "filament_name": "Bambu PPS-CF @base",
   "filament_type": "PPS-CF",
+  "tray_type": "PPS-CF",
+  "is_support": false,
   "nozzle_temp_min": 310,
   "nozzle_temp_max": 340,
   "bed_temp": 110,

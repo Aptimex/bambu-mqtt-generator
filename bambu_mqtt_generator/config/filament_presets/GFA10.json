@@ -2,6 +2,8 @@
   "filament_id": "GFA10",
   "filament_name": "Bambu PLA Tough+ @base",
   "filament_type": "PLA",
+  "tray_type": "PLA",
+  "is_support": false,
   "nozzle_temp_min": 220,
   "nozzle_temp_max": 250,
   "bed_temp": 55,

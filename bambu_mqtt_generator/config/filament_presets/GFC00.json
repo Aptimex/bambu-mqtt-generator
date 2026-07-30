@@ -2,6 +2,8 @@
   "filament_id": "GFC00",
   "filament_name": "Bambu PC @base",
   "filament_type": "PC",
+  "tray_type": "PC",
+  "is_support": false,
   "nozzle_temp_min": 260,
   "nozzle_temp_max": 290,
   "bed_temp": 110,

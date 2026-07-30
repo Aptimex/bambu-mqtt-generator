@@ -2,6 +2,8 @@
   "filament_id": "GFU01",
   "filament_name": "Bambu TPU 95A @base",
   "filament_type": "TPU",
+  "tray_type": "TPU",
+  "is_support": false,
   "nozzle_temp_min": 200,
   "nozzle_temp_max": 250,
   "bed_temp": 35,

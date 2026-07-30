@@ -2,6 +2,8 @@
   "filament_id": "GFSNL02",
   "filament_name": "SUNLU PLA Matte @base",
   "filament_type": "PLA",
+  "tray_type": "PLA",
+  "is_support": false,
   "nozzle_temp_min": 205,
   "nozzle_temp_max": 245,
   "bed_temp": 55,

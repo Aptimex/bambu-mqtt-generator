@@ -2,6 +2,8 @@
   "filament_id": "GFL51",
   "filament_name": "Fiberon PA6-GF @base",
   "filament_type": "PA-GF",
+  "tray_type": "PA-GF",
+  "is_support": false,
   "nozzle_temp_min": 280,
   "nozzle_temp_max": 300,
   "bed_temp": 40,

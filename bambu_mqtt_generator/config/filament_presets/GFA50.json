@@ -2,6 +2,8 @@
   "filament_id": "GFA50",
   "filament_name": "Bambu PLA-CF @base",
   "filament_type": "PLA-CF",
+  "tray_type": "PLA-CF",
+  "is_support": false,
   "nozzle_temp_min": 210,
   "nozzle_temp_max": 250,
   "bed_temp": 55,

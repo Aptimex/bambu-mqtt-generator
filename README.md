@@ -194,7 +194,7 @@ external spool based on `ams_id`, and derives the ids Bambu Studio would send.
 | `slot_id` | | from `tray_id` | Physical AMS only; supply either one and the other is derived |
 | `nozzle_temp_min` | | from preset | °C |
 | `nozzle_temp_max` | | from preset | °C |
-| `tray_type` | | from preset | `"PLA"`, `"PETG"`, … |
+| `tray_type` | | from preset | `"PLA"`, `"PETG"`, … — the preset default already accounts for support filaments, so leave it unset unless you mean to override it |
 | `setting_id` | | `""` | Filament preset id; empty means no user preset |
 | `sequence_id` | | random | 5-digit string starting with `2` |
 | `cols`, `ctype` | | omitted | Multi-color spools; see below |
@@ -415,10 +415,27 @@ config.resolve_model_id("a1 mini")                                         # 'N1
 config.resolve_model_id("not a printer")                                   # None
 config.get_filament_preset("GFA00")
 # {'filament_id': 'GFA00', 'filament_name': 'Bambu PLA Basic @base',
-#  'filament_type': 'PLA', 'nozzle_temp_min': 190, 'nozzle_temp_max': 240, ...}
+#  'filament_type': 'PLA', 'tray_type': 'PLA', 'is_support': False,
+#  'nozzle_temp_min': 190, 'nozzle_temp_max': 240, ...}
+
+config.get_tray_type("GFS00")   # 'PLA-S'
+config.get_tray_types()         # every known filament id -> tray_type
 ```
 
-`builder.get_filament_defaults(filament_id)` is the same preset lookup.
+`builder.get_filament_defaults(filament_id)` is the same preset lookup, and
+`builder.get_tray_type(filament_id)` the same type lookup.
+
+### `tray_type` is not `filament_type`
+
+`filament_type` is the material as the slicer profile declares it;
+`tray_type` is what the printer is told, and the two differ for support
+filaments. Bambu Support W is a PLA profile that goes out as `PLA-S`, Bambu
+Support G a PA profile that goes out as `PA-S`. Bambu Studio applies that
+rewrite in `DynamicPrintConfig::get_filament_type()` before sending, and the
+extractor bakes the result into each preset, so a caller holding a filament id
+should read `tray_type` (or call `get_tray_type()`) rather than splitting the
+filament name — the mapping is not mechanical, and `Bambu PLA-CF` is `PLA`
+while `Bambu PA-CF` is `PA-CF`.
 
 ## Configuration
 

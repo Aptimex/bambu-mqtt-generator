@@ -2,6 +2,8 @@
   "filament_id": "CRB99",
   "filament_name": "Generic ABS @Creality CR-6",
   "filament_type": "ABS",
+  "tray_type": "ABS",
+  "is_support": false,
   "nozzle_temp_min": 240,
   "nozzle_temp_max": 270,
   "bed_temp": 105,

@@ -3,6 +3,7 @@
     "filament_id": "CRB99",
     "filament_name": "Generic ABS @Creality CR-6",
     "filament_type": "ABS",
+    "tray_type": "ABS",
     "is_bambu": false,
     "file": "CRB99.json"
   },
@@ -10,6 +11,7 @@
     "filament_id": "CRG99",
     "filament_name": "Generic PETG @Creality CR-6",
     "filament_type": "PETG",
+    "tray_type": "PETG",
     "is_bambu": false,
     "file": "CRG99.json"
   },
@@ -17,6 +19,7 @@
     "filament_id": "CRL99",
     "filament_name": "Generic PLA @Creality CR-6",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": false,
     "file": "CRL99.json"
   },
@@ -24,6 +27,7 @@
     "filament_id": "GFA00",
     "filament_name": "Bambu PLA Basic @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFA00.json"
   },
@@ -31,6 +35,7 @@
     "filament_id": "GFA01",
     "filament_name": "Bambu PLA Matte @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFA01.json"
   },
@@ -38,6 +43,7 @@
     "filament_id": "GFA02",
     "filament_name": "Bambu PLA Metal @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFA02.json"
   },
@@ -45,6 +51,7 @@
     "filament_id": "GFA05",
     "filament_name": "Bambu PLA Silk @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFA05.json"
   },
@@ -52,6 +59,7 @@
     "filament_id": "GFA06",
     "filament_name": "Bambu PLA Silk+ @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFA06.json"
   },
@@ -59,6 +67,7 @@
     "filament_id": "GFA07",
     "filament_name": "Bambu PLA Marble @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFA07.json"
   },
@@ -66,6 +75,7 @@
     "filament_id": "GFA08",
     "filament_name": "Bambu PLA Sparkle @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFA08.json"
   },
@@ -73,6 +83,7 @@
     "filament_id": "GFA09",
     "filament_name": "Bambu PLA Tough @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFA09.json"
   },
@@ -80,6 +91,7 @@
     "filament_id": "GFA10",
     "filament_name": "Bambu PLA Tough+ @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFA10.json"
   },
@@ -87,6 +99,7 @@
     "filament_id": "GFA11",
     "filament_name": "Bambu PLA Aero @base",
     "filament_type": "PLA-AERO",
+    "tray_type": "PLA-AERO",
     "is_bambu": true,
     "file": "GFA11.json"
   },
@@ -94,6 +107,7 @@
     "filament_id": "GFA12",
     "filament_name": "Bambu PLA Glow @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFA12.json"
   },
@@ -101,6 +115,7 @@
     "filament_id": "GFA13",
     "filament_name": "Bambu PLA Dynamic @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFA13.json"
   },
@@ -108,6 +123,7 @@
     "filament_id": "GFA15",
     "filament_name": "Bambu PLA Galaxy @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFA15.json"
   },
@@ -115,6 +131,7 @@
     "filament_id": "GFA16",
     "filament_name": "Bambu PLA Wood @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFA16.json"
   },
@@ -122,6 +139,7 @@
     "filament_id": "GFA17",
     "filament_name": "Bambu PLA Translucent @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFA17.json"
   },
@@ -129,6 +147,7 @@
     "filament_id": "GFA18",
     "filament_name": "Bambu PLA Lite @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFA18.json"
   },
@@ -136,6 +155,7 @@
     "filament_id": "GFA19",
     "filament_name": "Bambu PLA Pure @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFA19.json"
   },
@@ -143,6 +163,7 @@
     "filament_id": "GFA50",
     "filament_name": "Bambu PLA-CF @base",
     "filament_type": "PLA-CF",
+    "tray_type": "PLA-CF",
     "is_bambu": true,
     "file": "GFA50.json"
   },
@@ -150,6 +171,7 @@
     "filament_id": "GFB00",
     "filament_name": "Bambu ABS @base",
     "filament_type": "ABS",
+    "tray_type": "ABS",
     "is_bambu": true,
     "file": "GFB00.json"
   },
@@ -157,6 +179,7 @@
     "filament_id": "GFB01",
     "filament_name": "Bambu ASA @base",
     "filament_type": "ASA",
+    "tray_type": "ASA",
     "is_bambu": true,
     "file": "GFB01.json"
   },
@@ -164,6 +187,7 @@
     "filament_id": "GFB02",
     "filament_name": "Bambu ASA-Aero @base",
     "filament_type": "ASA-AERO",
+    "tray_type": "ASA-AERO",
     "is_bambu": true,
     "file": "GFB02.json"
   },
@@ -171,6 +195,7 @@
     "filament_id": "GFB50",
     "filament_name": "Bambu ABS-GF @base",
     "filament_type": "ABS-GF",
+    "tray_type": "ABS-GF",
     "is_bambu": true,
     "file": "GFB50.json"
   },
@@ -178,6 +203,7 @@
     "filament_id": "GFB51",
     "filament_name": "Bambu ASA-CF @base",
     "filament_type": "ASA-CF",
+    "tray_type": "ASA-CF",
     "is_bambu": true,
     "file": "GFB51.json"
   },
@@ -185,6 +211,7 @@
     "filament_id": "GFB60",
     "filament_name": "PolyLite ABS @base",
     "filament_type": "ABS",
+    "tray_type": "ABS",
     "is_bambu": true,
     "file": "GFB60.json"
   },
@@ -192,6 +219,7 @@
     "filament_id": "GFB61",
     "filament_name": "PolyLite ASA @base",
     "filament_type": "ASA",
+    "tray_type": "ASA",
     "is_bambu": true,
     "file": "GFB61.json"
   },
@@ -199,6 +227,7 @@
     "filament_id": "GFB98",
     "filament_name": "Generic ASA @base",
     "filament_type": "ASA",
+    "tray_type": "ASA",
     "is_bambu": true,
     "file": "GFB98.json"
   },
@@ -206,6 +235,7 @@
     "filament_id": "GFB99",
     "filament_name": "Generic ABS @base",
     "filament_type": "ABS",
+    "tray_type": "ABS",
     "is_bambu": true,
     "file": "GFB99.json"
   },
@@ -213,6 +243,7 @@
     "filament_id": "GFC00",
     "filament_name": "Bambu PC @base",
     "filament_type": "PC",
+    "tray_type": "PC",
     "is_bambu": true,
     "file": "GFC00.json"
   },
@@ -220,6 +251,7 @@
     "filament_id": "GFC01",
     "filament_name": "Bambu PC FR @base",
     "filament_type": "PC",
+    "tray_type": "PC",
     "is_bambu": true,
     "file": "GFC01.json"
   },
@@ -227,6 +259,7 @@
     "filament_id": "GFC99",
     "filament_name": "Generic PC @base",
     "filament_type": "PC",
+    "tray_type": "PC",
     "is_bambu": true,
     "file": "GFC99.json"
   },
@@ -234,6 +267,7 @@
     "filament_id": "GFG00",
     "filament_name": "Bambu PETG Basic @base",
     "filament_type": "PETG",
+    "tray_type": "PETG",
     "is_bambu": true,
     "file": "GFG00.json"
   },
@@ -241,6 +275,7 @@
     "filament_id": "GFG01",
     "filament_name": "Bambu PETG Translucent @base",
     "filament_type": "PETG",
+    "tray_type": "PETG",
     "is_bambu": true,
     "file": "GFG01.json"
   },
@@ -248,6 +283,7 @@
     "filament_id": "GFG02",
     "filament_name": "Bambu PETG HF @base",
     "filament_type": "PETG",
+    "tray_type": "PETG",
     "is_bambu": true,
     "file": "GFG02.json"
   },
@@ -255,6 +291,7 @@
     "filament_id": "GFG03",
     "filament_name": "Bambu PETG Matte @base",
     "filament_type": "PETG",
+    "tray_type": "PETG",
     "is_bambu": true,
     "file": "GFG03.json"
   },
@@ -262,6 +299,7 @@
     "filament_id": "GFG50",
     "filament_name": "Bambu PETG-CF @base",
     "filament_type": "PETG-CF",
+    "tray_type": "PETG-CF",
     "is_bambu": true,
     "file": "GFG50.json"
   },
@@ -269,6 +307,7 @@
     "filament_id": "GFG60",
     "filament_name": "PolyLite PETG @base",
     "filament_type": "PETG",
+    "tray_type": "PETG",
     "is_bambu": true,
     "file": "GFG60.json"
   },
@@ -276,6 +315,7 @@
     "filament_id": "GFG96",
     "filament_name": "Generic PETG HF @base",
     "filament_type": "PETG",
+    "tray_type": "PETG",
     "is_bambu": true,
     "file": "GFG96.json"
   },
@@ -283,6 +323,7 @@
     "filament_id": "GFG97",
     "filament_name": "Generic PCTG @base",
     "filament_type": "PCTG",
+    "tray_type": "PCTG",
     "is_bambu": true,
     "file": "GFG97.json"
   },
@@ -290,6 +331,7 @@
     "filament_id": "GFG98",
     "filament_name": "Generic PETG-CF @base",
     "filament_type": "PETG-CF",
+    "tray_type": "PETG-CF",
     "is_bambu": true,
     "file": "GFG98.json"
   },
@@ -297,6 +339,7 @@
     "filament_id": "GFG99",
     "filament_name": "Generic PETG @base",
     "filament_type": "PETG",
+    "tray_type": "PETG",
     "is_bambu": true,
     "file": "GFG99.json"
   },
@@ -304,6 +347,7 @@
     "filament_id": "GFL00",
     "filament_name": "PolyLite PLA @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFL00.json"
   },
@@ -311,6 +355,7 @@
     "filament_id": "GFL01",
     "filament_name": "PolyTerra PLA @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFL01.json"
   },
@@ -318,6 +363,7 @@
     "filament_id": "GFL03",
     "filament_name": "eSUN PLA+ @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFL03.json"
   },
@@ -325,6 +371,7 @@
     "filament_id": "GFL04",
     "filament_name": "Overture PLA @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFL04.json"
   },
@@ -332,6 +379,7 @@
     "filament_id": "GFL05",
     "filament_name": "Overture Matte PLA @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFL05.json"
   },
@@ -339,6 +387,7 @@
     "filament_id": "GFL06",
     "filament_name": "Fiberon PETG-ESD @base",
     "filament_type": "PETG",
+    "tray_type": "PETG",
     "is_bambu": true,
     "file": "GFL06.json"
   },
@@ -346,6 +395,7 @@
     "filament_id": "GFL50",
     "filament_name": "Fiberon PA6-CF @base",
     "filament_type": "PA6-CF",
+    "tray_type": "PA6-CF",
     "is_bambu": true,
     "file": "GFL50.json"
   },
@@ -353,6 +403,7 @@
     "filament_id": "GFL51",
     "filament_name": "Fiberon PA6-GF @base",
     "filament_type": "PA-GF",
+    "tray_type": "PA-GF",
     "is_bambu": true,
     "file": "GFL51.json"
   },
@@ -360,6 +411,7 @@
     "filament_id": "GFL52",
     "filament_name": "Fiberon PA12-CF @base",
     "filament_type": "PA-CF",
+    "tray_type": "PA-CF",
     "is_bambu": true,
     "file": "GFL52.json"
   },
@@ -367,6 +419,7 @@
     "filament_id": "GFL53",
     "filament_name": "Fiberon PA612-CF @base",
     "filament_type": "PA",
+    "tray_type": "PA",
     "is_bambu": true,
     "file": "GFL53.json"
   },
@@ -374,6 +427,7 @@
     "filament_id": "GFL54",
     "filament_name": "Fiberon PET-CF @base",
     "filament_type": "PET-CF",
+    "tray_type": "PET-CF",
     "is_bambu": true,
     "file": "GFL54.json"
   },
@@ -381,6 +435,7 @@
     "filament_id": "GFL55",
     "filament_name": "Fiberon PETG-rCF @base",
     "filament_type": "PETG-CF",
+    "tray_type": "PETG-CF",
     "is_bambu": true,
     "file": "GFL55.json"
   },
@@ -388,6 +443,7 @@
     "filament_id": "GFL95",
     "filament_name": "Generic PLA High Speed @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFL95.json"
   },
@@ -395,6 +451,7 @@
     "filament_id": "GFL96",
     "filament_name": "Generic PLA Silk @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFL96.json"
   },
@@ -402,6 +459,7 @@
     "filament_id": "GFL98",
     "filament_name": "Generic PLA-CF @base",
     "filament_type": "PLA-CF",
+    "tray_type": "PLA-CF",
     "is_bambu": true,
     "file": "GFL98.json"
   },
@@ -409,6 +467,7 @@
     "filament_id": "GFL99",
     "filament_name": "Generic PLA @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFL99.json"
   },
@@ -416,6 +475,7 @@
     "filament_id": "GFN03",
     "filament_name": "Bambu PA-CF @base",
     "filament_type": "PA-CF",
+    "tray_type": "PA-CF",
     "is_bambu": true,
     "file": "GFN03.json"
   },
@@ -423,6 +483,7 @@
     "filament_id": "GFN04",
     "filament_name": "Bambu PAHT-CF @base",
     "filament_type": "PA-CF",
+    "tray_type": "PA-CF",
     "is_bambu": true,
     "file": "GFN04.json"
   },
@@ -430,6 +491,7 @@
     "filament_id": "GFN05",
     "filament_name": "Bambu PA6-CF @base",
     "filament_type": "PA6-CF",
+    "tray_type": "PA6-CF",
     "is_bambu": true,
     "file": "GFN05.json"
   },
@@ -437,6 +499,7 @@
     "filament_id": "GFN06",
     "filament_name": "Bambu PPA-CF @base",
     "filament_type": "PPA-CF",
+    "tray_type": "PPA-CF",
     "is_bambu": true,
     "file": "GFN06.json"
   },
@@ -444,6 +507,7 @@
     "filament_id": "GFN08",
     "filament_name": "Bambu PA6-GF @base",
     "filament_type": "PA-GF",
+    "tray_type": "PA-GF",
     "is_bambu": true,
     "file": "GFN08.json"
   },
@@ -451,6 +515,7 @@
     "filament_id": "GFN96",
     "filament_name": "Generic PPA-GF @base",
     "filament_type": "PPA-GF",
+    "tray_type": "PPA-GF",
     "is_bambu": true,
     "file": "GFN96.json"
   },
@@ -458,6 +523,7 @@
     "filament_id": "GFN97",
     "filament_name": "Generic PPA-CF @base",
     "filament_type": "PPA-CF",
+    "tray_type": "PPA-CF",
     "is_bambu": true,
     "file": "GFN97.json"
   },
@@ -465,6 +531,7 @@
     "filament_id": "GFN98",
     "filament_name": "Generic PA-CF @base",
     "filament_type": "PA-CF",
+    "tray_type": "PA-CF",
     "is_bambu": true,
     "file": "GFN98.json"
   },
@@ -472,6 +539,7 @@
     "filament_id": "GFN99",
     "filament_name": "Generic PA @base",
     "filament_type": "PA",
+    "tray_type": "PA",
     "is_bambu": true,
     "file": "GFN99.json"
   },
@@ -479,6 +547,7 @@
     "filament_id": "GFP95",
     "filament_name": "Generic PP-GF @base",
     "filament_type": "PP-GF",
+    "tray_type": "PP-GF",
     "is_bambu": true,
     "file": "GFP95.json"
   },
@@ -486,6 +555,7 @@
     "filament_id": "GFP96",
     "filament_name": "Generic PP-CF @base",
     "filament_type": "PP-CF",
+    "tray_type": "PP-CF",
     "is_bambu": true,
     "file": "GFP96.json"
   },
@@ -493,6 +563,7 @@
     "filament_id": "GFP97",
     "filament_name": "Generic PP @base",
     "filament_type": "PP",
+    "tray_type": "PP",
     "is_bambu": true,
     "file": "GFP97.json"
   },
@@ -500,6 +571,7 @@
     "filament_id": "GFP98",
     "filament_name": "Generic PE-CF @base",
     "filament_type": "PE-CF",
+    "tray_type": "PE-CF",
     "is_bambu": true,
     "file": "GFP98.json"
   },
@@ -507,6 +579,7 @@
     "filament_id": "GFP99",
     "filament_name": "Generic PE @base",
     "filament_type": "PE",
+    "tray_type": "PE",
     "is_bambu": true,
     "file": "GFP99.json"
   },
@@ -514,6 +587,7 @@
     "filament_id": "GFR98",
     "filament_name": "Generic PHA @base",
     "filament_type": "PHA",
+    "tray_type": "PHA",
     "is_bambu": true,
     "file": "GFR98.json"
   },
@@ -521,6 +595,7 @@
     "filament_id": "GFR99",
     "filament_name": "Generic EVA @base",
     "filament_type": "EVA",
+    "tray_type": "EVA",
     "is_bambu": true,
     "file": "GFR99.json"
   },
@@ -528,6 +603,7 @@
     "filament_id": "GFS00",
     "filament_name": "Bambu Support W @base",
     "filament_type": "PLA",
+    "tray_type": "PLA-S",
     "is_bambu": true,
     "file": "GFS00.json"
   },
@@ -535,6 +611,7 @@
     "filament_id": "GFS01",
     "filament_name": "Bambu Support G @base",
     "filament_type": "PA",
+    "tray_type": "PA-S",
     "is_bambu": true,
     "file": "GFS01.json"
   },
@@ -542,6 +619,7 @@
     "filament_id": "GFS02",
     "filament_name": "Bambu Support For PLA @base",
     "filament_type": "PLA",
+    "tray_type": "PLA-S",
     "is_bambu": true,
     "file": "GFS02.json"
   },
@@ -549,6 +627,7 @@
     "filament_id": "GFS03",
     "filament_name": "Bambu Support For PA/PET @base",
     "filament_type": "PA",
+    "tray_type": "PA-S",
     "is_bambu": true,
     "file": "GFS03.json"
   },
@@ -556,6 +635,7 @@
     "filament_id": "GFS04",
     "filament_name": "Bambu PVA @base",
     "filament_type": "PVA",
+    "tray_type": "PVA",
     "is_bambu": true,
     "file": "GFS04.json"
   },
@@ -563,6 +643,7 @@
     "filament_id": "GFS05",
     "filament_name": "Bambu Support For PLA/PETG @base",
     "filament_type": "PLA",
+    "tray_type": "PLA-S",
     "is_bambu": true,
     "file": "GFS05.json"
   },
@@ -570,6 +651,7 @@
     "filament_id": "GFS06",
     "filament_name": "Bambu Support for ABS @base",
     "filament_type": "ABS",
+    "tray_type": "ABS",
     "is_bambu": true,
     "file": "GFS06.json"
   },
@@ -577,6 +659,7 @@
     "filament_id": "GFS97",
     "filament_name": "Generic BVOH @base",
     "filament_type": "BVOH",
+    "tray_type": "BVOH",
     "is_bambu": true,
     "file": "GFS97.json"
   },
@@ -584,6 +667,7 @@
     "filament_id": "GFS98",
     "filament_name": "Generic HIPS @base",
     "filament_type": "HIPS",
+    "tray_type": "HIPS",
     "is_bambu": true,
     "file": "GFS98.json"
   },
@@ -591,6 +675,7 @@
     "filament_id": "GFS99",
     "filament_name": "Generic PVA @base",
     "filament_type": "PVA",
+    "tray_type": "PVA",
     "is_bambu": true,
     "file": "GFS99.json"
   },
@@ -598,6 +683,7 @@
     "filament_id": "GFSNL02",
     "filament_name": "SUNLU PLA Matte @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFSNL02.json"
   },
@@ -605,6 +691,7 @@
     "filament_id": "GFSNL03",
     "filament_name": "SUNLU PLA+ @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFSNL03.json"
   },
@@ -612,6 +699,7 @@
     "filament_id": "GFSNL04",
     "filament_name": "SUNLU PLA+ 2.0 @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFSNL04.json"
   },
@@ -619,6 +707,7 @@
     "filament_id": "GFSNL05",
     "filament_name": "SUNLU Silk PLA+ @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFSNL05.json"
   },
@@ -626,6 +715,7 @@
     "filament_id": "GFSNL06",
     "filament_name": "SUNLU PLA Marble @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFSNL06.json"
   },
@@ -633,6 +723,7 @@
     "filament_id": "GFSNL07",
     "filament_name": "SUNLU Wood PLA @base",
     "filament_type": "PLA",
+    "tray_type": "PLA",
     "is_bambu": true,
     "file": "GFSNL07.json"
   },
@@ -640,6 +731,7 @@
     "filament_id": "GFSNL08",
     "filament_name": "SUNLU PETG @base",
     "filament_type": "PETG",
+    "tray_type": "PETG",
     "is_bambu": true,
     "file": "GFSNL08.json"
   },
@@ -647,6 +739,7 @@
     "filament_id": "GFT01",
     "filament_name": "Bambu PET-CF @base",
     "filament_type": "PET-CF",
+    "tray_type": "PET-CF",
     "is_bambu": true,
     "file": "GFT01.json"
   },
@@ -654,6 +747,7 @@
     "filament_id": "GFT02",
     "filament_name": "Bambu PPS-CF @base",
     "filament_type": "PPS-CF",
+    "tray_type": "PPS-CF",
     "is_bambu": true,
     "file": "GFT02.json"
   },
@@ -661,6 +755,7 @@
     "filament_id": "GFT97",
     "filament_name": "Generic PPS @base",
     "filament_type": "PPS",
+    "tray_type": "PPS",
     "is_bambu": true,
     "file": "GFT97.json"
   },
@@ -668,6 +763,7 @@
     "filament_id": "GFT98",
     "filament_name": "Generic PPS-CF @base",
     "filament_type": "PPS-CF",
+    "tray_type": "PPS-CF",
     "is_bambu": true,
     "file": "GFT98.json"
   },
@@ -675,6 +771,7 @@
     "filament_id": "GFU00",
     "filament_name": "Bambu TPU 95A HF @base",
     "filament_type": "TPU",
+    "tray_type": "TPU",
     "is_bambu": true,
     "file": "GFU00.json"
   },
@@ -682,6 +779,7 @@
     "filament_id": "GFU01",
     "filament_name": "Bambu TPU 95A @base",
     "filament_type": "TPU",
+    "tray_type": "TPU",
     "is_bambu": true,
     "file": "GFU01.json"
   },
@@ -689,6 +787,7 @@
     "filament_id": "GFU02",
     "filament_name": "Bambu TPU for AMS @base",
     "filament_type": "TPU-AMS",
+    "tray_type": "TPU-AMS",
     "is_bambu": true,
     "file": "GFU02.json"
   },
@@ -696,6 +795,7 @@
     "filament_id": "GFU03",
     "filament_name": "Bambu TPU 90A @base",
     "filament_type": "TPU",
+    "tray_type": "TPU",
     "is_bambu": true,
     "file": "GFU03.json"
   },
@@ -703,6 +803,7 @@
     "filament_id": "GFU04",
     "filament_name": "Bambu TPU 85A @base",
     "filament_type": "TPU",
+    "tray_type": "TPU",
     "is_bambu": true,
     "file": "GFU04.json"
   },
@@ -710,6 +811,7 @@
     "filament_id": "GFU98",
     "filament_name": "Generic TPU for AMS @base",
     "filament_type": "TPU-AMS",
+    "tray_type": "TPU-AMS",
     "is_bambu": true,
     "file": "GFU98.json"
   },
@@ -717,6 +819,7 @@
     "filament_id": "GFU99",
     "filament_name": "Generic TPU @base",
     "filament_type": "TPU",
+    "tray_type": "TPU",
     "is_bambu": true,
     "file": "GFU99.json"
   }
