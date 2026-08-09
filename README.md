@@ -130,7 +130,7 @@ with BambuMQTTClient(printer) as client:
     # 3. Build, sign, and send.
     payload = builder.build_filament_setting(
         tray_info_idx="GFA00", tray_color="0000FFFF",
-        ams_id=slot["ids"]["amsID"], tray_id=slot["ids"]["trayID"],
+        ams_id=slot["ids"]["amsID"], tray_id=slot["ids"]["slotID"],
     )
     ack = client.send_and_wait(signer.sign(payload))
 
@@ -275,22 +275,26 @@ Each slot carries the raw printer fields (`tray_color`, `tray_info_idx`,
 
 ```python
 {
-  "ids": {"amsID": 255, "slotID": 0, "trayID": 254, "isExternal": True},
+  "ids": {"amsID": 255, "slotID": 0},
   "Type": "PLA", "Color": "00FF00", "Brand": "Bambu",
   "Min Temp": 190, "Max Temp": 240, "Bed Temp": 55,
   "displayID": "External Spool (no AMS)",
 }
 ```
 
-`ids` is expressed the way `ams_filament_setting` expects it back, so a parsed
-slot feeds straight into the builder:
+`ids` is the smallest set of data that identifies a slot, and feeds straight into the
+builder, which derives the rest of the command ids from `amsID`:
 
 ```python
 builder.build_filament_setting(
     tray_info_idx="GFA00", tray_color="FF0000",
-    ams_id=slot["ids"]["amsID"], tray_id=slot["ids"]["trayID"],
+    ams_id=slot["ids"]["amsID"], tray_id=slot["ids"]["slotID"],
 )
 ```
+
+An external spool is identified by its `amsID` alone — 255 for the main slot,
+254 for the deputy (`ExternalSpool.MAIN` / `ExternalSpool.DEPUTY`) — and always
+reports `slotID` 0, since that is the `slot_id` the command carries.
 
 When verifying a change, compare against the raw `tray_color` (8 characters,
 including alpha) rather than the truncated `Color` field.

@@ -157,23 +157,11 @@ class ResponseParser:
         """Convert tray data to the normalized slot format."""
         slot = dict(tray)
 
-        # Ids are reported the way ams_filament_setting expects them back, so a
-        # slot read from push_status can be fed straight into the payload
-        # builder. External spools always command slot_id 0 / tray_id 254.
-        if self._is_virtual(ams_id):
-            slot["ids"] = {
-                "amsID": ams_id,
-                "slotID": 0,
-                "trayID": self.virtual_deputy_id,
-                "isExternal": True,
-            }
-        else:
-            slot["ids"] = {
-                "amsID": ams_id,
-                "slotID": tray_id,
-                "trayID": tray_id,
-                "isExternal": False,
-            }
+        # The smallest set of data that reliably identifies a slot
+        slot["ids"] = {
+            "amsID": ams_id,
+            "slotID": 0 if self._is_virtual(ams_id) else tray_id,
+        }
 
         # Determine brand from the filament code.
         brand = "Generic"
