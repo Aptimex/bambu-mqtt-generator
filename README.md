@@ -279,8 +279,24 @@ Each slot carries the raw printer fields (`tray_color`, `tray_info_idx`,
   "Type": "PLA", "Color": "00FF00", "Brand": "Bambu",
   "Min Temp": 190, "Max Temp": 240, "Bed Temp": 55,
   "displayID": "External Spool (no AMS)",
+  "present": True, "info_known": True,
 }
 ```
+
+Every slot an AMS has is listed, loaded or not, so slot numbering is stable.
+Two flags say what is in one, and they are easy to conflate:
+
+| Flag | Meaning | `Type` |
+|---|---|---|
+| `present: True`, `info_known: True` | a spool the printer has identified | its filament type, e.g. `"PLA"` |
+| `present: True`, `info_known: False` | a spool is loaded but the printer does not know what it is. Typically happens after a RFID-detected spool is replaced with a non-RFID one. | `"UNKNOWN"` |
+| `present: False` | nothing in the slot | `"EMPTY"` |
+
+Only the third case cannot take filament settings. `present` comes from
+`ams.tray_exist_bits`, the signal Bambu Studio itself uses (it ignores the
+per-tray `state` value that printers also report, so that is only consulted
+when a printer sends no exist bits). External spools are always `present`,
+Bambu Studio never treats one as empty.
 
 `ids` is the smallest set of data that identifies a slot, and feeds straight into the
 builder, which derives the rest of the command ids from `amsID`:
@@ -473,6 +489,15 @@ The external spool arrives in one of two shapes, `vir_slot` taking precedence:
 The second row is easy to get wrong: some printers report `"id": "254"` inside
 `vt_tray` and are still the main slot, 255. `parse_response()` applies this
 rule, which is why its `ids` can be fed back to the builder unadjusted.
+
+The file's `slot_presence` section carries the rest of what a slot's contents
+are read from: `ams.tray_exist_bits` (a hex mask), the AMS type in bits 0-3 of
+each AMS's `info` field, and the per-type mapping from `(ams_id, slot_id)` to a
+bit position in that mask — Bambu Studio's `DevAms::GetTrayId`, which is *not*
+simply the slot id once a printer has more than one AMS or an AMS HT. It also
+records how many slots each AMS type has, and the observed meanings of the
+per-tray `state` value, marked `in_bambu_studio: false` because Bambu Studio
+never reads that field.
 
 ## License and scope
 

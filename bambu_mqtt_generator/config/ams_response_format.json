@@ -44,6 +44,111 @@
       "decode": "(id >> 8) + (id & 0xff)"
     }
   },
+  "slot_presence": {
+    "note": "Whether a slot holds a spool comes from ams.tray_exist_bits, not from the per-tray `state` value: Bambu Studio never reads `state`. Bit `tray_index` of tray_exist_bits is the `is_exists` flag for that slot.",
+    "source": [
+      "src/slic3r/GUI/DeviceCore/DevFilaSystem.cpp",
+      "src/slic3r/GUI/StatusPanel.cpp"
+    ],
+    "exist_bits": {
+      "container_key": "ams",
+      "ams_key": "ams_exist_bits",
+      "tray_key": "tray_exist_bits",
+      "base": 16,
+      "comment": "Hex strings. Bit N of tray_exist_bits is set when tray index N holds a spool; bit N of ams_exist_bits when AMS N is attached."
+    },
+    "ams_type": {
+      "key": "info",
+      "base": 16,
+      "bit_offset": 0,
+      "bit_count": 4,
+      "default": 1,
+      "values": {
+        "EXT_SPOOL": 0,
+        "AMS": 1,
+        "AMS_LITE": 2,
+        "N3F": 3,
+        "N3S": 4,
+        "AMS_LITE_MIXED": 5
+      },
+      "comment": "The AMS `info` field is a hex string; these bits hold the DevAmsType. Entries without `info` use the default."
+    },
+    "tray_index": {
+      "formula": "base + (ams_id - ams_offset) * ams_stride + slot_id",
+      "by_ams_type": {
+        "1": {
+          "base": 0,
+          "ams_offset": 0,
+          "ams_stride": 4
+        },
+        "2": {
+          "base": 0,
+          "ams_offset": 0,
+          "ams_stride": 4
+        },
+        "3": {
+          "base": 0,
+          "ams_offset": 0,
+          "ams_stride": 4
+        },
+        "4": {
+          "base": 16,
+          "ams_offset": 128,
+          "ams_stride": 1
+        },
+        "5": {
+          "base": 24,
+          "ams_offset": 0,
+          "ams_stride": 0
+        }
+      },
+      "comment": "From DevAms::GetTrayId. AMS types missing here have no mapping in Bambu Studio either (it asserts and returns -1), so treat their slots as present rather than reading a meaningless bit."
+    },
+    "slot_count": {
+      "by_ams_type": {
+        "1": 4,
+        "2": 4,
+        "3": 4,
+        "4": 1
+      },
+      "fallback": "reported_trays",
+      "comment": "From DevAms::GetSlotCount. AMS types not listed report as many slots as the printer sent trays for."
+    },
+    "virtual_slots_always_present": true,
+    "filament_info_known": {
+      "requires_all_non_empty": [
+        "tray_type",
+        "tray_color"
+      ],
+      "tray_fields_gated_on": [
+        "tray_info_idx",
+        "tray_type"
+      ],
+      "comment": "DevAmsTray::is_tray_info_ready. A slot that exists but reports no tray_type holds a spool whose filament the AMS has not identified; its settings can still be written."
+    },
+    "state_field": {
+      "key": "state",
+      "in_bambu_studio": false,
+      "comment": "Observed from printer output, NOT from Bambu Studio, which ignores this field. Use only as a fallback when the printer reports trays but no tray_exist_bits.",
+      "values": {
+        "9": {
+          "present": true,
+          "info_known": false,
+          "label": "spool loaded, filament not identified"
+        },
+        "10": {
+          "present": false,
+          "info_known": false,
+          "label": "slot empty"
+        },
+        "11": {
+          "present": true,
+          "info_known": true,
+          "label": "spool loaded, filament identified"
+        }
+      }
+    }
+  },
   "command_ids": {
     "virtual_slot": {
       "ams_id": [
@@ -71,7 +176,17 @@
       "tray_array_key",
       "tray_id_key",
       "virtual_tray_command_id",
-      "physical_tray_command_id"
+      "physical_tray_command_id",
+      "ams_type_enum",
+      "tray_exist_bits_source",
+      "is_exists_from_exist_bits",
+      "ams_type_from_info",
+      "ams_type_default",
+      "tray_index_mapping",
+      "slot_count_mapping",
+      "virtual_slots_exempt_from_exist_check",
+      "filament_fields_gated_on_type",
+      "filament_info_ready_rule"
     ],
     "unverified": []
   }
