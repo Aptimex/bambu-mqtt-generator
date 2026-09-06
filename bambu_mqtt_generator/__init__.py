@@ -27,6 +27,7 @@ from .response_parser import (
     parse_response,
     parse_slots,
     check_command_result,
+    find_slot,
 )
 from .sign_mqtt import (
     sign_payload,
@@ -58,6 +59,7 @@ __all__ = [
     "VIRTUAL_AMS_DEPUTY_ID",
     "ResponseParser",
     "parse_response",
+    "find_slot",
     "parse_slots",
     "check_command_result",
     "describe_error",

@@ -149,6 +149,48 @@
       }
     }
   },
+  "rfid_identity": {
+    "note": "Whether the printer identified a slot's filament itself comes from ams.ams[].tray[].tag_uid, which only an RFID read can fill in. The ams_filament_setting command has no tag_uid field, so a hand-set slot can never look auto-detected.",
+    "source": [
+      "src/slic3r/GUI/DeviceCore/DevFilaSystem.cpp",
+      "src/slic3r/GUI/StatusPanel.cpp"
+    ],
+    "tag_uid_key": "tag_uid",
+    "serial_key": "tray_uuid",
+    "auto_detected": {
+      "rule": "tag_uid is present and not every character is '0'",
+      "empty_values": [
+        "",
+        "0"
+      ],
+      "comment": "DevFilaSystem::IsBBL_Filament. Studio inverts this into m_is_third, the flag behind its third-party filament UI."
+    },
+    "official_tag": {
+      "length": 16,
+      "offset": 12,
+      "value": "01",
+      "serial_from": "tray_uuid",
+      "comment": "A genuine Bambu tag; tray_uuid then holds the per-spool serial Studio treats as that spool's identity. Other tags still prove a read happened, but carry no usable serial."
+    },
+    "not_a_source": {
+      "tray_is_bbl_bits": "Despite the name this tracks occupancy, not Bambu-ness: it was observed reading 'f' on a P2S with one tagged slot of four, and matching tray_exist_bits exactly on an A1. Bambu Studio parses it (DevFilaSystem.cpp) but only ever compares it against its previous value to detect change. Do not use it to decide whether a spool was auto-detected \u2014 use tag_uid."
+    }
+  },
+  "slot_read_state": {
+    "note": "A slot whose bit is clear in tray_read_done_bits, or set in tray_reading_bits, is one the AMS has not finished reading. Both are indexed by slot_presence.tray_index, like tray_exist_bits.",
+    "source": [
+      "src/slic3r/GUI/DeviceCore/DevFilaSystem.cpp"
+    ],
+    "read_done_key": "tray_read_done_bits",
+    "reading_key": "tray_reading_bits",
+    "base": 16,
+    "index_from": "slot_presence.tray_index",
+    "pending_rule": "reading bit set, or read_done bit clear, for this slot's tray index",
+    "in_bambu_studio": "parsed_not_gated",
+    "comment": "Bambu Studio parses both masks but only compares them against their previous values to detect change (StatusPanel's last_tray_is_bbl_bits and friends); it does not refuse writes during a read. Using them to gate a write is therefore an extension, not upstream behaviour, and is based on observed printer output: on an A1 and a P2S both masks cleared and restored across every tag read observed, and read_done matched tray_exist_bits exactly at rest. Treat unparseable or absent masks as 'not pending' so a printer that omits them keeps working.",
+    "observed_not_extracted": false,
+    "gated_in_bambu_studio": false
+  },
   "command_ids": {
     "virtual_slot": {
       "ams_id": [
@@ -186,7 +228,13 @@
       "slot_count_mapping",
       "virtual_slots_exempt_from_exist_check",
       "filament_fields_gated_on_type",
-      "filament_info_ready_rule"
+      "filament_info_ready_rule",
+      "is_bbl_filament_rule",
+      "is_third_from_tag_uid",
+      "official_tag_marker",
+      "official_tag_serial_is_uuid",
+      "read_done_bits_source",
+      "reading_bits_source"
     ],
     "unverified": []
   }

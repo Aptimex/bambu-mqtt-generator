@@ -81,7 +81,7 @@ class ResponseParser:
 
     ``vir_slot`` takes precedence when both are present.
 
-    Slots carry two flags that are easy to conflate:
+    Slots carry several important flags related to filament state:
 
       * ``present`` — a spool is physically in the slot. This is bit
         ``tray_index`` of ``ams.tray_exist_bits``, which is what Bambu Studio
@@ -90,6 +90,11 @@ class ResponseParser:
       * ``info_known`` — the printer knows what filament that spool is. A slot
         can be present with nothing else reported about it (an unidentified
         third-party spool, ``state`` 9), and its settings can still be written.
+      * ``auto_detected`` / ``rfid_serial`` — the AMS worked the filament
+        out for itself, from an RFID tag, rather than being told. ``info_known``
+        does not distinguish those two: a hand-set slot has known info too.
+      * ``read_pending`` — the AMS has not finished reading the slot yet, so
+        what it holds is not settled either way.
     """
 
     def __init__(self, config: ConfigLoader, model_id: str, firmware_version: str):
@@ -143,6 +148,19 @@ class ResponseParser:
         self.info_known_fields = presence.get("filament_info_known", {}).get(
             "requires_all_non_empty", ["tray_type", "tray_color"]
         )
+
+        rfid = fmt.get("rfid_identity") or {}
+        self.tag_uid_key = rfid.get("tag_uid_key", "tag_uid")
+        self.spool_serial_key = rfid.get("serial_key", "tray_uuid")
+        official = rfid.get("official_tag", {})
+        self.official_tag_length = official.get("length", 16)
+        self.official_tag_offset = official.get("offset", 12)
+        self.official_tag_value = official.get("value", "01")
+
+        read_state = fmt.get("slot_read_state") or {}
+        self.read_done_bits_key = read_state.get("read_done_key", "tray_read_done_bits")
+        self.reading_bits_key = read_state.get("reading_key", "tray_reading_bits")
+        self.read_state_base = read_state.get("base", 16)
         state_field = presence.get("state_field", defaults["state_field"])
         self.state_key = state_field.get("key", "state")
         self.state_values = state_field.get("values", {})
@@ -185,6 +203,9 @@ class ResponseParser:
                         tray,
                         present=self._is_present(
                             exist_bits, ams_id, ams_type, tray_id, tray
+                        ),
+                        read_pending=self._read_pending(
+                            ams_data, ams_id, ams_type, tray_id
                         ),
                     )
                 )
@@ -291,6 +312,72 @@ class ResponseParser:
             return bool(meaning.get("present"))
         return self._has_filament_info(tray)
 
+    def _spool_serial(self, tray: Dict[str, Any]) -> Optional[str]:
+        """
+        The slot's RFID identity, or None if the printer read no tag.
+
+        `tag_uid` is the one field here a tag read fills in but a MQTT command
+        cannot: ams_filament_setting carries no such field, so a slot somebody
+        set by hand can never look auto-detected. Bambu Studio's test is
+        DevFilaSystem::IsBBL_Filament — non-empty, and not every character '0'.
+
+        A genuine Bambu tag is 16 characters with "01" at offset 12, and its
+        `tray_uuid` is the per-spool serial Studio uses as that spool's
+        identity. Other tags still prove a read happened, so their raw uid is
+        returned rather than nothing.
+        """
+        uid = str(tray.get(self.tag_uid_key) or "").strip()
+        if not uid or set(uid) == {"0"}:
+            return None
+
+        serial = str(tray.get(self.spool_serial_key) or "").strip()
+        official = (
+            len(uid) == self.official_tag_length
+            and uid[self.official_tag_offset:
+                    self.official_tag_offset + len(self.official_tag_value)]
+            == self.official_tag_value
+        )
+        if official and serial and set(serial) != {"0"}:
+            return serial
+        return uid
+
+    def _read_pending(
+        self, ams_data: Dict[str, Any], ams_id: int, ams_type: int, tray_id: int
+    ) -> bool:
+        """
+        Whether the AMS has not finished reading this slot yet.
+
+        Between a spool going in and its tag read completing, a slot is present
+        but carries no tag data. The printer accepts filament settings written
+        during that window and may not correct them when the read finishes, so
+        a write there silently replaces what the tag would have said. The window
+        has no fixed length, so it is read from these masks rather than waited
+        out: a slot's bit is clear in tray_read_done_bits until its read
+        finishes, and set in tray_reading_bits while it runs.
+
+        Bambu Studio parses both masks but does not gate writes on them, so this
+        is an extension rather than upstream behaviour — see `slot_read_state`
+        in ams_response_format.json. Masks that are absent or unparseable, or an
+        AMS type with no tray-index mapping, count as not pending: a printer
+        that does not report them keeps working as before.
+        """
+        index = self._tray_index(ams_type, ams_id, tray_id)
+        if index is None:
+            return False
+
+        def bit(key: str) -> Optional[bool]:
+            raw = ams_data.get(key)
+            if raw is None:
+                return None
+            try:
+                return bool((int(str(raw).strip(), self.read_state_base) >> index) & 1)
+            except (TypeError, ValueError):
+                return None
+
+        if bit(self.reading_bits_key):
+            return True
+        return bit(self.read_done_bits_key) is False
+
     def _has_filament_info(self, tray: Dict[str, Any]) -> bool:
         """Whether the printer knows which filament is in the slot."""
         if not tray:
@@ -313,6 +400,7 @@ class ResponseParser:
         tray: Dict[str, Any],
         present: Optional[bool] = None,
         info_known: Optional[bool] = None,
+        read_pending: bool = False,
     ) -> Dict[str, Any]:
         """Convert tray data to the normalized slot format."""
         if info_known is None:
@@ -362,6 +450,14 @@ class ResponseParser:
         slot["k"] = slot.get("k", 0.0)
         slot["present"] = present
         slot["info_known"] = info_known
+
+        # Whether the printer worked the filament out for itself. An external
+        # holder has no tag reader, so it is never auto-detected regardless of
+        # what it reports.
+        serial = None if self._is_virtual(ams_id) else self._spool_serial(slot)
+        slot["rfid_serial"] = serial
+        slot["auto_detected"] = serial is not None
+        slot["read_pending"] = bool(read_pending) and not self._is_virtual(ams_id)
 
         if ams_id == self.virtual_main_id:
             slot["displayID"] = "External Spool (no AMS)"
@@ -556,3 +652,20 @@ def parse_slots(
         config = load_config()
     parser = ResponseParser(config, model_id, firmware_version)
     return parser.parse_slots(push_status)
+
+def find_slot(
+    slots: List[Dict[str, Any]], ams_id: int, slot_id: int
+) -> Optional[Dict[str, Any]]:
+    """
+    The parsed slot for these ids, or None if the printer has no such slot.
+
+    Matches on the `ids` a slot carries rather than on its position, so callers
+    do not have to reproduce the external-spool numbering: every external
+    holder reports as slot 0 of its own ams id, whatever tray id the printer
+    used for it.
+    """
+    for slot in slots:
+        ids = slot.get("ids") or {}
+        if ids.get("amsID") == ams_id and ids.get("slotID") == slot_id:
+            return slot
+    return None
