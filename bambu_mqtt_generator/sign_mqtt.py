@@ -128,10 +128,18 @@ def sign_payload(
 # "result": "failed", ...} inside the "print" or "security" scope when a signed
 # command is rejected for signing-related reasons.
 
+# The printer rejected an unsigned command that it requires a signature for.
+# This is the one code that reports a printer's *policy* rather than a mistake
+# in our message, which makes it the authoritative way to detect whether a
+# printer needs signing at all: see is_signature_required().
+SIGNATURE_REQUIRED_ERR = 84033543
+
 ERROR_CODES = {
-    84033543: 'command was not wrapped in the signature block (no "header" field '
-              "at all) for a command type that requires one. No reason field "
-              "accompanies this one.",
+    SIGNATURE_REQUIRED_ERR:
+              'command was not wrapped in the signature block (no "header" '
+              "field at all) for a command type that requires one. Older "
+              "firmware sends no reason alongside it; newer firmware sends "
+              '"mqtt message verify failed".',
     84033545: "no app-cert registered for this cert_id (cold state) — printer "
               "needs an app_cert_install bootstrap for this cert (e.g. after a "
               "power-cycle).",
@@ -144,6 +152,22 @@ ERROR_CODES = {
     84033548: "the signature bytes don't verify against an otherwise-valid "
               "registration.",
 }
+
+
+def is_signature_required(err_code: Optional[int]) -> bool:
+    """
+    Whether this err_code means "this printer requires signed commands".
+
+    The printer returns SIGNATURE_REQUIRED_ERR for any command in a
+    signature-required class that arrived without a "header" block. It is a
+    statement about the printer's configuration, not about our payload: a
+    printer in LAN + Developer mode never sends it, and neither does firmware
+    predating command signing (probably).
+
+    Args:
+        err_code: The err_code value from a printer response, or None.
+    """
+    return err_code == SIGNATURE_REQUIRED_ERR
 
 
 def describe_error(err_code: Optional[int]) -> Optional[str]:

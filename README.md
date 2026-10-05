@@ -398,6 +398,24 @@ one; `ERROR_CODES` is the full table of known codes.
 | 84033547 | Certificate chain/CRL registration incomplete or invalid |
 | 84033548 | Signature doesn't verify |
 
+`84033543` is the only one of these that reports the *printer's* configuration
+rather than a fault in our message: a printer in LAN + Developer mode never
+sends it, and neither does firmware predating command signing (probably). That makes it
+the authoritative way to tell whether a printer needs signing at all, so it
+gets a dedicated predicate:
+
+```python
+from bambu_mqtt_generator import is_signature_required, SIGNATURE_REQUIRED_ERR
+
+result = check_command_result(reply)
+if is_signature_required(result["err_code"]):
+    ...   # this printer rejects unsigned commands
+```
+
+The check runs before the printer looks at the command name, which is what lets
+**bambu-mqtt-comms** detect the requirement with a throwaway command that
+cannot do anything. See its `probe_signing_required()`.
+
 ### Lower-level helpers
 
 | Function | Purpose |

@@ -38,7 +38,9 @@ from .sign_mqtt import (
     load_pem,
     extract_leaf_cert,
     describe_error,
+    is_signature_required,
     ERROR_CODES,
+    SIGNATURE_REQUIRED_ERR,
 )
 
 __version__ = "1.0.0"
@@ -63,7 +65,9 @@ __all__ = [
     "parse_slots",
     "check_command_result",
     "describe_error",
+    "is_signature_required",
     "ERROR_CODES",
+    "SIGNATURE_REQUIRED_ERR",
     "sign_payload",
     "sign",
     "build_app_cert_install",
