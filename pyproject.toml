@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=77.0", "setuptools-scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bambu-mqtt-generator"
+dynamic = ["version"]
+description = "Generate MQTT JSON payloads for Bambu Lab printer AMS/external spool management"
+readme = "README.md"
+requires-python = ">=3.8"
+license = "AGPL-3.0-or-later"
+license-files = ["LICENSE"]
+authors = [{ name = "Aptimex" }]
+keywords = ["bambu", "bambu-lab", "mqtt", "3d-printing", "ams", "filament"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = [
+    "cryptography>=3.4",
+]
+
+[project.urls]
+Homepage = "https://github.com/Aptimex/bambu-mqtt-generator"
+Repository = "https://github.com/Aptimex/bambu-mqtt-generator"
+Issues = "https://github.com/Aptimex/bambu-mqtt-generator/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["bambu_mqtt_generator*"]
+
+[tool.setuptools.package-data]
+bambu_mqtt_generator = ["config/**/*.json"]
+
+[tool.setuptools_scm]
+# Version comes from the latest git tag (e.g. v0.2.0 -> 0.2.0). Untagged commits
+# build as dev versions like 0.2.1.dev3; drop the +g<hash> suffix since PyPI
+# and TestPyPI reject local versions.
+local_scheme = "no-local-version"

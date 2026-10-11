@@ -43,7 +43,12 @@ from .sign_mqtt import (
     SIGNATURE_REQUIRED_ERR,
 )
 
-__version__ = "1.0.0"
+try:
+    from importlib.metadata import PackageNotFoundError, version as _pkg_version
+
+    __version__ = _pkg_version("bambu-mqtt-generator")
+except PackageNotFoundError:  # running from a source tree without installing
+    __version__ = "0.0.0+unknown"
 
 __all__ = [
     "AmbiguousCommandNameError",

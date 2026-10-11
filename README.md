@@ -18,6 +18,10 @@ Functionality unrelated to that use has NOT been tested or validated. You use th
 
 ## Installation
 
+```bash
+pip install bambu-mqtt-generator
+```
+
 From a source checkout:
 
 ```bash
@@ -519,6 +523,7 @@ never reads that field.
 
 ## License and scope
 
-MIT licensed. This is an independent project, not affiliated with or endorsed
-by Bambu Lab. It speaks an undocumented protocol that vendor firmware updates
-can change without notice.
+Licensed under the GNU Affero General Public License v3.0 or later (see `LICENSE`).
+This is an independent project, not affiliated with or endorsed by Bambu Lab.
+It speaks an undocumented protocol that vendor firmware updates can change
+without notice.
