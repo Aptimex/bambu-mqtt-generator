@@ -10,7 +10,7 @@ extracted from the Bambu Studio source by
 payloads *should* match what Bambu Studio itself sends for a given printer and firmware.
 
 This library is focused on generating MQTT command payloads, but does not provide a method to send them.
-Sending commands can be handled by the separate **bambu-mqtt-comms** companion library, 
+Sending commands can be handled by the separate [bambu-mqtt-comms](https://github.com/Aptimex/bambu-mqtt-comms) companion library, 
 which is just a Bambu-focused wrapper around the paho-mqtt library.
 
 This library's code is primarily AI generated and maintained, but the aspects related to AMS and filament settings are validated against real printers to ensure correctness.
